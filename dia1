@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tocca Amalfi - Day 1: Departure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header"></header>
+    <section class="day-detail-section">
+        <h1>Day 1: Departure ✈️</h1>
+        <p>Your Italian escape begins! Board your flight and get ready to immerse yourself in the sun-kissed beauty of the Amalfi Coast.</p>
+        <a href="index.html#what-we-offer-grid" class="back-to-home">← Back to Itinerary</a>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
