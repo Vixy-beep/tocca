@@ -49,14 +49,14 @@ h2 {
     color: var(--text-color);
 }
 
-section {
+section.animate-on-scroll {
     padding: 80px 20px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-section.is-visible {
+section.animate-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -71,6 +71,11 @@ section.is-visible {
     background: #ffffff;
     backdrop-filter: none;
     transition: background 0.3s ease;
+}
+
+/* Reserve header height so content doesn't sit underneath it */
+.main-header {
+    height: 76px;
 }
 
 .navbar {
@@ -97,7 +102,8 @@ section.is-visible {
 }
 
 .nav-link {
-    color: var(--light-text-color);
+    /* En escritorio los enlaces deben ser legibles sobre el fondo claro */
+    color: var(--text-color);
     text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
     background-color: transparent;
     border-radius: 5px;
@@ -175,6 +181,10 @@ section.is-visible {
     position: relative;
     z-index: 0;
     filter: brightness(0.5);
+    /* Asegura que la imagen cubra el área del hero y no distorsione */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-content {
@@ -238,7 +248,20 @@ section.is-visible {
 }
 
 .cta-button {
-    display: none;
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 12px 26px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 /* --- SECCIÓN WHY US --- */
@@ -338,6 +361,8 @@ section.is-visible {
     justify-content: center;
     background-size: cover;
     background-position: center;
+    /* Fallback por si falta la imagen de fondo */
+    background-color: rgba(0,0,0,0.08);
     border-radius: 10px;
     overflow: hidden;
     padding: 25px 30px;
@@ -595,12 +620,79 @@ section.is-visible {
 
 /* --- ESTILOS PARA PÁGINAS DE DÍA INDIVIDUAL --- */
 .day-detail-section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     max-width: 800px;
-    margin: 120px auto 40px;
+    margin: 20px auto 40px;
     background-color: #fff;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- DAY PAGE HERO + NAV --- */
+.day-hero {
+    position: relative;
+    height: 48vh;
+    max-height: 460px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+/* Ensure the day hero doesn't start underneath the fixed header */
+.day-hero {
+    margin-top: 76px;
+}
+
+.day-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.55);
+    transform-origin: center;
+}
+
+/* Extra safety: never let hero images overflow viewport */
+.day-hero-img,
+.hero-img {
+    max-height: 80vh;
+}
+
+.day-hero-copy {
+    position: absolute;
+    z-index: 3;
+    color: var(--hero-text-color-beige);
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.day-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.day-nav a {
+    display: inline-block;
+    background: rgba(255,255,255,0.95);
+    color: var(--text-color);
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.day-nav a:hover {
+    background: var(--primary-color);
+    color: var(--light-text-color);
 }
 
 .day-detail-section h1 {

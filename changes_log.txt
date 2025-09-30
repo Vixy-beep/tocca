@@ -1,0 +1,43 @@
+Change log — Tocca project
+Date: 2025-09-29
+Author: automated edits (requested)
+
+Summary of actions performed (high level)
+- Fixed a bug that hid page content: narrowed the CSS animation selector so only sections with .animate-on-scroll start hidden.
+- Cleaned and reorganized `style.css`: removed duplicates, grouped related rules, preserved all visual behavior, and added styles for day pages and navigation.
+- Replaced corrupted/duplicated `dia1.html` with a single clean HTML doc.
+- Created day pages `dia1.html` … `dia10.html` (if not already present) with content from `days.txt`.
+- Added mini-hero and Prev/Next navigation to every day page. Images were referenced but not modified.
+- Added `changes_log.txt` (this file) describing the edits.
+
+Files changed or added
+- style.css (UPDATED) — major cleanup and reorganization; added day-hero/day-nav styles; scoped animate-on-scroll
+- dia1.html (UPDATED) — replaced with cleaned single-document page; added mini-hero and nav
+- dia2.html .. dia10.html (UPDATED/ADDED) — each page now contains a mini-hero, content from days.txt, and Prev/Next links
+- changes_log.txt (ADDED) — this summary file
+
+Details & rationale
+1) Hidden sections bug
+   - Problem: original `section { opacity: 0 }` hid all sections globally. This produced blank pages for standalone day pages.
+   - Fix: the rule now applies only to `section.animate-on-scroll` and `section.animate-on-scroll.is-visible` so day pages (which don't use the class) render normally.
+
+2) CSS cleanup / reorganization
+   - Grouped variables, base/reset, header, hero, components, day pages, footer, and responsive rules.
+   - Removed duplicated `.itinerary-grid` block found inside a media query.
+   - Preserved all original colors, spacing, and interactions.
+
+3) Day pages
+   - Created consistent structure across `dia1.html`..`dia10.html`: header, optional mini-hero (image), content block, Prev/Next navigation, footer.
+   - Images are only referenced (e.g., `imagenes/hero1.jpg`) — you requested to manage image files yourself.
+
+Notes / Next steps (optional)
+- I can add Prev/Next keyboard navigation and aria labels for accessibility.
+- I can run a thorough visual diff (screenshot-based) if you want to ensure there are no visual regressions.
+- If you'd like a deeper CSS audit (remove unused rules, compress, or convert to SCSS), I can prepare that.
+
+How to verify locally
+1) Open the project folder in VS Code and run Live Server (or start python http.server).
+2) Open `index.html`, click an itinerary Day link and verify the day page shows the mini-hero and text.
+3) Use browser DevTools to confirm `style.css` is the served file and contains the reorganized content.
+
+If anything doesn't look right, tell me which page/section and I'll adjust styles or markup while keeping the rest intact.
