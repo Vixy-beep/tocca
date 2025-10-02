@@ -639,7 +639,6 @@ section.animate-on-scroll.is-visible {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
 }
 
 /* Ensure the day hero doesn't start underneath the fixed header */
@@ -652,7 +651,6 @@ section.animate-on-scroll.is-visible {
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: brightness(0.55);
     transform-origin: center;
 }
 
