@@ -84,7 +84,7 @@
                     <p>It was here — on the Amalfi Coast — that I found what I never expected: love, family, home, and a
                         sense of belonging. Now a local by heart and by choice, I invite you to experience this coast
                         not as a tourist, but as part of its rhythm.</p>
-                </div>
+                </a>
                 <div class="why-us-image-grid">
                     <img src="imagenes/foto1.jpg" alt="View of the Amalfi Coast 1">
                     <img src="imagenes/foto2.jpg" alt="View of the Amalfi Coast 2">
@@ -132,7 +132,7 @@
             </div>
         </section>
 
-        <section id="what-we-offer-grid" class="luxury-package-section animate-on-scroll">
+    <section id="what-we-offer-grid" class="luxury-package-section animate-on-scroll">
             <h2>The 10-Day Journey</h2>
             <p class="package-price">An unforgettable itinerary along the coast</p>
             <div class="itinerary-grid">
@@ -142,49 +142,49 @@
                         <h3>🇮🇹 Arrival in Naples & The Adventure Begins</h3>
                         <p>Personal welcome, transfer to your boutique hotel, and a welcome dinner.</p>
                     </div>
-                </div>
+                </a>
                 <a class="itinerary-day-row animate-on-scroll day-link" href="dia2.html" style="background-image: url('imagenes/day2.jpg');">
                     <div class="day-title">Day 2</div>
                     <div class="day-description">
                         <h3>🏛 Pompeii & Volcanic Wines</h3>
                         <p>Tour the ruins and enjoy a wine-tasting lunch on the slopes of Vesuvius.</p>
                     </div>
-                </div>
+                </a>
                 <a class="itinerary-day-row animate-on-scroll day-link" href="dia3.html" style="background-image:  url('imagenes/day3.jpg');">
                     <div class="day-title">Day 3</div>
                     <div class="day-description">
                         <h3>🍃 A Day of Your Own</h3>
                         <p>A day to breathe, feel, and wander. Follow whatever calls to you.</p>
                     </div>
-                </div>
+                </a>
                 <a class="itinerary-day-row animate-on-scroll day-link" href="dia4.html" style="background-image: url('imagenes/day4.jpg');">
                     <div class="day-title">Day 4</div>
                     <div class="day-description">
                         <h3>🛥 Capri: Glamour, Grottoes & Golden Skin</h3>
                         <p>Private boat trip to the iconic island, exploring its caves and streets.</p>
                     </div>
-                </div>
+                </a>
                 <a class="itinerary-day-row animate-on-scroll day-link" href="dia5.html" style="background-image:  url('imagenes/day5.jpg');">
                     <div class="day-title">Day 5</div>
                     <div class="day-description">
                         <h3>🌸 Citrus Trails & Golden Sips</h3>
                         <p>Walk the "Path of Lemons" and learn the secrets of limoncello.</p>
                     </div>
-                </div>
+                </a>
                 <a class="itinerary-day-row animate-on-scroll day-link" href="dia6.html" style="background-image: url('imagenes/day6.jpg');">
                     <div class="day-title">Day 6</div>
                     <div class="day-description">
                         <h3>🍋 The Grand Finale in Positano</h3>
                         <p>Free morning to enjoy, followed by a farewell dinner with spectacular views.</p>
                     </div>
-                </div>
+                </a>
                 <a class="itinerary-day-row animate-on-scroll day-link" href="dia7.html" style="background-image: url('imagenes/day7.jpg');">
                     <div class="day-title">Day 7</div>
                     <div class="day-description">
                         <h3>🌤 Departure & Arrivederci</h3>
                         <p>Leisurely breakfast and a private transfer to Naples airport.</p>
                     </div>
-                </div>
+                </a>
                 <a class="itinerary-day-row animate-on-scroll day-link" href="dia8.html" style="background-image: url('imagenes/day8.jpg');">
                     <div class="day-title">Day 8</div>
                     <div class="day-description">
@@ -192,7 +192,7 @@
                         <p>Explore the stunning gardens and panoramic views of Villa Rufolo and Villa Cimbrone in
                             Ravello.</p>
                     </div>
-                </div>
+                </a>
                 <a class="itinerary-day-row animate-on-scroll day-link" href="dia9.html" style="background-image:  url('imagenes/day9.jpg');">
                     <div class="day-title">Day 9</div>
                     <div class="day-description">
@@ -284,6 +284,21 @@
 
     </main>
     <script src="script.js"></script>
+    <script>
+        // Minimal runtime fix: ensure the itinerary section is visible and uses the intended colors.
+        // This avoids editing style.css while fixing the white/hidden itinerary issue.
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                var s = document.getElementById('what-we-offer-grid');
+                if (s) {
+                    // Only add the visible class to trigger the existing CSS animation
+                    s.classList.add('is-visible');
+                }
+            } catch (e) {
+                console.error('Itinerary visibility script failed', e);
+            }
+        });
+    </script>
 </body>
 
 </html>
