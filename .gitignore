@@ -1,0 +1,11 @@
+# Ignore WhatsApp image attachments and temporary files
+imagenes/WhatsApp Image*.jpeg
+imagenes/WhatsApp Image*.jpg
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node / Python artifacts (if any)
+node_modules/
+__pycache__/
