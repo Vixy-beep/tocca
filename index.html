@@ -26,6 +26,19 @@
         <img src="imagenes/tocca_amalfi.png" alt="Chatbot">
     </a>
 
+    <!-- Chatbot panel -->
+    <aside id="chatbot-panel" class="chatbot-panel" aria-hidden="true">
+        <header class="chatbot-header">
+            <strong>Mini Chat</strong>
+            <button id="chatbot-close" aria-label="Close">×</button>
+        </header>
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <form id="chatbot-form" class="chatbot-form">
+            <input id="chatbot-input" placeholder="Ask about the tour (e.g. 'dates', 'price')" autocomplete="off">
+            <button type="submit">Send</button>
+        </form>
+    </aside>
+
     <header class="main-header">
         <nav class="navbar">
             <a href="#hero" class="nav-logo-container">

@@ -301,7 +301,7 @@ section.animate-on-scroll.is-visible {
     font-size: 1.8rem;
     line-height: 1.4;
     margin-top: 0;
-    color: #0a5a56; /* change headline color for Why Choose us */
+    color: var(--secondary-color); /* change headline color for Why Choose us */
 }
 
 .why-us-image-grid {
@@ -349,6 +349,19 @@ section.animate-on-scroll.is-visible {
     color: var(--light-text-color);
 }
 
+/* Specific heading colors to ensure contrast and separation */
+#why-tocca-amalfi h2 {
+    color: var(--secondary-color);
+}
+
+#what-we-believe h2 {
+    color: #111111;
+}
+
+#upcoming-dates h2 {
+    color: #111111;
+}
+
 .package-price {
     font-size: 1.8rem;
     font-weight: bold;
@@ -372,7 +385,8 @@ section.animate-on-scroll.is-visible {
     overflow: hidden;
     padding: 20px;
     text-align: center;
-    min-height: 220px;
+    min-height: 0;
+    aspect-ratio: 1 / 1; /* force squares */
     color: var(--light-text-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -381,6 +395,12 @@ section.animate-on-scroll.is-visible {
 
 .itinerary-day-row .day-title {
     font-size: 2.2rem;
+}
+
+/* Ensure day description sits inside the square and doesn't overflow */
+.itinerary-day-row .day-description {
+    position: relative;
+    z-index: 2;
 }
 
 /* Make whole tile clickable (anchor) behave like a block */
@@ -577,6 +597,53 @@ section.animate-on-scroll.is-visible {
     width: 36px;
     height: 36px;
 }
+
+/* Chatbot panel styles */
+.chatbot-panel {
+    position: fixed;
+    left: 20px;
+    bottom: 110px;
+    width: 320px;
+    max-height: 420px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    z-index: 115;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chatbot-panel[aria-hidden="false"] {
+    display: flex;
+}
+
+.chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.chatbot-messages {
+    padding: 12px;
+    overflow: auto;
+    flex: 1 1 auto;
+}
+
+.chatbot-messages p { margin: 8px 0; }
+
+.chatbot-form {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.chatbot-form input { flex: 1; padding: 8px 10px; }
+.chatbot-form button { padding: 8px 12px; background: var(--secondary-color); border: none; color: #fff; }
 
 .inclusions-container ul {
     list-style: none;
