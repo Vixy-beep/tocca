@@ -138,24 +138,27 @@ section.animate-on-scroll.is-visible {
 
 /* Reserve header height so content doesn't sit underneath it */
 .main-header {
-    height: 76px;
+    height: 70px;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
+    padding: 10px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    height: 100%;
 }
 
 .nav-logo-container {
     padding-top: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-logo {
-    height: 76px;
+    height: 80px;
     width: auto;
 }
 
@@ -199,8 +202,8 @@ section.animate-on-scroll.is-visible {
 
 /* --- HERO SECTION --- */
 .hero-section {
-    padding-top: 40px;
-    height: 90vh;
+    padding-top: 0;
+    height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -254,11 +257,15 @@ section.animate-on-scroll.is-visible {
     padding: 20px;
     position: absolute;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 0;
+    justify-items: center;
     align-items: center;
     justify-content: center;
+    align-content: center;
     height: 100%;
+    text-align: center;
 }
 
 .logo-background {
@@ -271,13 +278,15 @@ section.animate-on-scroll.is-visible {
     font-size: clamp(5rem, 15vw, 10rem);
     font-weight: 400;
     margin: 0;
-    line-height: 1;
+    line-height: 0.9;
     color: var(--hero-text-color-beige);
     /* Color beige */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     padding: 0;
     background-color: transparent;
     box-shadow: none;
+    grid-row: 1;
+    transform: translateY(10px);
 }
 
 /* Estilos para "AMALFI COAST" */
@@ -287,23 +296,19 @@ section.animate-on-scroll.is-visible {
     font-weight: 400;
     letter-spacing: 8px;
     text-transform: uppercase;
-    margin: 10px 0 0px;
+    margin: 0;
+    line-height: 1;
     color: var(--hero-text-color-beige);
     /* Color beige */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     padding: 0;
     background-color: transparent;
     box-shadow: none;
+    grid-row: 2;
+    transform: translateY(-15px);
 }
 
-/* Move subtitle and description closer to main title */
-.hero-subtitle {
-    margin-top: -8px;
-}
-
-.hero-description {
-    margin-top: -6px;
-}
+/* Grid positioning handles spacing - manual spacing rules removed */
 
 /* Estilos para "TOUCH THE SOUL OF THE COAST" (asumo que es .hero-description) */
 .hero-description {
@@ -313,9 +318,12 @@ section.animate-on-scroll.is-visible {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0;
+    line-height: 1;
     color: var(--hero-text-color-beige);
     /* Color beige */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    grid-row: 3;
+    transform: translateY(-18px);
 }
 
 .cta-button {
@@ -904,6 +912,11 @@ section.animate-on-scroll.is-visible {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 920px) {
+    /* Move Tocca higher up on mobile to prevent overlapping */
+    .hero-main-title {
+        transform: translateY(-10px);
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
