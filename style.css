@@ -320,8 +320,8 @@ section.animate-on-scroll.is-visible {
 
 .cta-button {
     display: inline-block;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: var(--warning-color);
+    color: var(--secondary-color);
     padding: 12px 26px;
     border-radius: 6px;
     text-decoration: none;
@@ -549,7 +549,7 @@ section.animate-on-scroll.is-visible {
 .dates-container {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 20px;
     max-width: 1000px;
     margin: 0 auto;
@@ -762,8 +762,8 @@ section.animate-on-scroll.is-visible {
 }
 
 .contact-button {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: var(--warning-color);
+    color: var(--secondary-color);
     padding: 15px 35px;
     text-decoration: none;
     font-weight: bold;
@@ -772,7 +772,7 @@ section.animate-on-scroll.is-visible {
 }
 
 .contact-button:hover {
-    background-color: #fff;
+    background-color: #e6ac00;
 }
 
 /* --- WHATSAPP FLOAT --- */
