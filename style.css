@@ -305,7 +305,9 @@ section.animate-on-scroll.is-visible {
     background-color: transparent;
     box-shadow: none;
     grid-row: 2;
-    transform: translateY(-15px);
+    transform: translateY(-15px) translateX(30px);
+    text-align: center;
+    justify-self: center;
 }
 
 /* Grid positioning handles spacing - manual spacing rules removed */
@@ -323,7 +325,11 @@ section.animate-on-scroll.is-visible {
     /* Color beige */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     grid-row: 3;
-    transform: translateY(-18px);
+    transform: translateY(-5px) translateX(60px);
+    text-align: center;
+    justify-self: center;
+    margin-left: 80px;
+    font-style: italic;
 }
 
 .cta-button {
