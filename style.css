@@ -401,6 +401,27 @@ section.animate-on-scroll.is-visible {
     height: calc(100% - 7.5px);
 }
 
+/* Ensure 'What We Offer' heading is black without changing other sections */
+#what-we-offer h2 {
+    color: var(--text-color) !important;
+}
+
+/* Force the same image styling for Why Choose Us as used in What We Offer (scoped) */
+#why-tocca-amalfi .why-us-image-grid img,
+#what-we-offer .why-us-image-grid img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
+#why-tocca-amalfi .why-us-image-grid img:first-child,
+#what-we-offer .why-us-image-grid img:first-child {
+    grid-row: span 2 !important;
+    height: calc(100% - 7.5px) !important;
+}
+
 .offer-list {
     list-style: none;
     padding: 0;
