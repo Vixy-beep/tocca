@@ -203,4 +203,29 @@ document.addEventListener('DOMContentLoaded', function() {
             botReply('Sorry, I can only answer basic questions. Try "dates", "price", "itinerary" or "contact".');
         }
     });
+
+    // --- FALLBACK: ensure Day 9 shows mobile-summary on small screens ---
+    function ensureDay9MobileSummary() {
+        try {
+            var mq = window.matchMedia('(max-width: 920px)');
+            var row = document.querySelector('.itinerary-day-row[data-day="9"]');
+            if (!row) return;
+            var original = row.querySelector('.day-description .original');
+            var mobile = row.querySelector('.day-description .mobile-summary');
+            if (mq.matches) {
+                if (original) original.style.display = 'none';
+                if (mobile) mobile.style.display = 'block';
+            } else {
+                if (original) original.style.display = '';
+                if (mobile) mobile.style.display = 'none';
+            }
+        } catch (e) {
+            console.warn('Day9 mobile-summary fallback failed', e);
+        }
+    }
+
+    // Run on load and on resize/orientation change
+    ensureDay9MobileSummary();
+    window.addEventListener('resize', ensureDay9MobileSummary);
+    window.addEventListener('orientationchange', ensureDay9MobileSummary);
 });
