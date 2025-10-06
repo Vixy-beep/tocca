@@ -401,63 +401,38 @@ section.animate-on-scroll.is-visible {
     height: calc(100% - 7.5px);
 }
 
-/* Ensure #why-tocca-amalfi specifically shows text on the left and images on the right */
+/* Make #why-tocca-amalfi follow the same layout pattern as the other sections:
+   text on the left, images on the right, but allow wrapping on small screens */
 #why-tocca-amalfi .why-us-container {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    align-items: center !important;
-    gap: 40px !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
 }
 
 #why-tocca-amalfi .why-us-text-block {
-    order: 0 !important;
-    flex: 0 1 52% !important;
-    min-width: 280px !important;
-    text-align: left !important;
+    order: 0;
+    flex: 1 1 52%;
+    min-width: 280px;
+    text-align: left;
 }
 
 #why-tocca-amalfi .why-us-image-grid {
-    order: 1 !important;
-    flex: 0 1 40% !important;
-    min-width: 260px !important;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 15px !important;
+    order: 1;
+    flex: 1 1 40%;
+    min-width: 260px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
 #why-tocca-amalfi .why-us-image-grid img:first-child {
-    grid-row: span 2 !important;
-    height: calc(100% - 7.5px) !important;
+    grid-row: span 2;
+    height: calc(100% - 7.5px);
 }
 
-/* Ensure images at #why-tocca-amalfi are a right column of two square photos */
-#why-tocca-amalfi .why-us-container {
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-}
-
-#why-tocca-amalfi .why-us-image-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    align-items: stretch !important;
-    gap: 12px !important;
-    flex: 0 0 300px !important;
-}
-
-#why-tocca-amalfi .why-us-image-grid img {
-    width: 100% !important;
-    aspect-ratio: 1 / 1 !important;
-    object-fit: cover !important;
-    height: auto !important;
-}
-
-/* Prevent global mobile rule from stacking the why-us container */
-@media (max-width: 920px) {
-    #why-tocca-amalfi .why-us-container {
-        flex-direction: row !important;
-    }
-}
+/* No further overrides here; the standard .why-us-container rules will ensure
+   the same visual behavior as the other sections (wrap on small screens). */
 
 /* Ensure 'What We Offer' heading is black without changing other sections */
 #what-we-offer h2 {
