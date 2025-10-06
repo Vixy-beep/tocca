@@ -597,7 +597,7 @@ section.animate-on-scroll.is-visible {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background: rgba(255,255,255,0.12); /* light card over the teal background */
     border-radius: 12px;
     overflow: hidden;
@@ -1379,7 +1379,7 @@ section.animate-on-scroll.is-visible {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     aspect-ratio: 1 / 1 !important;
     min-height: 120px !important;
     padding: 16px !important;
