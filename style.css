@@ -1202,6 +1202,30 @@ section.animate-on-scroll.is-visible {
     }
 }
 
+/* Mobile-specific: ensure hero description centers and is fully visible on small screens */
+@media (max-width: 920px) {
+    .hero-description {
+        transform: none !important;
+        margin-left: 0 !important;
+        text-align: center !important;
+        justify-self: center !important;
+        grid-row: auto !important;
+        padding: 0 14px !important;
+        font-size: clamp(0.95rem, 3.5vw, 1.2rem) !important;
+        display: block !important;
+    }
+}
+
+/* Extra tight phones: slightly increase spacing so description never clips */
+@media (max-width: 480px) {
+    .hero-description {
+        transform: none !important;
+        margin-left: 0 !important;
+        padding: 0 12px !important;
+        font-size: clamp(0.9rem, 4vw, 1.05rem) !important;
+    }
+}
+
 /* === Strong final overrides to ensure consistent itinerary layout and visibility === */
 /* Placed after all other rules so they win in the cascade. */
 #what-we-offer-grid .itinerary-grid {
