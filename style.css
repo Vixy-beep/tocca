@@ -38,23 +38,6 @@
     }
 }
 
-/* Desktop exception: let Day 9 expand so its full paragraph is visible without clipping.
-   This only affects the non-responsive (desktop) view and targets the single tile. */
-@media (min-width: 921px) {
-    #what-we-offer-grid .itinerary-day-row[data-day="9"] {
-        aspect-ratio: auto !important; /* allow taller box */
-        min-height: 220px !important; /* make it taller to accommodate the paragraph */
-        padding: 18px !important;
-        align-items: flex-start !important; /* keep content starting at top */
-    }
-
-    /* ensure the description text is left-aligned and not clipped */
-    #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description {
-        text-align: left !important;
-        width: 100% !important;
-    }
-}
-
 /* Ensure descriptions inside the itinerary tiles are visible and styled consistently */
 #what-we-offer-grid .itinerary-day-row .day-description p {
     display: block !important;
