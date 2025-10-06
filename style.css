@@ -1324,6 +1324,19 @@ section.animate-on-scroll.is-visible {
         }
     }
 
+/* Day 9 mobile short summary: show compact text only on small screens */
+@media (max-width: 920px) {
+    .itinerary-day-row[data-day="9"] .day-description .original {
+        display: none !important;
+    }
+    .itinerary-day-row[data-day="9"] .day-description .mobile-summary {
+        display: block !important;
+        color: var(--text-color) !important;
+        font-style: italic !important;
+        margin-top: 6px !important;
+    }
+}
+
     .itinerary-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
