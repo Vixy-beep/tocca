@@ -1510,7 +1510,7 @@ section.animate-on-scroll.is-visible {
     }
     #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description .mobile-summary {
         display: block !important;
-        color: var(--text-color) !important;
+        color: #FFF
         font-style: italic !important;
         margin-top: 6px !important;
     }
@@ -1536,5 +1536,6 @@ section.animate-on-scroll.is-visible {
 .itinerary-day-row[data-day="9"] .day-description h3 {
     font-size: 0.95rem !important;
 }
+
 
 
