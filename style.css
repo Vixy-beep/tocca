@@ -430,6 +430,35 @@ section.animate-on-scroll.is-visible {
     height: calc(100% - 7.5px) !important;
 }
 
+/* Ensure images at #why-tocca-amalfi are a right column of two square photos */
+#why-tocca-amalfi .why-us-container {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+#why-tocca-amalfi .why-us-image-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    flex: 0 0 300px !important;
+}
+
+#why-tocca-amalfi .why-us-image-grid img {
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    height: auto !important;
+}
+
+/* Prevent global mobile rule from stacking the why-us container */
+@media (max-width: 920px) {
+    #why-tocca-amalfi .why-us-container {
+        flex-direction: row !important;
+    }
+}
+
 /* Ensure 'What We Offer' heading is black without changing other sections */
 #what-we-offer h2 {
     color: var(--text-color) !important;
