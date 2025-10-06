@@ -434,6 +434,35 @@ section.animate-on-scroll.is-visible {
 /* No further overrides here; the standard .why-us-container rules will ensure
    the same visual behavior as the other sections (wrap on small screens). */
 
+/* Desktop: explicitly enforce row layout and right-side 2-column image grid
+   for #why-tocca-amalfi so it matches How We Offer / What We Believe on wide screens */
+@media (min-width: 921px) {
+    #why-tocca-amalfi .why-us-container {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+    }
+
+    #why-tocca-amalfi .why-us-text-block {
+        flex: 1 1 55% !important;
+        min-width: 320px !important;
+    }
+
+    #why-tocca-amalfi .why-us-image-grid {
+        flex: 0 0 40% !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 15px !important;
+        align-items: start !important;
+    }
+
+    #why-tocca-amalfi .why-us-image-grid img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+    }
+}
+
 /* Ensure 'What We Offer' heading is black without changing other sections */
 #what-we-offer h2 {
     color: var(--text-color) !important;
