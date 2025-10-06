@@ -1451,6 +1451,20 @@ section.animate-on-scroll.is-visible {
     text-align: center !important;
 }
 
+/* Final override: ensure Day 9 shows the mobile summary on small screens.
+   Placed at the end so it wins over earlier strong rules. */
+@media (max-width: 920px) {
+    #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description .original {
+        display: none !important;
+    }
+    #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description .mobile-summary {
+        display: block !important;
+        color: var(--text-color) !important;
+        font-style: italic !important;
+        margin-top: 6px !important;
+    }
+}
+
 /* Safety: ensure mobile sizes keep the same visual rhythm */
 @media (max-width: 920px) {
     #what-we-offer-grid .itinerary-day-row .day-title,
