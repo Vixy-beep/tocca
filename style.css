@@ -795,6 +795,57 @@ section.animate-on-scroll.is-visible {
     color: var(--danger-color);
 }
 
+/* Make main "What to Expect?" title black */
+.inclusions-section h2 {
+    color: var(--text-color) !important;
+}
+
+/* Color the icons in the inclusions section */
+.inclusions-container .fas {
+    color: var(--primary-color);
+}
+
+/* Specific colors for different types of icons */
+.includes-column .fas.fa-check-circle {
+    color: var(--success-color);
+}
+
+.not-includes-column .fas.fa-times-circle {
+    color: var(--danger-color);
+}
+
+.includes-column .fas.fa-bed {
+    color: #8B4513; /* brown for accommodation */
+}
+
+.includes-column .fas.fa-car-side {
+    color: #4169E1; /* royal blue for transport */
+}
+
+.includes-column .fas.fa-utensils {
+    color: #FF6347; /* tomato red for food */
+}
+
+.includes-column .fas.fa-ticket-alt {
+    color: #DAA520; /* golden rod for tickets */
+}
+
+.includes-column .fas.fa-ship {
+    color: #20B2AA; /* light sea green for boat */
+}
+
+.includes-column .fas.fa-user-friends {
+    color: #FF69B4; /* hot pink for guides */
+}
+
+.not-includes-column .fas.fa-plane-departure {
+    color: #708090; /* slate gray for flights */
+}
+
+.not-includes-column .fas.fa-shopping-bag {
+    color: #9370DB; /* medium purple for shopping */
+}
+
 /* Chatbot float on the left */
 .chatbot-float {
     position: fixed;
@@ -1472,5 +1523,17 @@ section.animate-on-scroll.is-visible {
         margin-bottom: 6px !important;
         line-height: 1.05 !important;
     }
+}
+
+/* Specific styling for Day 9 to make typography smaller */
+#what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description p,
+.itinerary-day-row[data-day="9"] .day-description p {
+    font-size: 0.85rem !important;
+    line-height: 1.3 !important;
+}
+
+#what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description h3,
+.itinerary-day-row[data-day="9"] .day-description h3 {
+    font-size: 0.95rem !important;
 }
 
