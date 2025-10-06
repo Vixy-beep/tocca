@@ -401,6 +401,35 @@ section.animate-on-scroll.is-visible {
     height: calc(100% - 7.5px);
 }
 
+/* Ensure #why-tocca-amalfi specifically shows text on the left and images on the right */
+#why-tocca-amalfi .why-us-container {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 40px !important;
+}
+
+#why-tocca-amalfi .why-us-text-block {
+    order: 0 !important;
+    flex: 0 1 52% !important;
+    min-width: 280px !important;
+    text-align: left !important;
+}
+
+#why-tocca-amalfi .why-us-image-grid {
+    order: 1 !important;
+    flex: 0 1 40% !important;
+    min-width: 260px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px !important;
+}
+
+#why-tocca-amalfi .why-us-image-grid img:first-child {
+    grid-row: span 2 !important;
+    height: calc(100% - 7.5px) !important;
+}
+
 /* Ensure 'What We Offer' heading is black without changing other sections */
 #what-we-offer h2 {
     color: var(--text-color) !important;
