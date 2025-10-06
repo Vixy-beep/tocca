@@ -1402,3 +1402,25 @@ section.animate-on-scroll.is-visible {
     }
 }
 
+/* Tiny normalization to ensure all day titles align vertically across tiles.
+   This only changes margins/line-height/padding for .day-title and uses
+   !important sparingly so it fixes visual drift without altering design. */
+#what-we-offer-grid .itinerary-day-row .day-title,
+.itinerary-day-row .day-title {
+    margin: 0 0 8px 0 !important; /* consistent bottom spacing */
+    padding: 0 !important;
+    line-height: 1 !important; /* avoid shifts from different font metrics */
+    display: block !important;
+    height: auto !important;
+    text-align: center !important;
+}
+
+/* Safety: ensure mobile sizes keep the same visual rhythm */
+@media (max-width: 920px) {
+    #what-we-offer-grid .itinerary-day-row .day-title,
+    .itinerary-day-row .day-title {
+        margin-bottom: 6px !important;
+        line-height: 1.05 !important;
+    }
+}
+
