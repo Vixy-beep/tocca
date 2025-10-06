@@ -1290,22 +1290,22 @@ section.animate-on-scroll.is-visible {
     @media (max-width: 920px) {
         .itinerary-grid {
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 12px; /* more breathing room on mobile */
         }
 
         .itinerary-day-row {
             flex-direction: column;
             align-items: center;
             text-align: center;
-            min-height: auto;
-            padding: 10px;
+            min-height: 140px; /* slightly taller for readability */
+            padding: 14px; /* more internal spacing */
             background-image: none !important;
         }
 
         .day-title {
             flex: unset;
-            font-size: 1.4rem;
-            margin-bottom: 5px;
+            font-size: 1.5rem; /* keep legible on phones */
+            margin-bottom: 8px !important;
         }
 
         .day-description {
@@ -1315,7 +1315,7 @@ section.animate-on-scroll.is-visible {
         }
 
         .day-description h3 {
-            font-size: 0.8rem;
+            font-size: 0.95rem;
             color: var(--text-color);
         }
 
@@ -1361,6 +1361,29 @@ section.animate-on-scroll.is-visible {
         margin-left: 0 !important;
         padding: 0 12px !important;
         font-size: clamp(0.9rem, 4vw, 1.05rem) !important;
+    }
+}
+
+/* Very small screens: make itinerary single column and increase spacing for touch targets */
+@media (max-width: 480px) {
+    .itinerary-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        padding: 10px !important;
+    }
+
+    .itinerary-day-row {
+        padding: 16px !important;
+        min-height: auto !important;
+    }
+
+    .day-title {
+        font-size: 1.6rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .day-description h3 {
+        font-size: 1rem !important;
     }
 }
 
