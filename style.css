@@ -1537,3 +1537,56 @@ section.animate-on-scroll.is-visible {
     font-size: 0.95rem !important;
 }
 
+/* Mobile-specific: Hide ALL day descriptions on screens < 920px */
+@media (max-width: 920px) {
+    /* Hide all paragraph descriptions in itinerary on mobile */
+    #what-we-offer-grid .itinerary-day-row .day-description p,
+    .luxury-package-section .itinerary-day-row .day-description p,
+    .itinerary-day-row .day-description p {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    /* Also hide Day 9 specific classes */
+    #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description p.original,
+    #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description p.mobile-summary,
+    .itinerary-day-row[data-day="9"] .day-description p.original,
+    .itinerary-day-row[data-day="9"] .day-description p.mobile-summary {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    /* Make day titles and emoji headers more prominent since they're now the main info */
+    #what-we-offer-grid .itinerary-day-row .day-description h3,
+    .luxury-package-section .itinerary-day-row .day-description h3,
+    .itinerary-day-row .day-description h3 {
+        font-size: 1.0rem !important;
+        text-align: center !important;
+        margin: 8px 0 0 0 !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+    }
+
+    /* Ensure day boxes are properly sized for mobile */
+    #what-we-offer-grid .itinerary-day-row,
+    .luxury-package-section .itinerary-day-row,
+    .itinerary-day-row {
+        min-height: 90px !important;
+        padding: 12px 8px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    /* Day title styling for mobile */
+    #what-we-offer-grid .day-title,
+    .luxury-package-section .day-title,
+    .day-title {
+        font-size: 1.6rem !important;
+        margin-bottom: 6px !important;
+        text-align: center !important;
+        font-weight: bold !important;
+    }
+}
+
