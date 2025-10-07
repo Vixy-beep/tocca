@@ -1187,6 +1187,31 @@ section.animate-on-scroll.is-visible {
         font-size: 1.1rem;
     }
 
+    /* Hide descriptions in mobile, only show day title and emoji/title */
+    .itinerary-day-row .day-description p {
+        display: none !important;
+    }
+
+    /* Make the h3 in day-description more prominent since it's now the main info */
+    .day-description h3 {
+        font-size: 1.2rem !important;
+        margin: 5px 0 0 0 !important;
+        font-weight: 600 !important;
+    }
+
+    /* Adjust day-row padding and spacing for mobile */
+    .itinerary-day-row {
+        padding: 16px 12px !important;
+        min-height: 100px !important;
+        justify-content: center !important;
+    }
+
+    /* Center the day title better */
+    .day-title {
+        font-size: 2rem !important;
+        margin-bottom: 5px !important;
+    }
+
     .why-us-container {
         flex-direction: column;
     }
@@ -1535,5 +1560,42 @@ section.animate-on-scroll.is-visible {
 #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description h3,
 .itinerary-day-row[data-day="9"] .day-description h3 {
     font-size: 0.95rem !important;
+}
+
+/* Mobile-specific overrides for itinerary - ensure descriptions are hidden */
+@media (max-width: 920px) {
+    /* Force hide all day descriptions on mobile */
+    #what-we-offer-grid .itinerary-day-row .day-description p,
+    .luxury-package-section .itinerary-day-row .day-description p {
+        display: none !important;
+    }
+
+    /* Make day titles more prominent on mobile */
+    #what-we-offer-grid .itinerary-day-row .day-description h3,
+    .luxury-package-section .itinerary-day-row .day-description h3 {
+        font-size: 1.1rem !important;
+        text-align: center !important;
+        margin: 8px 0 0 0 !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Ensure day boxes are properly sized for mobile */
+    #what-we-offer-grid .itinerary-day-row,
+    .luxury-package-section .itinerary-day-row {
+        min-height: 90px !important;
+        padding: 12px 8px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    /* Day title styling for mobile */
+    #what-we-offer-grid .day-title,
+    .luxury-package-section .day-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 6px !important;
+        text-align: center !important;
+    }
 }
 
