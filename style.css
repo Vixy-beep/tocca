@@ -1565,25 +1565,37 @@ section.animate-on-scroll.is-visible {
 /* Specific styling for Day 6 to make typography smaller */
 #what-we-offer-grid .itinerary-day-row[data-day="6"] .day-description p,
 .itinerary-day-row[data-day="6"] .day-description p {
-    font-size: 0.55rem !important;
-    line-height: 1.0 !important;
+    font-size: 0.85rem !important;
+    line-height: 1.3 !important;
 }
 
 #what-we-offer-grid .itinerary-day-row[data-day="6"] .day-description h3,
 .itinerary-day-row[data-day="6"] .day-description h3 {
-    font-size: 0.65rem !important;
+    font-size: 0.95rem !important;
+}
+
+/* Additional height for Day 6 box */
+#what-we-offer-grid .itinerary-day-row[data-day="6"],
+.itinerary-day-row[data-day="6"] {
+    min-height: 280px !important;
 }
 
 /* Specific styling for Day 7 to make typography smaller */
 #what-we-offer-grid .itinerary-day-row[data-day="7"] .day-description p,
 .itinerary-day-row[data-day="7"] .day-description p {
-    font-size: 0.55rem !important;
-    line-height: 1.0 !important;
+    font-size: 0.85rem !important;
+    line-height: 1.3 !important;
 }
 
 #what-we-offer-grid .itinerary-day-row[data-day="7"] .day-description h3,
 .itinerary-day-row[data-day="7"] .day-description h3 {
-    font-size: 0.65rem !important;
+    font-size: 0.95rem !important;
+}
+
+/* Additional height for Day 7 box */
+#what-we-offer-grid .itinerary-day-row[data-day="7"],
+.itinerary-day-row[data-day="7"] {
+    min-height: 280px !important;
 }
 
 /* Mobile-specific: Hide ALL day descriptions on screens < 920px */
