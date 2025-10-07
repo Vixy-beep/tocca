@@ -1565,25 +1565,25 @@ section.animate-on-scroll.is-visible {
 /* Specific styling for Day 6 to make typography smaller */
 #what-we-offer-grid .itinerary-day-row[data-day="6"] .day-description p,
 .itinerary-day-row[data-day="6"] .day-description p {
-    font-size: 0.65rem !important;
-    line-height: 1.1 !important;
+    font-size: 0.62rem !important;
+    line-height: 1.05 !important;
 }
 
 #what-we-offer-grid .itinerary-day-row[data-day="6"] .day-description h3,
 .itinerary-day-row[data-day="6"] .day-description h3 {
-    font-size: 0.75rem !important;
+    font-size: 0.71rem !important;
 }
 
 /* Specific styling for Day 7 to make typography smaller */
 #what-we-offer-grid .itinerary-day-row[data-day="7"] .day-description p,
 .itinerary-day-row[data-day="7"] .day-description p {
-    font-size: 0.65rem !important;
-    line-height: 1.1 !important;
+    font-size: 0.62rem !important;
+    line-height: 1.05 !important;
 }
 
 #what-we-offer-grid .itinerary-day-row[data-day="7"] .day-description h3,
 .itinerary-day-row[data-day="7"] .day-description h3 {
-    font-size: 0.75rem !important;
+    font-size: 0.71rem !important;
 }
 
 /* Mobile-specific: Hide ALL day descriptions on screens < 920px */
