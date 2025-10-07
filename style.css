@@ -43,7 +43,7 @@
     display: block !important;
     color: rgba(255,255,255,0.95) !important;
     font-style: italic !important;
-    font-size: 0.98rem !important;
+    font-size: 0.85rem !important;
     margin-top: 6px !important;
 }
 
@@ -1503,7 +1503,7 @@ section.animate-on-scroll.is-visible {
     display: block !important;
     color: rgba(255,255,255,0.95) !important;
     font-style: italic !important;
-    font-size: 0.98rem !important;
+    font-size: 0.85rem !important;
     margin-top: 6px !important;
 }
 
