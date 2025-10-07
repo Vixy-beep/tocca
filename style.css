@@ -109,7 +109,7 @@ h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #FFF;
+    color: #0F0F0F;
 }
 
 section.animate-on-scroll {
@@ -1187,6 +1187,31 @@ section.animate-on-scroll.is-visible {
         font-size: 1.1rem;
     }
 
+    /* Hide descriptions in mobile, only show day title and emoji/title */
+    .itinerary-day-row .day-description p {
+        display: none !important;
+    }
+
+    /* Make the h3 in day-description more prominent since it's now the main info */
+    .day-description h3 {
+        font-size: 1.2rem !important;
+        margin: 5px 0 0 0 !important;
+        font-weight: 600 !important;
+    }
+
+    /* Adjust day-row padding and spacing for mobile */
+    .itinerary-day-row {
+        padding: 16px 12px !important;
+        min-height: 100px !important;
+        justify-content: center !important;
+    }
+
+    /* Center the day title better */
+    .day-title {
+        font-size: 2rem !important;
+        margin-bottom: 5px !important;
+    }
+
     .why-us-container {
         flex-direction: column;
     }
@@ -1510,7 +1535,7 @@ section.animate-on-scroll.is-visible {
     }
     #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description .mobile-summary {
         display: block !important;
-        color: var(--text-color) !important;
+        color: #FFF
         font-style: italic !important;
         margin-top: 6px !important;
     }
