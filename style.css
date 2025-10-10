@@ -411,15 +411,15 @@ section.animate-on-scroll.is-visible {
 
 #why-tocca-amalfi .why-us-text-block {
     order: 0;
-    flex: 1 1 52%;
+    flex: 1 1 45%;
     min-width: 280px;
     text-align: left;
 }
 
 #why-tocca-amalfi .why-us-image-grid {
     order: 1;
-    flex: 1 1 40%;
-    min-width: 260px;
+    flex: 1 1 55%;
+    min-width: 320px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
@@ -547,8 +547,17 @@ section.animate-on-scroll.is-visible {
     box-shadow: none !important;
 }
 
-/* Make toccaowner image 20% larger in desktop view only */
+/* Make toccaowner image 20% larger and wider in desktop view only */
 @media (min-width: 921px) {
+    #why-tocca-amalfi .why-us-image-grid {
+        flex: 1 1 60% !important;
+        min-width: 400px !important;
+    }
+    
+    #why-tocca-amalfi .why-us-text-block {
+        flex: 1 1 35% !important;
+    }
+    
     #why-tocca-amalfi .why-us-image-grid img {
         height: 300px !important;
         transform: scale(1.2) !important;
