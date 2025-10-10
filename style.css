@@ -495,7 +495,7 @@ section.animate-on-scroll.is-visible {
     height: 250px !important;
     object-fit: cover !important;
     border-radius: 8px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+    box-shadow: none !important;
 }
 
 #what-we-offer .why-us-image-grid img:first-child,
@@ -529,6 +529,7 @@ section.animate-on-scroll.is-visible {
         height: 300px !important;
         border-radius: 12px !important;
         margin: 0 auto !important;
+        box-shadow: none !important;
     }
 }
 
@@ -538,7 +539,14 @@ section.animate-on-scroll.is-visible {
 }
 
 /* Force the same image styling for Why Choose Us as used in What We Offer (scoped) */
-#why-tocca-amalfi .why-us-image-grid img,
+#why-tocca-amalfi .why-us-image-grid img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
 #what-we-offer .why-us-image-grid img {
     width: 100% !important;
     height: 100% !important;
