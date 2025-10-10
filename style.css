@@ -514,6 +514,22 @@ section.animate-on-scroll.is-visible {
     #why-tocca-amalfi .why-us-image-grid {
         grid-template-columns: 1fr 1fr !important;
     }
+
+    /* Special styling for toccaowner image in mobile - make it centered and prominent */
+    #why-tocca-amalfi .why-us-image-grid {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 20px 0 !important;
+    }
+
+    #why-tocca-amalfi .why-us-image-grid img {
+        width: 80% !important;
+        max-width: 300px !important;
+        height: 300px !important;
+        border-radius: 12px !important;
+        margin: 0 auto !important;
+    }
 }
 
 /* Ensure 'What We Offer' heading is black without changing other sections */
