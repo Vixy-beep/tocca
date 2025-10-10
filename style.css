@@ -393,7 +393,7 @@ section.animate-on-scroll.is-visible {
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .why-us-image-grid img:first-child {
@@ -495,7 +495,7 @@ section.animate-on-scroll.is-visible {
     height: 250px !important;
     object-fit: cover !important;
     border-radius: 8px !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
 }
 
 #what-we-offer .why-us-image-grid img:first-child,
@@ -528,7 +528,7 @@ section.animate-on-scroll.is-visible {
     height: 100% !important;
     object-fit: cover !important;
     border-radius: 8px !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
 }
 
 #why-tocca-amalfi .why-us-image-grid img:first-child,
