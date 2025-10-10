@@ -547,6 +547,15 @@ section.animate-on-scroll.is-visible {
     box-shadow: none !important;
 }
 
+/* Make toccaowner image 20% larger in desktop view only */
+@media (min-width: 921px) {
+    #why-tocca-amalfi .why-us-image-grid img {
+        height: 300px !important;
+        transform: scale(1.2) !important;
+        transform-origin: center !important;
+    }
+}
+
 #what-we-offer .why-us-image-grid img {
     width: 100% !important;
     height: 100% !important;
