@@ -510,7 +510,11 @@ section.animate-on-scroll.is-visible {
         flex-direction: column !important;
     }
 
-    #what-we-offer .why-us-image-grid,
+    #what-we-offer .why-us-image-grid {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr !important;
+    }
+    
     #why-tocca-amalfi .why-us-image-grid {
         grid-template-columns: 1fr 1fr !important;
     }
@@ -536,6 +540,69 @@ section.animate-on-scroll.is-visible {
 /* Ensure 'What We Offer' heading is black without changing other sections */
 #what-we-offer h2 {
     color: var(--text-color) !important;
+}
+
+/* NUCLEAR OPTION - OVERRIDE EVERYTHING FOR WHAT WE OFFER 2x2 GRID */
+#what-we-offer .why-us-image-grid {
+    display: grid !important;
+    grid-template-columns: 180px 180px !important;
+    grid-template-rows: 150px 150px !important;
+    gap: 12px !important;
+    width: 372px !important;
+    height: 312px !important;
+    flex: none !important;
+    min-width: unset !important;
+    justify-content: center !important;
+    align-content: center !important;
+    margin: 0 auto !important;
+}
+
+/* FORCE EACH IMAGE TO EXACT DIMENSIONS */
+#what-we-offer .why-us-image-grid img {
+    width: 180px !important;
+    height: 150px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+    display: block !important;
+    flex: none !important;
+}
+
+/* FORCE GRID POSITIONS - NO AREAS, DIRECT POSITIONING */
+#what-we-offer .why-us-image-grid img:nth-child(1) { 
+    grid-column: 1 !important; 
+    grid-row: 1 !important; 
+}
+#what-we-offer .why-us-image-grid img:nth-child(2) { 
+    grid-column: 2 !important; 
+    grid-row: 1 !important; 
+}
+#what-we-offer .why-us-image-grid img:nth-child(3) { 
+    grid-column: 1 !important; 
+    grid-row: 2 !important; 
+}
+#what-we-offer .why-us-image-grid img:nth-child(4) { 
+    grid-column: 2 !important; 
+    grid-row: 2 !important; 
+}
+
+/* Specific styling for What We Believe - single vespa image 19% larger */
+#what-we-believe .why-us-image-grid {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+#what-we-believe .why-us-image-grid img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 400px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+    transform: scale(1.19) !important;
+    transform-origin: center !important;
 }
 
 /* Force the same image styling for Why Choose Us as used in What We Offer (scoped) */
@@ -564,10 +631,15 @@ section.animate-on-scroll.is-visible {
     box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
 }
 
-#why-tocca-amalfi .why-us-image-grid img:first-child,
-#what-we-offer .why-us-image-grid img:first-child {
+#why-tocca-amalfi .why-us-image-grid img:first-child {
     grid-row: span 2 !important;
     height: calc(100% - 7.5px) !important;
+}
+
+/* OVERRIDE: What We Offer needs 2x2 grid, NOT spanning rows */
+#what-we-offer .why-us-image-grid img:first-child {
+    grid-row: 1 !important;
+    height: 150px !important;
 }
 
 .offer-list {
@@ -1566,7 +1638,7 @@ section.animate-on-scroll.is-visible {
     }
     #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description .mobile-summary {
         display: block !important;
-        color: #FFF
+        color: #FFF;
         font-style: italic !important;
         margin-top: 6px !important;
     }
