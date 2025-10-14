@@ -587,7 +587,7 @@ section.animate-on-scroll.is-visible {
     grid-row: 2 !important; 
 }
 
-/* Specific styling for What We Believe - single vespa image 19% larger */
+/* Specific styling for What We Believe - single vespa image COMPACT like What We Offer */
 #what-we-believe .why-us-image-grid {
     display: flex !important;
     justify-content: center !important;
@@ -596,30 +596,26 @@ section.animate-on-scroll.is-visible {
 
 #what-we-believe .why-us-image-grid img {
     width: 100% !important;
-    height: 100% !important;
+    height: 250px !important;
     max-width: 400px !important;
     object-fit: cover !important;
     border-radius: 8px !important;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
-    transform: scale(1.19) !important;
-    transform-origin: center !important;
 }
 
-/* Force the same image styling for Why Choose Us as used in What We Offer (scoped) */
+/* Force the same image styling for Why Choose Us as used in What We Offer (scoped) - COMPACT */
 #why-tocca-amalfi .why-us-image-grid img {
     width: 100% !important;
-    height: 100% !important;
+    height: 250px !important;
     object-fit: cover !important;
     border-radius: 8px !important;
-    box-shadow: none !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
 }
 
-/* Make toccaowner image 20% larger in desktop view only */
+/* Remove the 20% larger scaling for desktop */
 @media (min-width: 921px) {
     #why-tocca-amalfi .why-us-image-grid img {
-        height: 300px !important;
-        transform: scale(1.2) !important;
-        transform-origin: center !important;
+        height: 250px !important;
     }
 }
 
@@ -2237,47 +2233,49 @@ section.animate-on-scroll.is-visible {
 .timeline-item:nth-child(11) { transition-delay: 1.1s; }
 
 /* ========================================
-   LEMON MENU (replacing WhatsApp)
+   CONTACT US MENU (bottom right)
 ======================================== */
 
-.lemon-menu {
+.contact-menu {
     position: fixed;
-    top: 50%;
-    left: 25px;
-    transform: translateY(-50%);
+    bottom: 25px;
+    right: 25px;
     z-index: 1001;
 }
 
-.lemon-toggle {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #f1c40f, #f39c12);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(241, 196, 15, 0.4);
-    transition: all 0.3s ease;
+.contact-toggle {
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, var(--primary-color), #3a8a82);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(74, 154, 146, 0.4);
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
-.lemon-toggle:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(241, 196, 15, 0.5);
+.contact-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 154, 146, 0.5);
 }
 
-.lemon-toggle img {
-    width: 32px;
-    height: 32px;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+.contact-toggle i {
+    font-size: 1.2rem;
 }
 
-.lemon-options {
+.contact-text {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-options {
     position: absolute;
     bottom: 70px;
-    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -2287,13 +2285,13 @@ section.animate-on-scroll.is-visible {
     transition: all 0.3s ease;
 }
 
-.lemon-menu.active .lemon-options {
+.contact-menu.active .contact-options {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
 }
 
-.lemon-option {
+.contact-option {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -2307,42 +2305,46 @@ section.animate-on-scroll.is-visible {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: all 0.2s ease;
     white-space: nowrap;
-    min-width: 100px;
+    min-width: 120px;
 }
 
-.lemon-option:hover {
+.contact-option:hover {
     background: #f8f9fa;
-    transform: translateX(5px);
+    transform: translateX(-5px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-.lemon-option i {
+.contact-option i {
     font-size: 1.1rem;
     width: 20px;
     text-align: center;
 }
 
-.lemon-option:nth-child(1) i { color: #e74c3c; } /* Email */
-.lemon-option:nth-child(2) i { color: #25d366; } /* WhatsApp */
-.lemon-option:nth-child(3) i { color: #3498db; } /* Phone */
+.contact-option:nth-child(1) i { color: #e74c3c; } /* Email */
+.contact-option:nth-child(2) i { color: #25d366; } /* WhatsApp */
+.contact-option:nth-child(3) i { color: #3498db; } /* Phone */
 
-/* Mobile Lemon Menu */
+/* Mobile Contact Menu */
 @media (max-width: 768px) {
-    .lemon-menu {
-        left: 15px;
+    .contact-menu {
+        bottom: 20px;
+        right: 20px;
     }
     
-    .lemon-toggle {
-        width: 50px;
-        height: 50px;
+    .contact-toggle {
+        padding: 10px 16px;
+        font-size: 0.9rem;
     }
     
-    .lemon-toggle img {
-        width: 26px;
-        height: 26px;
+    .contact-toggle i {
+        font-size: 1rem;
     }
     
-    .lemon-option {
+    .contact-text {
+        font-size: 0.85rem;
+    }
+    
+    .contact-option {
         padding: 8px 12px;
         font-size: 0.8rem;
     }
