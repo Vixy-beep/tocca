@@ -2354,3 +2354,19 @@ section.animate-on-scroll.is-visible {
     right: 25px;
 }
 
+/* === FINAL OVERRIDE: Itinerary tiles show only Day + emoji + title on all screen sizes === */
+#what-we-offer-grid .itinerary-day-row .day-description p {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Match original dark section background for itinerary so white text is legible */
+#what-we-offer-grid.itinerary-section {
+    background-color: var(--primary-color) !important;
+    color: var(--light-text-color) !important;
+}
+
+#what-we-offer-grid h2 {
+    color: var(--light-text-color) !important;
+}
+

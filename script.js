@@ -144,67 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // --- Mini Chatbot (simple rule-based) ---
-    const chatbotFloat = document.querySelector('.chatbot-float');
-    const chatbotPanel = document.getElementById('chatbot-panel');
-    const chatbotClose = document.getElementById('chatbot-close');
-    const chatbotForm = document.getElementById('chatbot-form');
-    const chatbotMessages = document.getElementById('chatbot-messages');
-
-    function botReply(text) {
-        const p = document.createElement('p');
-        p.textContent = text;
-        p.style.background = '#f1f1f1';
-        p.style.padding = '8px';
-        p.style.borderRadius = '6px';
-        chatbotMessages.appendChild(p);
-        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-    }
-
-    function userSay(text) {
-        const p = document.createElement('p');
-        p.textContent = text;
-        p.style.textAlign = 'right';
-        chatbotMessages.appendChild(p);
-    }
-
-    chatbotFloat && chatbotFloat.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (chatbotPanel.getAttribute('aria-hidden') === 'false') {
-            chatbotPanel.setAttribute('aria-hidden', 'true');
-        } else {
-            chatbotPanel.setAttribute('aria-hidden', 'false');
-            botReply('Hi! I can answer simple questions about the tour. Try: "dates", "itinerary", "price", "contact"');
-        }
-    });
-
-    chatbotClose && chatbotClose.addEventListener('click', () => {
-        chatbotPanel.setAttribute('aria-hidden', 'true');
-    });
-
-    chatbotForm && chatbotForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const input = document.getElementById('chatbot-input');
-        const q = input.value.trim().toLowerCase();
-        if (!q) return;
-        userSay(input.value.trim());
-        input.value = '';
-
-        // Simple rule-based answers
-        if (q.includes('date') || q.includes('when')) {
-            botReply('Upcoming dates: May 15-22, June 12-19, July 10-17.');
-        } else if (q.includes('price') || q.includes('cost')) {
-            botReply('Prices depend on season and room choice. Contact us at info@toccaamalfi.com for details.');
-        } else if (q.includes('itiner') || q.includes('day')) {
-            botReply('The 10-day journey includes Naples, Pompeii, Capri, Positano, Ravello and local experiences. Click any day in the itinerary grid to learn more.');
-        } else if (q.includes('contact') || q.includes('email')) {
-            botReply('Email: info@toccaamalfi.com — or press the WhatsApp button to message us.');
-        } else {
-            botReply('Sorry, I can only answer basic questions. Try "dates", "price", "itinerary" or "contact".');
-        }
-    });
-
-    // --- FALLBACK: ensure Day 9 shows mobile-summary on small screens ---
+    // --- FALLBACK: ensure Day 9 shows mobile-summary on small screens (kept harmless) ---
     function ensureDay9MobileSummary() {
         try {
             var mq = window.matchMedia('(max-width: 920px)');
@@ -229,53 +169,5 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', ensureDay9MobileSummary);
     window.addEventListener('orientationchange', ensureDay9MobileSummary);
 
-    // --- INTERACTIVE TIMELINE ANIMATIONS ---
-    function initTimelineAnimations() {
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        
-        const timelineObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('animate');
-                    }, 100);
-                    timelineObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            root: null,
-            threshold: 0.2
-        });
-
-        timelineItems.forEach(item => {
-            timelineObserver.observe(item);
-        });
-
-        // Add click interactions for timeline items
-        timelineItems.forEach((item, index) => {
-            item.addEventListener('click', function() {
-                const dayNumber = index + 1;
-                // Optional: Navigate to individual day pages if they exist
-                // window.location.href = `dia${dayNumber}.html`;
-                
-                // For now, just add a subtle feedback animation
-                this.style.transform = 'scale(0.98)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 150);
-            });
-
-            // Add hover sound effect (optional)
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-3px)';
-            });
-
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = '';
-            });
-        });
-    }
-
-    // Initialize timeline animations
-    initTimelineAnimations();
+    // Timeline removed
 });
