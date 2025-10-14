@@ -4,20 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tocca Amalfi                              </a>
-                <a class="itinerary-day-row animate-on-scroll day-link" href="dia7.html" data-day="7" style="background-image: url('imagenes/day7.jpg');">
-                    <div class="day-title">Day 7</div>
-                    <div class="day-description">
-                        <h3>🌤 The Heart of Amalfi</h3>
-                        <p>Spend the day in Amalfi town, visiting the grand cathedral and strolling the medieval alleys. Join a lemon grove tour, learning about the region's prized sfusato lemons. Taste limoncello and lemon-infused treats. Conclude with a traditional Amalfitano dinner, celebrating the coast's most iconic fruit.</p>
-                    </div>
-                </a>                <a class="itinerary-day-row animate-on-scroll day-link" href="dia6.html" data-day="6" style="background-image: url('imagenes/day6.jpg');">
-                    <div class="day-title">Day 6</div>
-                    <div class="day-description">
-                        <h3>🍋 Positano's Magic</h3>
-                        <p>Morning at leisure. In the afternoon, head to Positano, with its pastel houses cascading into the sea. Meet a local artisan for a ceramic-painting experience, creating your own souvenir. End the day with a candlelit dinner by the beach in Positano, framed by twinkling lights above.</p>
-                    </div>
-                </a>i Coast Tour</title>
+    <title>Tocca Amalfi Coast Tour</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,28 +16,26 @@
 
 <body>
 
-    <a href="https://wa.me/1234567890?text=Hello!%20I'd%20like%20to%20know%20more%20about%20the%20tours."
-        target="_blank" class="whatsapp-float">
-        <img src="imagenes/whatsapp-logo.svg" alt="WhatsApp" class="whatsapp-svg-icon">
-    </a>
-
-    <!-- Chatbot float (left side) -->
-    <a href="#" class="chatbot-float" aria-label="Open chatbot">
-        <img src="imagenes/tocca_amalfi.png" alt="Chatbot">
-    </a>
-
-    <!-- Chatbot panel -->
-    <aside id="chatbot-panel" class="chatbot-panel" aria-hidden="true">
-        <header class="chatbot-header">
-            <strong>Mini Chat</strong>
-            <button id="chatbot-close" aria-label="Close">×</button>
-        </header>
-        <div class="chatbot-messages" id="chatbot-messages"></div>
-        <form id="chatbot-form" class="chatbot-form">
-            <input id="chatbot-input" placeholder="Ask about the tour (e.g. 'dates', 'price')" autocomplete="off">
-            <button type="submit">Send</button>
-        </form>
-    </aside>
+    <!-- LEMON MENU BUTTON (replacing WhatsApp) -->
+    <div id="lemon-menu" class="lemon-menu">
+        <button class="lemon-toggle" onclick="toggleLemonMenu()">
+            <img src="imagenes/lemon.png" alt="Menu Options">
+        </button>
+        <div class="lemon-options">
+            <a href="mailto:info@toccaamalfi.com" class="lemon-option" title="Email Us">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <a href="https://wa.me/1234567890?text=Hello!%20I'd%20like%20to%20know%20more%20about%20the%20tours." target="_blank" class="lemon-option" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="tel:+1234567890" class="lemon-option" title="Call Us">
+                <i class="fas fa-phone"></i>
+                <span>Call</span>
+            </a>
+        </div>
+    </div>
 
     <header class="main-header">
         <nav class="navbar">
@@ -59,7 +44,7 @@
             </a>
             <div class="nav-menu">
                 <a href="#why-tocca-amalfi" class="nav-link">Why Us?</a>
-                <a href="#what-we-offer-grid" class="nav-link">Itinerary</a>
+                <a href="#interactive-timeline" class="nav-link">Itinerary</a>
                 <a href="#upcoming-dates" class="nav-link">Dates</a>
                 <a href="#inclusions" class="nav-link">Inclusions</a>
                 <a href="#testimonials" class="nav-link">Testimonials</a>
@@ -80,7 +65,7 @@
             <h2 class="hero-subtitle">Amalfi Coast</h2>
             <h3 class="hero-description">Touch the soul of the coast.</h3>
             <p class="slogan">Your coastal adventure starts here.</p>
-            <a href="#what-we-offer-grid" class="cta-button">Learn More</a>
+            <a href="#interactive-timeline" class="cta-button">Learn More</a>
         </div>
     </header>
 
@@ -108,7 +93,7 @@
             <h2>What We Offer</h2>
             <div class="why-us-container">
                 <div class="why-us-text-block">
-                    <h3>At Tocca Amalfi, we don’t believe in cookie-cutter tours. We design moments — deeply local,
+                    <h3>At Tocca Amalfi, we don't believe in cookie-cutter tours. We design moments — deeply local,
                         thoughtfully curated, and full of soul.</h3>
                     <p>From sipping limoncello in lemon groves to sailing into the sunset with a glass of wine… From
                         winding Vespa rides through cliffside villages to private cooking lessons in family kitchens…
@@ -135,9 +120,9 @@
                 <div class="why-us-text-block">
                     <h3>Travel should move you. It should touch your senses, tell you a story, and make you feel alive.
                     </h3>
-                    <p>This isn’t about visiting a destination. It’s about becoming part of it.</p>
+                    <p>This isn't about visiting a destination. It's about becoming part of it.</p>
                     <p>This is Tocca Amalfi. Travel, reimagined — for those who want to feel something deeper.</p>
-                    <p><strong>Let’s create something beautiful together.</strong></p>
+                    <p><strong>Let's create something beautiful together.</strong></p>
                 </div>
                 <div class="why-us-image-grid">
                     <img src="imagenes/vespa.jpg" alt="Riding a Vespa through hidden cliffside roads">
@@ -145,90 +130,146 @@
             </div>
         </section>
 
-    <section id="what-we-offer-grid" class="luxury-package-section animate-on-scroll">
-            <h2>The 11-Day Journey</h2>
-            <p class="package-price">An unforgettable itinerary along the coast</p>
-            <div class="itinerary-grid">
-                <a class="itinerary-day-row animate-on-scroll day-link" href="dia1.html" style="background-image: url('imagenes/day1.jpg');">
-                    <div class="day-title">Day 1</div>
-                    <div class="day-description">
-                        <h3>🇮🇹 Departure</h3>
-                        <p>Your Italian escape begins! Board your flight and get ready to immerse yourself in the sun-kissed beauty of the Amalfi Coast.</p>
-                    </div>
-                </a>
-                <a class="itinerary-day-row animate-on-scroll day-link" href="dia2.html" style="background-image: url('imagenes/day2.jpg');">
-                    <div class="day-title">Day 2</div>
-                    <div class="day-description">
-                        <h3>🏛 Arrival & Welcome</h3>
-                        <p>Arrive in Naples, where a private driver whisks you along the stunning coastal road. Check into your hotel overlooking the sea. In the evening, gather for a welcome cocktail and dinner on a panoramic terrace — the first taste of la dolce vita.</p>
-                    </div>
-                </a>
-                <a class="itinerary-day-row animate-on-scroll day-link" href="dia3.html" style="background-image:  url('imagenes/day3.jpg');">
-                    <div class="day-title">Day 3</div>
-                    <div class="day-description">
-                        <h3>🍃 Flavors of the Coast</h3>
-                        <p>A slow morning to rest and explore at leisure. In the afternoon, roll up your sleeves for a hands-on cooking class on a cliffside terrace. Prepare regional recipes and toast with wine as the sun sets — your first real taste of the Amalfi way of life.</p>
-                    </div>
-                </a>
-                <a class="itinerary-day-row animate-on-scroll day-link" href="dia4.html" style="background-image: url('imagenes/day4.jpg');">
-                    <div class="day-title">Day 4</div>
-                    <div class="day-description">
-                        <h3>🛥 Pompeii & Pizza in the Hills</h3>
-                        <p>Morning free to relax. In the afternoon, step back in time with a guided tour of the ancient ruins of Pompeii, frozen in time since AD 79. Evening: head to Tramonti, birthplace of many master pizzaioli, for a traditional pizza-making dinner.</p>
-                    </div>
-                </a>
-                <a class="itinerary-day-row animate-on-scroll day-link" href="dia5.html" style="background-image:  url('imagenes/day5.jpg');">
-                    <div class="day-title">Day 5</div>
-                    <div class="day-description">
-                        <h3>🌸 Enchanting Capri</h3>
-                        <p>Sail to the legendary island of Capri. Explore the Blue Grotto, shop the elegant boutiques, and enjoy a seaside swim. As twilight falls, linger for a romantic dinner in Capri, savoring fresh seafood and island wines before returning to the mainland.</p>
-                    </div>
-                </a>
-                <a class="itinerary-day-row animate-on-scroll day-link" href="dia6.html" style="background-image: url('imagenes/day6.jpg');">
-                    <div class="day-title">Day 6</div>
-                    <div class="day-description">
-                        <h3>🍋 Positano’s Magic</h3>
-                        <p>Morning at leisure. In the afternoon, head to Positano, with its pastel houses cascading into the sea. Meet a local artisan for a ceramic-painting experience, creating your own souvenir. End the day with a candlelit dinner by the beach in Positano, framed by twinkling lights above.</p>
-                    </div>
-                </a>
-                <a class="itinerary-day-row animate-on-scroll day-link" href="dia7.html" style="background-image: url('imagenes/day7.jpg');">
-                    <div class="day-title">Day 7</div>
-                    <div class="day-description">
-                        <h3>🌤 The Heart of Amalfi</h3>
-                        <p>Spend the day in Amalfi town, visiting the grand cathedral and strolling the medieval alleys. Join a lemon grove tour, learning about the region’s prized sfusato lemons. Taste limoncello and lemon-infused treats. Conclude with a traditional Amalfitano dinner, celebrating the coast’s most iconic fruit.</p>
-                    </div>
-                </a>
-                <a class="itinerary-day-row animate-on-scroll day-link" href="dia8.html" style="background-image: url('imagenes/day8.jpg');">
-                    <div class="day-title">Day 8</div>
-                    <div class="day-description">
-                        <h3>🏨 La Dolce Far Niente</h3>
-                        <p>A full free day to enjoy as you wish — lounge by the beach, indulge in a spa treatment, or wander the village piazzas.</p>
-                    </div>
-                </a>
-                <a class="itinerary-day-row animate-on-scroll day-link" href="dia9.html" data-day="9" style="background-image:  url('imagenes/day9.jpg');">
-                    <div class="day-title">Day 9</div>
-                    <div class="day-description">
-                        <h3>🗿 Ravello's Romance</h3>
-                        <p class="original">Morning free. In the afternoon, ascend to Ravello, a jewel suspended between sea and sky. Stroll the gardens of Villa Rufolo or Villa Cimbrone, with views that inspired Wagner. Evening: a refined dinner in Ravello, with the option of attending a private concert or aperitivo on the Terrazza dell’Infinito.</p>
-                        <p class="mobile-summary" style="display:none;">Ascend to Ravello: stroll Villa Rufolo & Cimbrone; evening dinner with optional concert or aperitivo on the Terrazza dell’Infinito.</p>
-                    </div>
-                </a>
-                <a class="itinerary-day-row animate-on-scroll day-link" href="dia10.html" style="background-image: url('imagenes/day10.jpg');">
-                    <div class="day-title">Day 10</div>
-                    <div class="day-description">
-                        <h3>🍝 Wines of the Hills</h3>
-                        <p>A full-day immersion in the vineyards of Tramonti. Wander between vines, learn the art of local winemaking, and enjoy a rustic wine-pairing lunch in the countryside. Return to the coast for a farewell toast under the stars.</p>
-                    </div>
-                </a>
-                <a class="itinerary-day-row animate-on-scroll day-link" href="dia11.html" style="background-image: url('imagenes/day11.jpg');">
-                    <div class="day-title">Day 11</div>
-                    <div class="day-description">
-                        <h3>👋 Arrivederci</h3>
-                        <p>Your unforgettable journey comes to an end. After breakfast, we'll transfer you to Naples airport, but the memories of the Amalfi Coast will stay with you forever. Until we meet again!</p>
-                    </div>
-                </a>
+    <section id="interactive-timeline" class="timeline-section animate-on-scroll">
+        <h2>Your Journey Through Time</h2>
+        <p class="timeline-subtitle">Explore each magical moment of your Amalfi Coast adventure</p>
+        
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-item" data-day="1">
+                <div class="timeline-marker">
+                    <div class="marker-icon">🇮🇹</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Day 1</div>
+                    <h3>Departure</h3>
+                    <p>Your Italian escape begins! Board your flight and get ready to immerse yourself in the sun-kissed beauty of the Amalfi Coast.</p>
+                    <div class="timeline-image" style="background-image: url('imagenes/day1.jpg');"></div>
+                </div>
             </div>
-        </section>
+
+            <div class="timeline-item" data-day="2">
+                <div class="timeline-marker">
+                    <div class="marker-icon">🏛</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Day 2</div>
+                    <h3>Arrival & Welcome</h3>
+                    <p>Arrive in Naples, private coastal drive, check-in with sea views. Welcome cocktail and dinner on a panoramic terrace — your first taste of la dolce vita.</p>
+                    <div class="timeline-image" style="background-image: url('imagenes/day2.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-day="3">
+                <div class="timeline-marker">
+                    <div class="marker-icon">🍃</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Day 3</div>
+                    <h3>Flavors of the Coast</h3>
+                    <p>Relaxing morning, then hands-on cooking class on a cliffside terrace. Prepare regional recipes and toast with wine as the sun sets.</p>
+                    <div class="timeline-image" style="background-image: url('imagenes/day3.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-day="4">
+                <div class="timeline-marker">
+                    <div class="marker-icon">🛥</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Day 4</div>
+                    <h3>Pompeii & Pizza</h3>
+                    <p>Guided tour of ancient Pompeii ruins. Evening in Tramonti for traditional pizza-making dinner with master pizzaioli.</p>
+                    <div class="timeline-image" style="background-image: url('imagenes/day4.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-day="5">
+                <div class="timeline-marker">
+                    <div class="marker-icon">🌸</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Day 5</div>
+                    <h3>Enchanting Capri</h3>
+                    <p>Sail to legendary Capri. Explore Blue Grotto, elegant boutiques, seaside swim. Romantic dinner with fresh seafood and island wines.</p>
+                    <div class="timeline-image" style="background-image: url('imagenes/day5.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-day="6">
+                <div class="timeline-marker">
+                    <div class="marker-icon">🍋</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Day 6</div>
+                    <h3>Positano's Magic</h3>
+                    <p>Pastel houses cascading to the sea. Ceramic-painting with local artisan. Candlelit dinner by the beach under twinkling lights.</p>
+                    <div class="timeline-image" style="background-image: url('imagenes/day6.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-day="7">
+                <div class="timeline-marker">
+                    <div class="marker-icon">🌤</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Day 7</div>
+                    <h3>Heart of Amalfi</h3>
+                    <p>Grand cathedral, medieval alleys, lemon grove tour. Taste limoncello and celebrate the coast's iconic fruit with traditional dinner.</p>
+                    <div class="timeline-image" style="background-image: url('imagenes/day7.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-day="8">
+                <div class="timeline-marker">
+                    <div class="marker-icon">🏨</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Day 8</div>
+                    <h3>La Dolce Far Niente</h3>
+                    <p>Full free day — lounge by the beach, indulge in spa treatments, or wander the charming village piazzas at your own pace.</p>
+                    <div class="timeline-image" style="background-image: url('imagenes/day8.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-day="9">
+                <div class="timeline-marker">
+                    <div class="marker-icon">🗿</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Day 9</div>
+                    <h3>Ravello's Romance</h3>
+                    <p>Ascend to Ravello, jewel between sea and sky. Villa Rufolo & Cimbrone gardens. Evening dinner with optional concert on Terrazza dell'Infinito.</p>
+                    <div class="timeline-image" style="background-image: url('imagenes/day9.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-day="10">
+                <div class="timeline-marker">
+                    <div class="marker-icon">🍝</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Day 10</div>
+                    <h3>Wines of the Hills</h3>
+                    <p>Full immersion in Tramonti vineyards. Learn winemaking, rustic wine-pairing lunch in countryside. Farewell toast under the stars.</p>
+                    <div class="timeline-image" style="background-image: url('imagenes/day10.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-day="11">
+                <div class="timeline-marker">
+                    <div class="marker-icon">👋</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Day 11</div>
+                    <h3>Arrivederci</h3>
+                    <p>Journey's end after breakfast. Transfer to Naples airport, but memories of the Amalfi Coast stay forever. Until we meet again!</p>
+                    <div class="timeline-image" style="background-image: url('imagenes/day11.jpg');"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
         <section id="upcoming-dates" class="upcoming-dates-section animate-on-scroll">
             <h2>Upcoming Dates</h2>
@@ -276,7 +317,7 @@
         </section>
 
         <section id="testimonials" class="testimonials-section animate-on-scroll">
-            <h2>What Our Travelers Say</h2>
+            <h2>What Our Guests Say</h2>
             <div class="testimonial-card">
                 <p>"An experience that exceeded all expectations. Tocca Amalfi isn't a tour, it's an immersion into
                     Italian culture. Unforgettable!"</p>
@@ -296,24 +337,217 @@
         </section>
 
     </main>
+
+    <!-- CHATBOT POPUP -->
+    <div id="chatbot-popup" class="chatbot-popup">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <img src="imagenes/toccaowner.jpg" alt="Tocca Amalfi Assistant">
+            </div>
+            <div class="chatbot-info">
+                <h3>Ciao! I'm Sofia 👋</h3>
+                <p>Your Amalfi Coast travel assistant</p>
+            </div>
+            <button class="chatbot-close" onclick="closeChatbot()">✕</button>
+        </div>
+        <div class="chatbot-body">
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="bot-message">
+                    <div class="message-bubble">
+                        Welcome to Tocca Amalfi! ✨ I'm here to help you plan your perfect Italian getaway. What would you like to know about our 11-day journey along the coast?
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbot-input" placeholder="Ask me about dates, activities, pricing..." onkeypress="handleChatEnter(event)">
+                <button class="send-btn" onclick="sendMessage()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22,2 15,22 11,13 2,9"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="chatbot-quick-questions">
+            <button class="quick-btn" onclick="askQuickQuestion('dates')">Available Dates</button>
+            <button class="quick-btn" onclick="askQuickQuestion('pricing')">Pricing Info</button>
+            <button class="quick-btn" onclick="askQuickQuestion('activities')">What's Included</button>
+        </div>
+    </div>
+
+    <!-- CHATBOT TOGGLE BUTTON -->
+    <button id="chatbot-toggle" class="chatbot-toggle" onclick="toggleChatbot()">
+        <div class="chat-icon">💬</div>
+        <div class="notification-dot"></div>
+    </button>
+
     <script src="script.js"></script>
     <script>
-        // Minimal runtime fix: ensure the itinerary section is visible and uses the intended colors.
-        // This avoids editing style.css while fixing the white/hidden itinerary issue.
+        // LEMON MENU FUNCTIONALITY
+        let lemonMenuOpen = false;
+
+        function toggleLemonMenu() {
+            const menu = document.getElementById('lemon-menu');
+            const options = menu.querySelector('.lemon-options');
+            
+            if (lemonMenuOpen) {
+                menu.classList.remove('active');
+                lemonMenuOpen = false;
+            } else {
+                menu.classList.add('active');
+                lemonMenuOpen = true;
+            }
+        }
+
+        // Close lemon menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('lemon-menu');
+            if (!menu.contains(event.target) && lemonMenuOpen) {
+                toggleLemonMenu();
+            }
+        });
+
+        // CHATBOT FUNCTIONALITY
+        let chatbotOpen = false;
+        let hasShownWelcome = false;
+
+        // Show chatbot popup on page load
         document.addEventListener('DOMContentLoaded', function() {
+            // Timeline section fix
             try {
-                var s = document.getElementById('what-we-offer-grid');
+                var s = document.getElementById('interactive-timeline');
                 if (s) {
-                    // Only add the visible class to trigger the existing CSS animation
                     s.classList.add('is-visible');
                 }
             } catch (e) {
-                console.error('Itinerary visibility script failed', e);
+                console.error('Timeline visibility script failed', e);
             }
+
+            // Show chatbot after 3 seconds
+            setTimeout(function() {
+                if (!hasShownWelcome) {
+                    showChatbotWelcome();
+                }
+            }, 3000);
         });
+
+        function showChatbotWelcome() {
+            const popup = document.getElementById('chatbot-popup');
+            const toggle = document.getElementById('chatbot-toggle');
+            
+            popup.classList.add('show-welcome');
+            toggle.classList.add('pulse');
+            
+            // Hide welcome after 8 seconds
+            setTimeout(function() {
+                popup.classList.remove('show-welcome');
+                toggle.classList.remove('pulse');
+            }, 8000);
+            
+            hasShownWelcome = true;
+        }
+
+        function toggleChatbot() {
+            const popup = document.getElementById('chatbot-popup');
+            const toggle = document.getElementById('chatbot-toggle');
+            
+            if (chatbotOpen) {
+                closeChatbot();
+            } else {
+                popup.classList.add('show');
+                toggle.classList.add('active');
+                chatbotOpen = true;
+                document.getElementById('chatbot-input').focus();
+            }
+        }
+
+        function closeChatbot() {
+            const popup = document.getElementById('chatbot-popup');
+            const toggle = document.getElementById('chatbot-toggle');
+            
+            popup.classList.remove('show', 'show-welcome');
+            toggle.classList.remove('active', 'pulse');
+            chatbotOpen = false;
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatbot-input');
+            const message = input.value.trim();
+            
+            if (message) {
+                addUserMessage(message);
+                input.value = '';
+                
+                // Simulate bot response
+                setTimeout(() => {
+                    addBotResponse(message);
+                }, 1000);
+            }
+        }
+
+        function handleChatEnter(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function askQuickQuestion(type) {
+            const questions = {
+                'dates': 'What dates are available for 2025?',
+                'pricing': 'How much does the 11-day journey cost?',
+                'activities': 'What activities are included in the tour?'
+            };
+            
+            const question = questions[type];
+            if (question) {
+                addUserMessage(question);
+                setTimeout(() => {
+                    addBotResponse(question);
+                }, 1000);
+            }
+        }
+
+        function addUserMessage(message) {
+            const messages = document.getElementById('chatbot-messages');
+            const userMsg = document.createElement('div');
+            userMsg.className = 'user-message';
+            userMsg.innerHTML = `<div class="message-bubble">${message}</div>`;
+            messages.appendChild(userMsg);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        function addBotResponse(userMessage) {
+            const messages = document.getElementById('chatbot-messages');
+            const botMsg = document.createElement('div');
+            botMsg.className = 'bot-message';
+            
+            let response = getBotResponse(userMessage.toLowerCase());
+            
+            botMsg.innerHTML = `<div class="message-bubble">${response}</div>`;
+            messages.appendChild(botMsg);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        function getBotResponse(message) {
+            if (message.includes('date') || message.includes('when') || message.includes('available')) {
+                return "🗓️ We have exciting dates coming up:<br><br>• <strong>June 12-19, 2025</strong> - Available<br>• <strong>July 10-17, 2025</strong> - Few spots left<br>• <strong>September 11-18, 2025</strong> - Sold out<br><br>Would you like me to check availability for any specific dates?";
+            }
+            
+            if (message.includes('price') || message.includes('cost') || message.includes('pricing')) {
+                return "💰 Our 11-day Amalfi Coast experience is thoughtfully priced to include everything you need for an unforgettable journey.<br><br>For detailed pricing and what's included, I'd love to connect you with our travel specialists. Would you like me to arrange a call? 📞";
+            }
+            
+            if (message.includes('include') || message.includes('activities') || message.includes('what')) {
+                return "✨ Your journey includes:<br><br>🏨 Luxury accommodations with sea views<br>🍝 Hands-on cooking classes<br>🚤 Private boat excursions to Capri<br>🍋 Lemon grove tours & tastings<br>🏛️ Guided Pompeii exploration<br>🍷 Wine experiences in Tramonti<br>🎨 Artisan workshops<br><br>Plus private transfers, welcome dinners, and so much more!";
+            }
+            
+            if (message.includes('book') || message.includes('reserve') || message.includes('contact')) {
+                return "🌟 I'm excited you're interested! The best way to secure your spot is to email us directly at <strong>info@toccaamalfi.com</strong><br><br>Our team will help you choose the perfect dates and answer any questions about your Italian adventure! 💙";
+            }
+            
+            return "That's a great question! For the most detailed and personalized information, I recommend reaching out to our travel specialists at <strong>info@toccaamalfi.com</strong>. They'll be thrilled to help plan your perfect Amalfi Coast experience! 🇮🇹✨";
+        }
     </script>
 </body>
 
 </html>
-
-

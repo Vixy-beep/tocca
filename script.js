@@ -228,4 +228,54 @@ document.addEventListener('DOMContentLoaded', function() {
     ensureDay9MobileSummary();
     window.addEventListener('resize', ensureDay9MobileSummary);
     window.addEventListener('orientationchange', ensureDay9MobileSummary);
+
+    // --- INTERACTIVE TIMELINE ANIMATIONS ---
+    function initTimelineAnimations() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('animate');
+                    }, 100);
+                    timelineObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.2
+        });
+
+        timelineItems.forEach(item => {
+            timelineObserver.observe(item);
+        });
+
+        // Add click interactions for timeline items
+        timelineItems.forEach((item, index) => {
+            item.addEventListener('click', function() {
+                const dayNumber = index + 1;
+                // Optional: Navigate to individual day pages if they exist
+                // window.location.href = `dia${dayNumber}.html`;
+                
+                // For now, just add a subtle feedback animation
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+
+            // Add hover sound effect (optional)
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+            });
+
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+            });
+        });
+    }
+
+    // Initialize timeline animations
+    initTimelineAnimations();
 });
