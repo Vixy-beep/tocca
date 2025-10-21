@@ -131,23 +131,182 @@
             </div>
         </section>
 
-    <!-- SIMPLE ITINERARY GRID (title + emoji only) -->
-    <section id="what-we-offer-grid" class="itinerary-section animate-on-scroll">
-        <h2>The 11-Day Journey</h2>
-        <div class="itinerary-grid">
-            <a href="dia1.html" class="itinerary-day-row day-link" data-day="1"><div class="day-title">Day 1</div><div class="day-description"><h3>🇮🇹 Departure</h3><p></p></div></a>
-            <a href="dia2.html" class="itinerary-day-row day-link" data-day="2"><div class="day-title">Day 2</div><div class="day-description"><h3>🏛 Arrival & Welcome</h3><p></p></div></a>
-            <a href="dia3.html" class="itinerary-day-row day-link" data-day="3"><div class="day-title">Day 3</div><div class="day-description"><h3>🍃 Flavors of the Coast</h3><p></p></div></a>
-            <a href="dia4.html" class="itinerary-day-row day-link" data-day="4"><div class="day-title">Day 4</div><div class="day-description"><h3>🛥 Pompeii & Pizza</h3><p></p></div></a>
-            <a href="dia5.html" class="itinerary-day-row day-link" data-day="5"><div class="day-title">Day 5</div><div class="day-description"><h3>🌸 Enchanting Capri</h3><p></p></div></a>
-            <a href="dia6.html" class="itinerary-day-row day-link" data-day="6"><div class="day-title">Day 6</div><div class="day-description"><h3>🍋 Positano's Magic</h3><p></p></div></a>
-            <a href="dia7.html" class="itinerary-day-row day-link" data-day="7"><div class="day-title">Day 7</div><div class="day-description"><h3>🌤 Heart of Amalfi</h3><p></p></div></a>
-            <a href="dia8.html" class="itinerary-day-row day-link" data-day="8"><div class="day-title">Day 8</div><div class="day-description"><h3>🏨 La Dolce Far Niente</h3><p></p></div></a>
-            <a href="dia9.html" class="itinerary-day-row day-link" data-day="9"><div class="day-title">Day 9</div><div class="day-description"><h3>🗿 Ravello's Romance</h3><p></p></div></a>
-            <a href="dia10.html" class="itinerary-day-row day-link" data-day="10"><div class="day-title">Day 10</div><div class="day-description"><h3>🍝 Wines of the Hills</h3><p></p></div></a>
-            <a href="dia11.html" class="itinerary-day-row day-link" data-day="11"><div class="day-title">Day 11</div><div class="day-description"><h3>👋 Arrivederci</h3><p></p></div></a>
+    <!-- JOURNEY OPTIONS SECTION -->
+    <section id="what-we-offer-grid" class="journey-options-section animate-on-scroll">
+        <h2>Your Amalfi Journey Awaits</h2>
+        <p class="journey-subtitle">Choose your perfect Italian adventure</p>
+        <div class="journey-buttons-container">
+            <button class="journey-btn highlights-btn" onclick="openHighlightsModal()">
+                <div class="btn-icon">✨</div>
+                <div class="btn-content">
+                    <h3>Journey Highlights</h3>
+                    <p>Discover the magic of our 11-day experience</p>
+                </div>
+                <div class="btn-arrow">→</div>
+            </button>
+            <button class="journey-btn customize-btn" onclick="openCustomizeModal()">
+                <div class="btn-icon">🎨</div>
+                <div class="btn-content">
+                    <h3>Customize Your Tour</h3>
+                    <p>Create your personal Italian dream</p>
+                </div>
+                <div class="btn-arrow">→</div>
+            </button>
         </div>
     </section>
+
+    <!-- HIGHLIGHTS MODAL -->
+    <div id="highlightsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>✨ Journey Highlights</h2>
+                <span class="close" onclick="closeHighlightsModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🍋</div>
+                        <h3>Limoncello Under Ancient Trees</h3>
+                        <p>Taste authentic limoncello in historic lemon groves of Sorrento</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🛵</div>
+                        <h3>Vespa Through Cliffside Villages</h3>
+                        <p>Wind through hidden coastal roads to secret viewpoints</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🚤</div>
+                        <h3>Private Sunset Sailing</h3>
+                        <p>Sail into golden sunsets with prosecco and Italian aperitivos</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🍝</div>
+                        <h3>Cooking with Local Families</h3>
+                        <p>Learn ancient recipes in authentic Italian kitchens</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🌸</div>
+                        <h3>Enchanting Capri</h3>
+                        <p>Explore the legendary Blue Grotto and Villa San Michele</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🏛</div>
+                        <h3>Pompeii & Ancient Wonders</h3>
+                        <p>Walk through history with expert archaeological guides</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🍷</div>
+                        <h3>Wine Tasting in the Hills</h3>
+                        <p>Sample regional wines at family-owned vineyards</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🗿</div>
+                        <h3>Ravello's Romance</h3>
+                        <p>Experience the gardens of Villa Rufolo and Villa Cimbrone</p>
+                    </div>
+                </div>
+                <div class="modal-cta">
+                    <button class="cta-button" onclick="closeHighlightsModal(); openCustomizeModal();">
+                        Ready to Customize Your Journey?
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOMIZE MODAL -->
+    <div id="customizeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>� Customize Your Perfect Journey</h2>
+                <span class="close" onclick="closeCustomizeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="customize-intro">Tell us about your dream Italian experience and we'll craft a personalized journey just for you.</p>
+                
+                <form class="customize-form" onsubmit="submitCustomization(event)">
+                    <div class="form-group">
+                        <label for="groupSize">Group Size</label>
+                        <select id="groupSize" name="groupSize" required>
+                            <option value="">Select group size</option>
+                            <option value="2">2 people</option>
+                            <option value="3-4">3-4 people</option>
+                            <option value="5-6">5-6 people</option>
+                            <option value="7+">7+ people</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duration">Preferred Duration</label>
+                        <select id="duration" name="duration" required>
+                            <option value="">Select duration</option>
+                            <option value="7">7 days</option>
+                            <option value="11">11 days (recommended)</option>
+                            <option value="14">14 days</option>
+                            <option value="custom">Custom length</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>What interests you most? (Select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="cuisine"> 🍝 Culinary experiences
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="history"> 🏛 Historical sites
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="nature"> 🌿 Nature & hiking
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="art"> 🎨 Art & culture
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="wine"> 🍷 Wine tasting
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="adventure"> 🛵 Adventure activities
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accommodation">Accommodation Preference</label>
+                        <select id="accommodation" name="accommodation" required>
+                            <option value="">Select preference</option>
+                            <option value="luxury">Luxury hotels & resorts</option>
+                            <option value="boutique">Boutique properties</option>
+                            <option value="local">Local guesthouses & B&Bs</option>
+                            <option value="mix">Mix of different styles</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialRequests">Special Requests or Dreams</label>
+                        <textarea id="specialRequests" name="specialRequests" rows="4" 
+                                  placeholder="Tell us about any special celebrations, dietary needs, or specific experiences you're dreaming of..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required 
+                               placeholder="Your name">
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        Create My Dream Journey ✨
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 
         <section id="upcoming-dates" class="upcoming-dates-section animate-on-scroll">
             <h2>Upcoming Dates</h2>
@@ -231,6 +390,81 @@
             const menu = document.getElementById('contact-menu');
             if (menu && !menu.contains(event.target) && contactMenuOpen) {
                 toggleContactMenu();
+            }
+        });
+
+        // MODAL FUNCTIONS
+        function openHighlightsModal() {
+            document.getElementById('highlightsModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeHighlightsModal() {
+            document.getElementById('highlightsModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openCustomizeModal() {
+            document.getElementById('customizeModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCustomizeModal() {
+            document.getElementById('customizeModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const highlightsModal = document.getElementById('highlightsModal');
+            const customizeModal = document.getElementById('customizeModal');
+            
+            if (event.target === highlightsModal) {
+                closeHighlightsModal();
+            }
+            if (event.target === customizeModal) {
+                closeCustomizeModal();
+            }
+        }
+
+        // Handle form submission
+        function submitCustomization(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const interests = [];
+            const checkboxes = document.querySelectorAll('input[name="interests"]:checked');
+            checkboxes.forEach(checkbox => interests.push(checkbox.value));
+            
+            // Create email body
+            const emailBody = `
+New Customization Request:
+
+Name: ${formData.get('name')}
+Email: ${formData.get('email')}
+Group Size: ${formData.get('groupSize')}
+Duration: ${formData.get('duration')}
+Interests: ${interests.join(', ')}
+Accommodation: ${formData.get('accommodation')}
+Special Requests: ${formData.get('specialRequests')}
+            `;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:info@toccaamalfi.com?subject=Custom Tour Request - ${formData.get('name')}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Close modal and show confirmation
+            closeCustomizeModal();
+            alert('Thank you! Your email client will open to send your customization request.');
+        }
+
+        // Close modals with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeHighlightsModal();
+                closeCustomizeModal();
             }
         });
     </script>
