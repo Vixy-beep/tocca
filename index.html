@@ -96,22 +96,9 @@
                 <div class="why-us-text-block">
                     <h3>We design moments — deeply local, thoughtfully curated, and full of soul.</h3>
                     <p>We design experiences that blend discovery and stillness, flavor and feeling; unfolding authentic moments naturally across Positano, Ravello, Maiori, Minori, Atrani, Capri, Tramonti and Pompeii.</p>
-                    <p>Each Tocca journey is handcrafted with intention and guided by our philosophy of slow, soulful travel. Whether you long for full immersion or wish to move at your own rhythm, we offer two extraordinary ways to experience the Amalfi Coast.</p>
-                </div>
-                <div class="why-us-image-grid">
-                    <img src="imagenes/lemons.jpg" alt="Lemon trees and limoncello">
-                    <img src="imagenes/gapes.jpg" alt="Fresh local grapes and wine">
-                    <img src="imagenes/boat.jpg" alt="Sailing through golden sunsets">
-                    <img src="imagenes/views.jpg" alt="Breathtaking Amalfi Coast views">
-                </div>
-            </div>
-        </section>
-
-        <section id="tocca-experiences" class="why-us-carousel-section animate-on-scroll">
-            <h2>Tocca Experiences</h2>
-            <div class="why-us-container">
-                <div class="why-us-text-block">
-                    <h3>A glimpse of some of the curated experiences that awaits for you</h3>
+                    <p>Each Tocca journey is handcrafted with intention and guided by our philosophy of slow, soulful travel. <strong>We offer two extraordinary ways to discover the Amalfi Coast.</strong> Whether you long for full immersion or wish to move at your own rhythm, each experience invites you to connect with the land, its people, and its timeless rhythm.</p>
+                    
+                    <h3 style="margin-top: 40px; color: #000;">A glimpse of some of the curated experiences that awaits for you</h3>
                     <ul class="offer-list">
                         <li>🏡 Terraces overlooking the Mediterranean Sea.</li>
                         <li>🍝 Cooking with Nonna.</li>
@@ -127,10 +114,10 @@
                     </ul>
                 </div>
                 <div class="why-us-image-grid">
-                    <img src="imagenes/vespa.jpg" alt="Riding a Vespa through hidden cliffside roads">
                     <img src="imagenes/lemons.jpg" alt="Lemon trees and limoncello">
                     <img src="imagenes/gapes.jpg" alt="Fresh local grapes and wine">
                     <img src="imagenes/boat.jpg" alt="Sailing through golden sunsets">
+                    <img src="imagenes/views.jpg" alt="Breathtaking Amalfi Coast views">
                 </div>
             </div>
         </section>
@@ -139,28 +126,26 @@
             <h2>Tocca Offerings</h2>
             <div class="why-us-container">
                 <div class="why-us-text-block">
-                    <h3><strong>Whether you seek deep immersion or experiences tailored to your time and interests, we offer two extraordinary ways to discover the Amalfi Coast.</strong></h3>
-                    <p>Each Tocca journey is handcrafted with intention, guided by our philosophy of slow, soulful travel — inviting you to connect with the land, its people, and its timeless rhythm</p>
-                    
                     <div class="offerings-cards">
-                        <div class="offering-card">
+                        <div class="offering-card signature-card">
+                            <div class="card-number">#1</div>
                             <h4>The Signature Journey — The Essence of the Coast</h4>
                             <div class="offering-content-visible">
                                 <p>Our flagship experience: a complete immersion through Positano, Ravello, Amalfi, Maiori, Minori, Atrani, Praiano, Tramonti, and the island of Capri — with touches of Pompeii's timeless history. each day revealing a new flavor, story, and horizon.</p>
                                 <p>Stay in handpicked hotels where the sea greets you each morning from your private terrace. Ten days of curated beauty, local connection, and effortless flow — blending movement, flavor, and stillness in perfect balance.</p>
                                 <div class="departure-dates">
                                     <h5>2026 Departures</h5>
-                                    <div class="dates-grid">
-                                        <div class="departure-date-card">
-                                            <span class="departure-date">July 2 – 12</span>
+                                    <div class="dates-grid-inline">
+                                        <div class="departure-date-inline">
+                                            <span class="date-text">July 2 – 12</span>
                                             <span class="availability-badge available">Available</span>
                                         </div>
-                                        <div class="departure-date-card">
-                                            <span class="departure-date">August 5 - 15</span>
+                                        <div class="departure-date-inline">
+                                            <span class="date-text">August 5 - 15</span>
                                             <span class="availability-badge few-spots">Few Spots Left</span>
                                         </div>
-                                        <div class="departure-date-card">
-                                            <span class="departure-date">September 3 – 15</span>
+                                        <div class="departure-date-inline">
+                                            <span class="date-text">September 3 – 15</span>
                                             <span class="availability-badge available">Available</span>
                                         </div>
                                     </div>
@@ -169,7 +154,8 @@
                             </div>
                         </div>
                         
-                        <div class="offering-card">
+                        <div class="offering-card bespoke-card">
+                            <div class="card-number">#2</div>
                             <h4>The Bespoke Journey — Inspired by You</h4>
                             <div class="offering-content-visible">
                                 <p>Tailored to your passions, pace, and availability — each encounter is created around what moves you most.</p>
@@ -292,7 +278,7 @@
     <div id="customizeModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>� Customize Your Perfect Journey</h2>
+                <h2>🎨 Customize Your Perfect Journey</h2>
                 <span class="close" onclick="closeCustomizeModal()">&times;</span>
             </div>
             <div class="modal-body">
@@ -452,28 +438,8 @@
 
     </main>
 
-    <!-- Chatbot removed intentionally -->
-
     <script src="script.js"></script>
     <script>
-        // OFFERINGS TOGGLE
-        function toggleOffering(offeringType) {
-            const content = document.getElementById(offeringType + '-content');
-            const card = content.parentElement;
-            
-            if (card.classList.contains('expanded')) {
-                card.classList.remove('expanded');
-                setTimeout(() => {
-                    content.style.display = 'none';
-                }, 400);
-            } else {
-                content.style.display = 'block';
-                setTimeout(() => {
-                    card.classList.add('expanded');
-                }, 10);
-            }
-        }
-
         // CONTACT MENU TOGGLE
         let contactMenuOpen = false;
         function toggleContactMenu() {
