@@ -350,7 +350,7 @@ section.animate-on-scroll.is-visible {
     background-color: transparent;
     box-shadow: none;
     grid-row: 1;
-    transform: translateY(10px);
+    transform: translateY(-20px);
 }
 
 /* Estilos para "AMALFI COAST" */
@@ -389,10 +389,10 @@ section.animate-on-scroll.is-visible {
     /* Color beige */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     grid-row: 3;
-    transform: translateY(-5px) translateX(60px);
+    transform: translateY(-5px) translateX(40px);
     text-align: center;
     justify-self: center;
-    margin-left: 80px;
+    margin-left: 60px;
     font-style: italic;
     max-width: 90vw;
     overflow-wrap: break-word;
@@ -424,6 +424,12 @@ section.animate-on-scroll.is-visible {
     background-color: #ffffff;
 }
 
+/* Primer párrafo de Why Choose Us en negro y bold */
+.first-paragraph-bold {
+    color: #000000 !important;
+    font-weight: 600 !important;
+    font-size: 1.15rem !important;
+}
 
 .why-us-container {
     display: flex;
@@ -1568,7 +1574,7 @@ section.animate-on-scroll.is-visible {
 ======================================== */
 
 .journey-section {
-    padding: 80px 20px;
+    padding: 40px 20px 80px;
     background-color: #ffffff;
     position: relative;
     overflow: hidden;
