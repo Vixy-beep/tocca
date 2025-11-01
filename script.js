@@ -169,5 +169,5 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', ensureDay9MobileSummary);
     window.addEventListener('orientationchange', ensureDay9MobileSummary);
 
-    // Timeline removed
+    // Remove all carousel initialization code from here - it's now in index.html
 });

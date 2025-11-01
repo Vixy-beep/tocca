@@ -12,6 +12,9 @@
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&family=Style+Script&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 
 <body>
@@ -26,7 +29,7 @@
                 <i class="fas fa-envelope"></i>
                 <span>Email</span>
             </a>
-            <a href="https://wa.me/1234567890?text=Hello!%20I'd%20like%20to%20know%20more%20about%20the%20tours." target="_blank" class="contact-option" title="WhatsApp">
+            <a href="https://wa.me/1234567890?text=Hello!%20I'd%like%20to%20know%20more%20about%20the%20tours." target="_blank" class="contact-option" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
                 <span>WhatsApp</span>
             </a>
@@ -74,14 +77,14 @@
             <h2>Why Choose us?</h2>
             <div class="why-us-container">
                 <div class="why-us-text-block">
-                    <h3>Tocca Amalfi is more than a travel experience — it's a feeling. One you carry in your skin, your
-                        memory, your soul.</h3>
-                    <p>Born from my lifelong love for travel, shaped by years living across 7 countries and 5 continents
-                        — including two decades in the U.S. working as an executive and director in the travel industry
-                        — Tocca Amalfi is the most personal chapter of my journey.</p>
-                    <p>It was here — on the Amalfi Coast — that I found what I never expected: love, family, home, and a
-                        sense of belonging. Now a local by heart and by choice, I invite you to experience this coast
-                        not as a tourist, but as part of its rhythm.</p>
+                        <p>Tocca Amalfi is more than a travel experience; it’s a feeling.<br>
+                        A rhythm that stays with you: in your skin, your memory and your soul.</p>
+                        <p>Born from my lifelong love for exploration and shaped by years living across seven countries and three continents; including two decades in the U.S. leading teams and transformations in the travel industry; Tocca Amalfi is the most personal chapter of my journey.</p>
+                        <p>It was here, on the Amalfi Coast, that I discovered what I never expected: love, family, home, and a true sense of belonging.<br>
+                        Now, as a local by heart and by choice, I created Tocca Amalfi Coast to share the coast as I live it: through its people, its stories, and its quiet, timeless beauty.</p>
+                        <p>I invite you to experience this coast not as a visitor, but as part of its soul; to touch, taste, and truly feel the Coast.</p>
+                        <p>Benvenuti a casa, welcome home, bienvenido a casa<br>
+                        <strong>Jessica Peña, Founder & Host</strong></p>
                     </div>
                 <div class="why-us-image-grid">
                     <img src="imagenes/toccaowner.jpg" alt="A smiling woman stands on a sunlit terrace overlooking the Amalfi Coast, with colorful houses and the blue sea in the background. The scene feels warm and welcoming, capturing a sense of joy and belonging.">
@@ -91,14 +94,25 @@
 
         <section id="what-we-offer" class="why-us-carousel-section animate-on-scroll">
             <h2>What We Offer</h2>
-            <div class="why-us-container">
-                <div class="why-us-text-block">
+            
+            <div class="what-we-offer-layout-container">
+                
+                <div class="what-we-offer-intro">
                     <h3>We design moments — deeply local, thoughtfully curated, and full of soul.</h3>
                     <p>We design experiences that blend discovery and stillness, flavor and feeling; unfolding authentic moments naturally across Positano, Ravello, Maiori, Minori, Atrani, Capri, Tramonti and Pompeii.</p>
                     <p>Each Tocca journey is handcrafted with intention and guided by our philosophy of slow, soulful travel. Whether you long for full immersion or wish to move at your own rhythm, we offer two extraordinary ways to experience the Amalfi Coast.</p>
-                    
+                </div>
+
+                <div class="why-us-image-grid what-we-offer-grid-photos">
+                    <img src="imagenes/lemons.jpg" alt="Lemon trees and limoncello">
+                    <img src="imagenes/gapes.jpg" alt="Fresh local grapes and wine">
+                    <img src="imagenes/boat.jpg" alt="Sailing through golden sunsets">
+                    <img src="imagenes/views.jpg" alt="Breathtaking Amalfi Coast views">
+                </div>
+
+                <div class="what-we-offer-list">
                     <h3>A glimpse of some of the curated experiences that awaits for you</h3>
-                    <ul class="offer-list">
+                    <ul class="offer-list offer-list-compact">
                         <li>🏡 Terraces overlooking the Mediterranean Sea.</li>
                         <li>🍝 Cooking with Nonna.</li>
                         <li>🌾 Farm-to-Table Dining.</li>
@@ -111,68 +125,62 @@
                         <li>🎾 For the Active Traveler.</li>
                         <li>🔥 Culinary Traditions.</li>
                     </ul>
-                    </div>
-                <div class="why-us-image-grid">
-                    <img src="imagenes/lemons.jpg" alt="Lemon trees and limoncello">
-                    <img src="imagenes/gapes.jpg" alt="Fresh local grapes and wine">
-                    <img src="imagenes/boat.jpg" alt="Sailing through golden sunsets">
-                    <img src="imagenes/views.jpg" alt="Breathtaking Amalfi Coast views">
                 </div>
-            </div>
-        </section>
 
-        <section id="tocca-offerings" class="why-us-carousel-section animate-on-scroll">
+<div class="experiences-carousel what-we-offer-carousel">
+    <div><img src="imagenes/vespa.jpg" alt="Vespa ride through scenic coastal roads"></div>
+    <div><img src="imagenes/toccaowner.jpg" alt="Jessica, founder of Tocca Amalfi"></div>
+    <div><img src="imagenes/lemons.jpg" alt="Fresh lemons in Amalfi Coast groves"></div>
+    <div><img src="imagenes/boat.jpg" alt="Private boat sailing at sunset"></div>
+    <div><img src="imagenes/views.jpg" alt="Breathtaking Amalfi Coast views"></div>
+</div>
+            </div>
+            </section>
+        <section id="tocca-offerings" class="journey-section animate-on-scroll">
             <h2>Tocca Offerings</h2>
-            <div class="why-us-container">
-                <div class="why-us-text-block">
-                    <h3>Whether you seek deep immersion or experiences tailored to your time and interests, <strong>we offer two extraordinary ways to discover the Amalfi Coast.</strong></h3>
-                    <p>Each Tocca journey is handcrafted with intention, guided by our philosophy of slow, soulful travel — inviting you to connect with the land, its people, and its timeless rhythm</p>
-                    
-                    <div class="offerings-cards">
-                        <div class="offering-card">
-                            <h4>The Signature Journey — The Essence of the Coast</h4>
-                            <div class="offering-content-visible">
-                                <p>Our flagship experience: a complete immersion through Positano, Ravello, Amalfi, Maiori, Minori, Atrani, Praiano, Tramonti, and the island of Capri — with touches of Pompeii's timeless history. each day revealing a new flavor, story, and horizon.</p>
-                                <p>Stay in handpicked hotels where the sea greets you each morning from your private terrace. Ten days of curated beauty, local connection, and effortless flow — blending movement, flavor, and stillness in perfect balance.</p>
-                                
-                                <div class="departure-dates">
-                                    <h5>2026 Departures</h5>
-                                    <div class="dates-grid">
-                                        <div class="departure-date-card">
-                                            <span class="departure-date">July 2 – 12</span>
-                                            <span class="availability-badge available">Available</span>
-                                        </div>
-                                        <div class="departure-date-card">
-                                            <span class="departure-date">August 5 - 15</span>
-                                            <span class="availability-badge few-spots">Few Spots Left</span>
-                                        </div>
-                                        <div class="departure-date-card">
-                                            <span class="departure-date">September 3 – 15</span>
-                                            <span class="availability-badge available">Available</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="story-tagline">It's an unfolding story of the coast, one day at a time.</p>
-                            </div>
-                        </div>
+            <p class="journey-intro">Two extraordinary ways to discover the Amalfi Coast</p>
+            
+            <div class="journey-container">
+                <!-- Signature Journey Card -->
+                <a href="index.html#what-we-offer-grid" class="journey-card signature-card">
+                    <div class="journey-card-content">
+                        <h3>Signature Journey</h3>
+                        <p class="journey-subtitle-card">For those who want to simply arrive and be embraced by the Coast.</p>
                         
-                        <div class="offering-card">
-                            <h4>The Bespoke Journey — Inspired by You</h4>
-                            <div class="offering-content-visible">
-                                <p>Tailored to your passions, pace, and availability — each encounter is created around what moves you most.</p>
-                                <p>Whether for a single afternoon, a weekend escape, or an extended journey; Bespoke Amalfi Coast Experience transforms your desires into a tailor-made Italian escape. We begin with what inspires you — food, wellness, the sea, culture, luxury, or quiet discovery — and weave it into a seamless experience designed entirely around you.</p>
-                                <p>Whatever you wish to emphasize, we'll bring it to life — with the same artistry, warmth, and attention to detail as our Signature Journey.</p>
-                            </div>
-                        </div>
+                        <ul class="journey-features">
+                            <li><i class="fas fa-sun"></i> 10 days of curated experiences</li>
+                            <li><i class="fas fa-hotel"></i> Handpicked stays & local hosts</li>
+                            <li><i class="fas fa-car"></i> Seamless logistics and transfers</li>
+                            <li><i class="fas fa-users"></i> Small groups, big memories</li>
+                            <li><i class="fas fa-cocktail"></i> Daily touches of <em>la dolce vita</em></li>
+                        </ul>
                         
-                        <div class="offering-card promise-card">
-                            <div class="offering-content-visible">
-                                <h4 class="promise-title">💫 Two Journeys. One Promise.</h4>
-                                <p class="promise-text">Whichever path you choose, Tocca Amalfi Coast invites you to live, taste, and move with intention — feeling what it truly means to touch the soul of the coast.</p>
-                            </div>
-                        </div>
+                        <span class="journey-link">Discover the Journey →</span>
                     </div>
-                </div>
+                </a>
+                
+                <!-- Bespoke Journey Card -->
+                <a href="#" class="journey-card bespoke-card" onclick="event.preventDefault(); openCustomizeModal();">
+                    <div class="journey-card-content">
+                        <h3>Bespoke Journey</h3>
+                        <p class="journey-subtitle-card">For the dreamers who wish to craft their own Italian story</p>
+                        
+                        <ul class="journey-features">
+                            <li><i class="fas fa-magic"></i> Fully personalized itinerary</li>
+                            <li><i class="fas fa-paint-brush"></i> Access to local artisans & experiences</li>
+                            <li><i class="fas fa-user-tie"></i> Private guides and chefs</li>
+                            <li><i class="fas fa-calendar-check"></i> Flexible dates & tailor-made moments</li>
+                            <li><i class="fas fa-heart"></i> Designed with you, for you</li>
+                        </ul>
+                        
+                        <span class="journey-link">Create Yours →</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="journey-promise">
+                <h4>2 JOURNEYS / ONE PROMISE</h4>
+                <p>To touch the soul of the Coast.</p>
             </div>
         </section>
 
@@ -415,25 +423,13 @@
 
     </main>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
     <script src="script.js"></script>
+    
     <script>
-        // OFFERINGS TOGGLE
-        function toggleOffering(offeringType) {
-            const content = document.getElementById(offeringType + '-content');
-            const card = content.parentElement;
-            
-            if (card.classList.contains('expanded')) {
-                card.classList.remove('expanded');
-                setTimeout(() => {
-                    content.style.display = 'none';
-                }, 400);
-            } else {
-                content.style.display = 'block';
-                setTimeout(() => {
-                    card.classList.add('expanded');
-                }, 10);
-            }
-        }
+        // OFFERINGS TOGGLE (Movido a script.js)
 
         // CONTACT MENU TOGGLE
         let contactMenuOpen = false;
@@ -524,6 +520,42 @@ Special Requests: ${formData.get('specialRequests')}
             }
         });
     </script>
+
+<!-- Remove duplicate script tags and consolidate -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+// Initialize carousel after everything loads
+$(document).ready(function(){
+    // Wait a bit for images to load
+    setTimeout(function() {
+        if ($('.what-we-offer-carousel').length && !$('.what-we-offer-carousel').hasClass('slick-initialized')) {
+            $('.what-we-offer-carousel').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: true,
+                dots: true,
+                fade: true,
+                cssEase: 'linear',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false
+                        }
+                    }
+                ]
+            });
+            console.log('Carousel initialized successfully');
+        }
+    }, 500);
+});
+</script>
 </body>
 
 </html>

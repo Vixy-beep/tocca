@@ -1,8 +1,3 @@
-/* Errores en:
-    Linea 160
-    
-*/
-
 /* --- ESTILOS GENERALES Y FUENTES --- */
 :root {
     --primary-color: #4A9A92;
@@ -14,6 +9,12 @@
     --warning-color: #ffc107;
     --danger-color: #dc3545;
     --hero-text-color-beige: #EFEAE4;
+	/* === Nuevos colores para las tarjetas === */
+    --card-dark-blue: #23374d; /* Azul oscuro para Signature */
+    --card-light-beige: #f4f1eb; /* Beige claro para Bespoke */
+    --card-text-light: #ffffff;
+    --card-text-dark: #23374d;
+    --card-accent-gold: #c9a970; /* Dorado para acentos */
 }
 
 /* Final override: ensure the itinerary grid shows 2 columns on typical screens - BETTER FILLED LOOK */
@@ -467,75 +468,7 @@ section.animate-on-scroll.is-visible {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
-
-.why-us-image-grid img:first-child {
-    height: 250px;
-}
-
-/* Make #why-tocca-amalfi follow the same layout pattern as the other sections:
-   text on the left, images on the right, but allow wrapping on small screens */
-#why-tocca-amalfi .why-us-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 40px;
-}
-
-#why-tocca-amalfi .why-us-text-block {
-    order: 0;
-    flex: 1 1 52%;
-    min-width: 280px;
-    text-align: left;
-}
-
-#why-tocca-amalfi .why-us-image-grid {
-    order: 1;
-    flex: 1 1 40%;
-    min-width: 260px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-#why-tocca-amalfi .why-us-image-grid img:first-child {
-    grid-row: span 2;
-    height: calc(100% - 7.5px);
-}
-
-/* No further overrides here; the standard .why-us-container rules will ensure
-   the same visual behavior as the other sections (wrap on small screens). */
-
-/* Desktop: explicitly enforce row layout and right-side 2-column image grid
-   for #why-tocca-amalfi so it matches How We Offer / What We Believe on wide screens */
-@media (min-width: 921px) {
-    #why-tocca-amalfi .why-us-container {
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        align-items: center !important;
-    }
-
-    #why-tocca-amalfi .why-us-text-block {
-        flex: 1 1 55% !important;
-        min-width: 320px !important;
-    }
-
-    #why-tocca-amalfi .why-us-image-grid {
-        flex: 0 0 40% !important;
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 15px !important;
-        align-items: start !important;
-    }
-
-    #why-tocca-amalfi .why-us-image-grid img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: cover !important;
-    }
-}
-
 /* Strong final override: make Why Choose Us identical to What We Offer - BETTER ALIGNMENT */
-#what-we-offer .why-us-container,
 #why-tocca-amalfi .why-us-container {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -548,7 +481,6 @@ section.animate-on-scroll.is-visible {
     overflow-x: hidden !important;
 }
 
-#what-we-offer .why-us-text-block,
 #why-tocca-amalfi .why-us-text-block {
     flex: 1 1 55% !important;
     min-width: 300px !important;
@@ -556,129 +488,46 @@ section.animate-on-scroll.is-visible {
     max-width: 100% !important;
 }
 
-#what-we-offer .why-us-image-grid,
 #why-tocca-amalfi .why-us-image-grid {
-    flex: 0 0 40% !important;
-    min-width: 300px !important;
-    max-width: 100% !important;
-}
-
-#what-we-offer .why-us-image-grid,
-#why-tocca-amalfi .why-us-image-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 15px !important;
     flex: 1 1 40% !important;
-    min-width: 260px !important;
+    min-width: 300px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
-#what-we-offer .why-us-image-grid img,
+
 #why-tocca-amalfi .why-us-image-grid img {
     width: 100% !important;
-    height: 250px !important;
+    height: 400px !important;
     object-fit: cover !important;
-    border-radius: 8px !important;
-    box-shadow: none !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
 }
 
-#what-we-offer .why-us-image-grid img:first-child,
-#why-tocca-amalfi .why-us-image-grid img:first-child {
-    height: 250px !important;
-}
-
-/* Ensure mobile behavior matches: wrap into column on small screens */
 @media (max-width: 920px) {
-    #what-we-offer .why-us-container,
     #why-tocca-amalfi .why-us-container {
         flex-direction: column !important;
     }
-
-    #what-we-offer .why-us-image-grid {
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: 1fr 1fr !important;
-    }
     
-    #why-tocca-amalfi .why-us-image-grid {
-        grid-template-columns: 1fr 1fr !important;
-    }
-
-    /* Special styling for toccaowner image in mobile - make it centered and prominent */
     #why-tocca-amalfi .why-us-image-grid {
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
-        margin: 20px 0 !important;
+        margin: 30px 0 !important;
     }
 
     #why-tocca-amalfi .why-us-image-grid img {
-        width: 80% !important;
-        max-width: 300px !important;
-        height: 300px !important;
-        border-radius: 12px !important;
+        width: 90% !important;
+        max-width: 400px !important;
+        height: 350px !important;
+        border-radius: 15px !important;
         margin: 0 auto !important;
-        box-shadow: none !important;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
     }
 }
 
-/* Ensure 'What We Offer' heading is black without changing other sections */
-#what-we-offer h2 {
-    color: var(--text-color) !important;
-}
-
-/* NUCLEAR OPTION - OVERRIDE EVERYTHING FOR WHAT WE OFFER 2x2 GRID - ALIGNED AND PROPORTIONAL */
-#what-we-offer .why-us-image-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    grid-template-rows: 1fr 1fr !important;
-    gap: 12px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    flex: 0 0 40% !important;
-    min-width: 300px !important;
-    align-self: flex-start !important;
-}
-
-/* FORCE EACH IMAGE TO FILL ITS GRID CELL PROPORTIONALLY */
-#what-we-offer .why-us-image-grid img {
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 160px !important;
-    max-height: 180px !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    border-radius: 8px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
-    display: block !important;
-}
-
-/* Desktop: better proportions */
-@media (min-width: 921px) {
-    #what-we-offer .why-us-image-grid img {
-        min-height: 170px !important;
-        max-height: 200px !important;
-    }
-}
-
-/* FORCE GRID POSITIONS - NO AREAS, DIRECT POSITIONING */
-#what-we-offer .why-us-image-grid img:nth-child(1) { 
-    grid-column: 1 !important; 
-    grid-row: 1 !important; 
-}
-#what-we-offer .why-us-image-grid img:nth-child(2) { 
-    grid-column: 2 !important; 
-    grid-row: 1 !important; 
-}
-#what-we-offer .why-us-image-grid img:nth-child(3) { 
-    grid-column: 1 !important; 
-    grid-row: 2 !important; 
-}
-#what-we-offer .why-us-image-grid img:nth-child(4) { 
-    grid-column: 2 !important; 
-    grid-row: 2 !important; 
-}
-
-/* Specific styling for What We Believe - single vespa image LARGER */
+/* === SPECIFIC STYLES FOR "What We Believe" === */
 #what-we-believe .why-us-image-grid {
     display: flex !important;
     justify-content: center !important;
@@ -687,64 +536,147 @@ section.animate-on-scroll.is-visible {
 
 #what-we-believe .why-us-image-grid img {
     width: 100% !important;
-    height: 320px !important;
-    max-width: 450px !important;
+    height: 400px !important; /* Hacer la imagen más grande */
     object-fit: cover !important;
-    object-position: center !important;
-    border-radius: 8px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
 }
 
-/* Desktop: make vespa image fill the space better */
-@media (min-width: 921px) {
+@media (max-width: 920px) {
+    #what-we-believe .why-us-image-grid {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 30px 0 !important;
+    }
+
     #what-we-believe .why-us-image-grid img {
-        height: 400px !important;
-        max-width: 100% !important;
+        width: 90% !important;
+        max-width: 400px !important;
+        height: 350px !important; /* Más grande en móvil también */
+        border-radius: 15px !important;
+        margin: 0 auto !important;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
     }
 }
 
-/* Force the same image styling for Why Choose Us as used in What We Offer (scoped) - LARGER OWNER IMAGE */
-#why-tocca-amalfi .why-us-image-grid {
+/* === FIXED WHAT WE OFFER GRID PHOTOS === */
+.what-we-offer-grid-photos {
+    grid-area: photos;
+    display: grid !important; 
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px !important;
+}
+
+.what-we-offer-grid-photos img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.what-we-offer-grid-photos img:hover {
+    transform: scale(1.05) !important;
+}
+
+@media (max-width: 920px) {
+    .what-we-offer-grid-photos {
+        order: 2 !important;
+        display: grid !important; 
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+        margin-top: 30px !important;
+    }
+    
+    .what-we-offer-grid-photos img {
+        width: 100% !important;
+        height: 150px !important;
+        object-fit: cover !important;
+        border-radius: 8px !important;
+    }
+}
+
+/* === FIXED CAROUSEL STYLES === */
+.what-we-offer-carousel { 
+    grid-area: carousel !important; 
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 20px 0 !important;
+    overflow: hidden !important;
+}
+
+.what-we-offer-carousel.slick-initialized {
+    display: block !important;
+}
+
+.what-we-offer-carousel .slick-track {
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
 }
 
-#why-tocca-amalfi .why-us-image-grid img {
+.what-we-offer-carousel .slick-slide {
+    display: block !important;
     width: 100% !important;
-    height: 320px !important;
-    max-width: 450px !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    border-radius: 8px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+    height: auto !important;
 }
 
-/* Desktop: make owner image fill the space better */
-@media (min-width: 921px) {
-    #why-tocca-amalfi .why-us-image-grid img {
-        height: 400px !important;
-        max-width: 100% !important;
+.what-we-offer-carousel .slick-slide img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    display: block !important;
+}
+
+.what-we-offer-carousel .slick-dots {
+    bottom: -30px !important;
+    position: relative !important;
+    text-align: center !important;
+}
+
+.what-we-offer-carousel .slick-dots li {
+    display: inline-block !important;
+    margin: 0 5px !important;
+}
+
+.what-we-offer-carousel .slick-dots li button:before {
+    font-size: 12px !important;
+    color: var(--primary-color) !important;
+    opacity: 0.5 !important;
+}
+
+.what-we-offer-carousel .slick-dots li.slick-active button:before {
+    opacity: 1 !important;
+}
+
+.what-we-offer-carousel .slick-arrow {
+    display: block !important;
+    z-index: 10 !important;
+}
+
+.what-we-offer-carousel .slick-prev {
+    left: 10px !important;
+}
+
+.what-we-offer-carousel .slick-next {
+    right: 10px !important;
+}
+
+@media (max-width: 920px) {
+    .what-we-offer-carousel { 
+        order: 4 !important;
+        display: block !important;
+        margin-top: 30px !important;
     }
 }
 
-#what-we-offer .why-us-image-grid img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    border-radius: 8px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
-}
-
-#why-tocca-amalfi .why-us-image-grid img:first-child {
-    grid-row: span 2 !important;
-    height: calc(100% - 7.5px) !important;
-}
-
-/* OVERRIDE: What We Offer needs 2x2 grid, NOT spanning rows */
-#what-we-offer .why-us-image-grid img:first-child {
-    grid-row: 1 !important;
-    height: 150px !important;
+/* Ensure 'What We Offer' heading is black without changing other sections */
+#what-we-offer h2 {
+    color: var(--text-color) !important;
 }
 
 .offer-list {
@@ -759,1097 +691,180 @@ section.animate-on-scroll.is-visible {
     line-height: 1.5;
 }
 
-
-/* --- SECCIÓN ITINERARIO --- */
-.luxury-package-section {
-    background-color: var(--primary-color);
-    color: var(--light-text-color);
-    text-align: center;
-}
-
-.luxury-package-section h2 {
-    color: var(--light-text-color);
-}
-
-/* Specific heading colors to ensure contrast and separation */
-#why-tocca-amalfi h2 {
-    color: var(--secondary-color);
-}
-
-#what-we-believe h2 {
-    color: #111111;
-}
-
-#upcoming-dates h2 {
-    color: #111111;
-}
-
-.package-price {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 50px;
-    color: var(--secondary-color);
-}
-
-.itinerary-grid {
-    display: grid;
-    /* prefer two columns on common phone widths, expand on larger screens */
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 8px;
-}
-
-.itinerary-day-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background: rgba(255,255,255,0.12); /* light card over the teal background */
-    border-radius: 12px;
-    overflow: hidden;
-    padding: 20px 16px;
-    text-align: center;
-    min-height: 140px;
-    aspect-ratio: 1 / 1; /* keep square look */
-    color: var(--light-text-color);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    position: relative;
-    text-decoration: none;
-    box-shadow: none;
-}
-
-.itinerary-day-row .day-title {
-    font-size: 2.2rem;
-    width: 100%;
-    text-align: center;
-}
-
-/* Ensure day description sits inside the square and doesn't overflow */
-.itinerary-day-row .day-description {
-    position: relative;
-    z-index: 2;
-}
-
-/* Make whole tile clickable (anchor) behave like a block */
-.itinerary-day-row.day-link {
-    display: block;
-}
-
-.itinerary-day-row::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    z-index: 1;
-}
-
-.itinerary-day-row>* {
-    position: relative;
-    z-index: 2;
-}
-
-.itinerary-day-row:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
-}
-
-.day-title {
-    flex: none;
-    font-size: 2.4rem;
-    font-weight: 700;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 8px;
-}
-
-.day-title a {
-    color: var(--light-text-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.day-title a:hover {
-    color: var(--secondary-color);
-}
-
-.day-description {
-    padding-left: 0;
-    border-left: none;
-    width: 100%;
-    text-align: center;
-}
-
-.day-description h3 {
-    margin: 0 0 5px 0;
-    font-size: 1.6rem;
-    color: var(--light-text-color);
-}
-
-.day-description p {
-    margin: 0;
+/* CAMBIO: Lista de experiencias más compacta */
+.offer-list.offer-list-compact li {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.95);
-    font-style: italic;
+    margin-bottom: 8px; /* Menos espacio vertical */
+    line-height: 1.4;
 }
 
-/* underline on hover to indicate hyperlink */
-.itinerary-day-row.day-link .day-description p:hover {
-    text-decoration: underline;
+/* ================================================
+   CORRECCIÓN DEFINITIVA "What We Offer"
+================================================ */
+
+/* --- 1. Oculta el contenedor viejo --- */
+#what-we-offer .why-us-container {
+    display: none !important;
 }
 
-/* --- SECCIÓN FECHAS --- */
-.upcoming-dates-section {
-    background-color: var(--background-light);
-}
-
-.dates-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1000px;
+/* --- 2. Estilo Base (ESCRITORIO) para el nuevo contenedor --- */
+.what-we-offer-layout-container {
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    grid-template-rows: auto auto; 
+    gap: 20px 40px; 
+    grid-template-areas:
+        "intro  photos"
+        "list   carousel";
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
-}
-
-.date-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    width: 220px;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.date-card:hover {
-    transform: translateY(-10px);
-}
-
-.date-card h3 {
-    margin: 0 0 10px;
-    color: var(--text-color); /* set upcoming date title color to black */
-}
-
-.date-card p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-.status {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 5px 15px;
-    border-radius: 15px;
-    font-weight: bold;
-    color: #fff;
-}
-
-.status.available {
-    background-color: var(--success-color);
-}
-
-.status.few-spots {
-    background-color: var(--warning-color);
-    color: var(--text-color);
-}
-
-.status.sold-out {
-    background-color: var(--danger-color);
-}
-
-/* --- SECCIÓN INCLUSIONES --- */
-.inclusions-section {
-    background: #fff;
-}
-
-.inclusions-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    max-width: 900px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-.includes-column,
-.not-includes-column {
-    background: var(--background-light);
-    padding: 30px;
-    border-radius: 8px;
-    flex: 1;
-    min-width: 300px;
-}
-
-.inclusions-container h3 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.5rem;
-    margin-top: 0;
-}
-
-.includes-column h3 {
-    color: var(--text-color); /* make What to Expect? heading black */
-}
-
-.not-includes-column h3 {
-    color: var(--danger-color);
-}
-
-/* Make main "What to Expect?" title black */
-.inclusions-section h2 {
-    color: var(--text-color) !important;
-}
-
-/* Color the icons in the inclusions section */
-.inclusions-container .fas {
-    color: var(--primary-color);
-}
-
-/* Specific colors for different types of icons */
-.includes-column .fas.fa-check-circle {
-    color: var(--success-color);
-}
-
-.not-includes-column .fas.fa-times-circle {
-    color: var(--danger-color);
-}
-
-.includes-column .fas.fa-bed {
-    color: #8B4513; /* brown for accommodation */
-}
-
-.includes-column .fas.fa-car-side {
-    color: #4169E1; /* royal blue for transport */
-}
-
-.includes-column .fas.fa-utensils {
-    color: #FF6347; /* tomato red for food */
-}
-
-.includes-column .fas.fa-ticket-alt {
-    color: #DAA520; /* golden rod for tickets */
-}
-
-.includes-column .fas.fa-ship {
-    color: #20B2AA; /* light sea green for boat */
-}
-
-.includes-column .fas.fa-user-friends {
-    color: #FF69B4; /* hot pink for guides */
-}
-
-.not-includes-column .fas.fa-plane-departure {
-    color: #708090; /* slate gray for flights */
-}
-
-.not-includes-column .fas.fa-shopping-bag {
-    color: #9370DB; /* medium purple for shopping */
-}
-
-/* Chatbot float on the left */
-.chatbot-float {
-    position: fixed;
-    left: 20px;
-    bottom: 40px;
-    width: 60px;
-    height: 60px;
-    background-color: #ffffff;
-    color: #333;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    z-index: 110;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.chatbot-float img {
-    width: 36px;
-    height: 36px;
-}
-
-/* Chatbot panel styles */
-.chatbot-panel {
-    position: fixed;
-    left: 20px;
-    bottom: 110px;
-    width: 320px;
-    max-height: 420px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-    z-index: 115;
-    display: none;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.chatbot-panel[aria-hidden="false"] {
-    display: flex;
-}
-
-.chatbot-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 12px;
-    background: var(--primary-color);
-    color: #fff;
-}
-
-.chatbot-messages {
-    padding: 12px;
-    overflow: auto;
-    flex: 1 1 auto;
-}
-
-.chatbot-messages p { margin: 8px 0; }
-
-.chatbot-form {
-    display: flex;
-    gap: 8px;
-    padding: 10px;
-    border-top: 1px solid #eee;
-}
-
-.chatbot-form input { flex: 1; padding: 8px 10px; }
-.chatbot-form button { padding: 8px 12px; background: var(--secondary-color); border: none; color: #fff; }
-
-.inclusions-container ul {
-    list-style: none;
-    padding: 0;
-}
-
-.inclusions-container li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.inclusions-container i {
-    font-size: 1.2rem;
-}
-
-/* --- TESTIMONIOS --- */
-.testimonials-section {
-    background-color: var(--background-light);
-}
-
-.testimonial-card {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-left: 5px solid var(--primary-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
-}
-
-/* --- CONTACTO --- */
-.contact-us-section {
-    text-align: center;
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
-.contact-us-section h2 {
-    color: #fff;
-}
-
-.contact-us-section p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 30px;
-}
-
-.contact-button {
-    background-color: var(--warning-color);
-    color: var(--secondary-color);
-    padding: 15px 35px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-.contact-button:hover {
-    background-color: #e6ac00;
-}
-
-/* --- WHATSAPP FLOAT --- */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.whatsapp-svg-icon {
-    width: 35px;
-    height: 35px;
-}
-
-/* --- ESTILOS PARA PÁGINAS DE DÍA INDIVIDUAL --- */
-.day-detail-section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 20px auto 40px;
-    background-color: #fff;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    position: relative;
-    z-index: 2;
-}
-
-/* --- DAY PAGE HERO + NAV --- */
-.day-hero {
-    position: relative;
-    height: 48vh;
-    max-height: 460px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Ensure the day hero doesn't start underneath the fixed header */
-.day-hero {
-    margin-top: 76px;
-}
-
-.day-hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transform-origin: center;
-}
-
-/* Extra safety: never let hero images overflow viewport */
-.day-hero-img,
-.hero-img {
-    max-height: 80vh;
-}
-
-.day-hero-copy {
-    position: absolute;
-    z-index: 3;
-    color: var(--hero-text-color-beige);
-    text-align: center;
-    padding: 10px 20px;
-}
-
-.day-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    max-width: 900px;
-    margin: 20px auto;
     padding: 0 20px;
 }
 
-.day-nav a {
-    display: inline-block;
-    background: rgba(255,255,255,0.95);
-    color: var(--text-color);
-    padding: 10px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 700;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+/* Asignación de áreas del grid */
+.what-we-offer-intro { 
+    grid-area: intro; 
 }
 
-.day-nav a:hover {
-    background: var(--primary-color);
-    color: var(--light-text-color);
+.what-we-offer-list { 
+    grid-area: list; 
 }
 
-.day-detail-section h1 {
-    font-size: 2.8rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+.what-we-offer-grid-photos {
+    grid-area: photos;
+    display: grid !important; 
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px !important;
 }
 
-.day-detail-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
+.what-we-offer-grid-photos img {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    transition: transform 0.3s ease !important;
 }
 
-.back-to-home {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 12px 25px;
-    background-color: var(--primary-color);
-    color: var(--light-text-color);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+.what-we-offer-grid-photos img:hover {
+    transform: scale(1.05) !important;
 }
 
-.back-to-home:hover {
-    background-color: #3a7a72;
+.what-we-offer-carousel { 
+    grid-area: carousel; 
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
 }
 
-/* --- RESPONSIVE --- */
+/* --- 3. Estilo para Móvil (Responsive) --- */
 @media (max-width: 920px) {
-    /* Move Tocca higher up on mobile to prevent overlapping */
-    .hero-main-title {
-        transform: translateY(-10px);
+    .what-we-offer-layout-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 500px; 
+        margin: 0 auto;
+        padding: 0 20px;
     }
     
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 85px;
-        flex-direction: column;
-        background-color: var(--secondary-color);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        gap: 1px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    .what-we-offer-intro { 
+        order: 1; 
+    }
+    
+    .what-we-offer-grid-photos {
+        order: 2;
+        display: grid !important; 
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+        margin-top: 30px !important;
+    }
+    
+    .what-we-offer-grid-photos img {
+        width: 100% !important;
+        height: 150px !important;
+        object-fit: cover !important;
+        border-radius: 8px !important;
+    }
+    
+    .what-we-offer-list { 
+        order: 3; 
+        margin-top: 30px !important;
     }
 
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-link {
-        padding: 20px;
-        width: 100%;
-        border: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 0;
-        box-shadow: none;
-        color: var(--text-color);
-    }
-
-    .nav-link:hover {
-        background-color: var(--primary-color);
-        color: var(--light-text-color);
-        transform: none;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .itinerary-day-row {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-        min-height: 200px;
-    }
-
-    .day-title {
-        margin-bottom: 10px;
-        font-size: 2.5rem;
-    }
-
-    .day-description {
-        text-align: center;
-        width: 100%;
-    }
-
-    .day-description h3 {
-        font-size: 1.4rem;
-    }
-
-    .day-description p {
-        font-size: 1.1rem;
-    }
-
-    /* Hide descriptions in mobile, only show day title and emoji/title */
-    .itinerary-day-row .day-description p {
-        display: none !important;
-    }
-
-    /* Make the h3 in day-description more prominent since it's now the main info */
-    .day-description h3 {
-        font-size: 1.2rem !important;
-        margin: 5px 0 0 0 !important;
-        font-weight: 600 !important;
-    }
-
-    /* Adjust day-row padding and spacing for mobile */
-    .itinerary-day-row {
-        padding: 16px 12px !important;
-        min-height: 100px !important;
-        justify-content: center !important;
-    }
-
-    /* Center the day title better */
-    .day-title {
-        font-size: 2rem !important;
-        margin-bottom: 5px !important;
-    }
-
-    .why-us-container {
-        flex-direction: column;
-    }
-
-    .why-us-carousel-section:nth-of-type(even) .why-us-container {
-        flex-direction: column-reverse;
-    }
-
-    /* === AJUSTE FINAL PARA UPCOMING DATES (CENTRADO Y HORIZONTAL) === */
-    .dates-container {
-        display: flex;
-        /* Usamos Flexbox que es ideal para esto */
-        justify-content: center;
-        /* Centra las tarjetas horizontalmente */
-        align-items: stretch;
-        /* Asegura que todas tengan la misma altura */
-        flex-wrap: nowrap;
-        /* Evita que se bajen a otra línea */
-        gap: 8px;
-        /* Un pequeño espacio entre ellas */
-        padding: 0 10px;
-        /* Padding para que no toquen los bordes de la pantalla */
-    }
-
-    .date-card {
-        flex-basis: 0;
-        /* Permite que las tarjetas se encojan de forma flexible */
-        flex-grow: 1;
-        /* Hace que ocupen el espacio disponible de forma equitativa */
-        padding: 10px 5px;
-        /* Espacio interno ajustado */
-        min-height: 90px;
-        /* Les da una altura mínima para que no se vean aplastadas */
-        /* Centramos el texto dentro de cada tarjeta */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .date-card h3 {
-        font-size: 0.8rem;
-        margin: 0 0 4px 0;
-    }
-
-    .date-card p {
-        font-size: 0.9rem;
-        margin: 0 0 6px 0;
-    }
-
-    .status {
-        font-size: 0.65rem;
-        padding: 4px 8px;
-        white-space: nowrap;
-        /* Evita que "Few Spots Left" se parta en dos líneas */
-    }
-
-    .video-background img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-
-
-
-
-
-
-    /* --- SECCIÓN ITINERARIO --- */
-    .luxury-package-section {
-        background-color: var(--primary-color);
-        color: var(--light-text-color);
-        text-align: center;
-    }
-
-    .luxury-package-section h2 {
-        color: var(--light-text-color);
-    }
-
-    .package-price {
-        font-size: 1.8rem;
-        font-weight: bold;
-        margin-bottom: 50px;
-        color: var(--secondary-color);
-    }
-
-    .itinerary-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .itinerary-day-row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        overflow: hidden;
-        padding: 20px;
-        text-align: center;
-        min-height: 100px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .itinerary-day-row:hover {
-        transform: scale(1.03);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .day-title {
-        font-size: 1.8rem;
-        font-weight: bold;
-        font-family: 'Playfair Display', serif;
-    }
-
-    .day-title a {
-        color: var(--light-text-color);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .day-title a:hover {
-        color: var(--secondary-color);
-    }
-
-    .day-description {
-        padding-left: 0;
-        border-left: none;
-    }
-
-    .day-description h3 {
-        margin: 0 0 5px 0;
-        font-size: 1.1rem;
-        color: var(--light-text-color);
-    }
-
-    .day-description p {
-        margin: 0;
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.9);
-        display: none;
-    }
-
-    /* === AJUSTE DE ITINERARIO PARA MÓVIL === */
-    @media (max-width: 920px) {
-        .itinerary-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 12px; /* more breathing room on mobile */
-        }
-
-        .itinerary-day-row {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            min-height: 140px; /* slightly taller for readability */
-            padding: 14px; /* more internal spacing */
-            background-image: none !important;
-        }
-
-        .day-title {
-            flex: unset;
-            font-size: 1.5rem; /* keep legible on phones */
-            margin-bottom: 8px !important;
-        }
-
-        .day-description {
-            padding-left: 0;
-            border-left: none;
-            width: 100%;
-        }
-
-        .day-description h3 {
-            font-size: 0.95rem;
-            color: var(--text-color);
-        }
-
-        .day-description p {
-            display: none;
-        }
-    }
-
-/* Day 9 mobile short summary: show compact text only on small screens */
-@media (max-width: 920px) {
-    .itinerary-day-row[data-day="9"] .day-description .original {
-        display: none !important;
-    }
-    .itinerary-day-row[data-day="9"] .day-description .mobile-summary {
+    .what-we-offer-carousel { 
+        order: 4; 
         display: block !important;
-        color: var(--text-color) !important;
-        font-style: italic !important;
-        margin-top: 6px !important;
+        margin-top: 30px !important;
     }
 }
 
-    .itinerary-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    @media (max-width: 920px) {
-        .itinerary-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-        }
-    }
+/* --- 4. Estilos del Carrusel --- */
+.what-we-offer-carousel.slick-initialized {
+    display: block !important;
 }
 
-/* Mobile-specific: ensure hero description centers and is fully visible on small screens */
-@media (max-width: 920px) {
-    .hero-description {
-        transform: none !important;
-        margin-left: 0 !important;
-        text-align: center !important;
-        justify-self: center !important;
-        grid-row: auto !important;
-        padding: 0 14px !important;
-        font-size: clamp(0.95rem, 3.5vw, 1.2rem) !important;
-        display: block !important;
-    }
-}
-
-/* Extra tight phones: slightly increase spacing so description never clips */
-@media (max-width: 480px) {
-    .hero-description {
-        transform: none !important;
-        margin-left: 0 !important;
-        padding: 0 12px !important;
-        font-size: clamp(0.9rem, 4vw, 1.05rem) !important;
-    }
-}
-
-/* Very small screens: make itinerary single column and increase spacing for touch targets */
-@media (max-width: 480px) {
-    .itinerary-grid {
-        grid-template-columns: 1fr !important;
-        gap: 14px !important;
-        padding: 10px !important;
-    }
-
-    .itinerary-day-row {
-        padding: 16px !important;
-        min-height: auto !important;
-    }
-
-    .day-title {
-        font-size: 1.6rem !important;
-        margin-bottom: 8px !important;
-    }
-
-    .day-description h3 {
-        font-size: 1rem !important;
-    }
-}
-
-/* === Strong final overrides to ensure consistent itinerary layout and visibility === */
-/* Placed after all other rules so they win in the cascade. */
-#what-we-offer-grid .itinerary-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
-    max-width: 560px !important;
-    margin: 0 auto !important;
-    padding: 6px !important;
-}
-
-#what-we-offer-grid .itinerary-day-row {
+.what-we-offer-carousel .slick-track {
     display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    aspect-ratio: 1 / 1 !important;
-    min-height: 120px !important;
-    padding: 16px !important;
-    background: rgba(255,255,255,0.12) !important;
-    border-radius: 12px !important;
 }
 
-#what-we-offer-grid .itinerary-day-row .day-description p {
+.what-we-offer-carousel .slick-slide {
     display: block !important;
-    color: rgba(255,255,255,0.95) !important;
-    font-style: italic !important;
-    font-size: 0.85rem !important;
-    margin-top: 6px !important;
-}
-
-@media (min-width: 1000px) {
-    #what-we-offer-grid .itinerary-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-        max-width: 960px !important;
-    }
-}
-
-/* Tiny normalization to ensure all day titles align vertically across tiles.
-   This only changes margins/line-height/padding for .day-title and uses
-   !important sparingly so it fixes visual drift without altering design. */
-#what-we-offer-grid .itinerary-day-row .day-title,
-.itinerary-day-row .day-title {
-    margin: 0 0 8px 0 !important; /* consistent bottom spacing */
-    padding: 0 !important;
-    line-height: 1 !important; /* avoid shifts from different font metrics */
-    display: block !important;
+    width: 100% !important;
     height: auto !important;
+    padding: 0 5px;
+}
+
+.what-we-offer-carousel .slick-slide img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    display: block !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+.what-we-offer-carousel .slick-dots {
+    bottom: -25px !important;
+    position: relative !important;
     text-align: center !important;
 }
 
-/* Final override: ensure Day 9 shows the mobile summary on small screens.
-   Placed at the end so it wins over earlier strong rules. */
-@media (max-width: 920px) {
-    #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description .original {
-        display: none !important;
-    }
-    #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description .mobile-summary {
-        display: block !important;
-        color: #FFF;
-        font-style: italic !important;
-        margin-top: 6px !important;
-    }
+.what-we-offer-carousel .slick-dots li {
+    display: inline-block !important;
+    margin: 0 5px !important;
 }
 
-/* Safety: ensure mobile sizes keep the same visual rhythm */
-@media (max-width: 920px) {
-    #what-we-offer-grid .itinerary-day-row .day-title,
-    .itinerary-day-row .day-title {
-        margin-bottom: 6px !important;
-        line-height: 1.05 !important;
-    }
+.what-we-offer-carousel .slick-dots li button:before {
+    font-size: 10px !important;
+    color: var(--primary-color) !important;
+    opacity: 0.5 !important;
 }
 
-/* Specific styling for Day 9 to make typography smaller */
-#what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description p,
-.itinerary-day-row[data-day="9"] .day-description p {
-    font-size: 0.85rem !important;
-    line-height: 1.3 !important;
+.what-we-offer-carousel .slick-dots li.slick-active button:before {
+    color: var(--primary-color) !important;
+    opacity: 1 !important;
 }
 
-#what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description h3,
-.itinerary-day-row[data-day="9"] .day-description h3 {
-    font-size: 0.95rem !important;
+.what-we-offer-carousel .slick-arrow {
+    display: block !important;
+    z-index: 10 !important;
 }
 
-/* Specific styling for Day 6 to make typography smaller */
-#what-we-offer-grid .itinerary-day-row[data-day="6"] .day-description p,
-.itinerary-day-row[data-day="6"] .day-description p {
-    font-size: 0.85rem !important;
-    line-height: 1.3 !important;
+.what-we-offer-carousel .slick-prev {
+    left: 10px !important;
 }
 
-#what-we-offer-grid .itinerary-day-row[data-day="6"] .day-description h3,
-.itinerary-day-row[data-day="6"] .day-description h3 {
-    font-size: 0.95rem !important;
+.what-we-offer-carousel .slick-next {
+    right: 10px !important;
 }
 
-/* Specific styling for Day 7 to make typography smaller */
-#what-we-offer-grid .itinerary-day-row[data-day="7"] .day-description p,
-.itinerary-day-row[data-day="7"] .day-description p {
-    font-size: 0.85rem !important;
-    line-height: 1.3 !important;
-}
-
-#what-we-offer-grid .itinerary-day-row[data-day="7"] .day-description h3,
-.itinerary-day-row[data-day="7"] .day-description h3 {
-    font-size: 0.95rem !important;
-}
-
-/* Mobile-specific: Hide ALL day descriptions on screens < 920px */
-@media (max-width: 920px) {
-    /* Hide all paragraph descriptions in itinerary on mobile */
-    #what-we-offer-grid .itinerary-day-row .day-description p,
-    .luxury-package-section .itinerary-day-row .day-description p,
-    .itinerary-day-row .day-description p {
-        display: none !important;
-        visibility: hidden !important;
-    }
-
-    /* Also hide specific day classes (6, 7, 9) */
-    #what-we-offer-grid .itinerary-day-row[data-day="6"] .day-description p,
-    #what-we-offer-grid .itinerary-day-row[data-day="7"] .day-description p,
-    #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description p.original,
-    #what-we-offer-grid .itinerary-day-row[data-day="9"] .day-description p.mobile-summary,
-    .itinerary-day-row[data-day="6"] .day-description p,
-    .itinerary-day-row[data-day="7"] .day-description p,
-    .itinerary-day-row[data-day="9"] .day-description p.original,
-    .itinerary-day-row[data-day="9"] .day-description p.mobile-summary {
-        display: none !important;
-        visibility: hidden !important;
-    }
-
-    /* Make day titles and emoji headers more prominent since they're now the main info */
-    #what-we-offer-grid .itinerary-day-row .day-description h3,
-    .luxury-package-section .itinerary-day-row .day-description h3,
-    .itinerary-day-row .day-description h3 {
-        font-size: 1.0rem !important;
-        text-align: center !important;
-        margin: 8px 0 0 0 !important;
-        line-height: 1.2 !important;
-        font-weight: 600 !important;
-    }
-
-    /* Ensure day boxes are properly sized for mobile */
-    #what-we-offer-grid .itinerary-day-row,
-    .luxury-package-section .itinerary-day-row,
-    .itinerary-day-row {
-        min-height: 90px !important;
-        padding: 12px 8px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-
-    /* Day title styling for mobile */
-    #what-we-offer-grid .day-title,
-    .luxury-package-section .day-title,
-    .day-title {
-        font-size: 1.6rem !important;
-        margin-bottom: 6px !important;
-        text-align: center !important;
-        font-weight: bold !important;
-    }
-}
+/* --- REMOVE ALL DUPLICATE STYLES --- */
+/* Remove the duplicate "FIXED WHAT WE OFFER GRID PHOTOS" and "FIXED CAROUSEL STYLES" sections */
 
 /* ========================================
    INTERACTIVE TIMELINE STYLES
@@ -2293,609 +1308,7 @@ section.animate-on-scroll.is-visible {
     background: #f8f9fa;
 }
 
-.quick-btn {
-    display: inline-block;
-    margin: 5px 5px 5px 0;
-    padding: 6px 12px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.quick-btn:hover {
-    background: #e74c3c;
-    color: white;
-    border-color: #e74c3c;
-}
-
-/* Mobile Chatbot */
-@media (max-width: 480px) {
-    .chatbot-popup {
-        right: 10px;
-        bottom: 90px;
-        width: calc(100vw - 20px);
-    }
-    
-    .chatbot-toggle {
-        right: 15px;
-        bottom: 15px;
-    }
-}
-
-/* Timeline Animation on Scroll */
-.timeline-item {
-    transition-delay: 0.1s;
-}
-
-.timeline-item:nth-child(2) { transition-delay: 0.2s; }
-.timeline-item:nth-child(3) { transition-delay: 0.3s; }
-.timeline-item:nth-child(4) { transition-delay: 0.4s; }
-.timeline-item:nth-child(5) { transition-delay: 0.5s; }
-.timeline-item:nth-child(6) { transition-delay: 0.6s; }
-.timeline-item:nth-child(7) { transition-delay: 0.7s; }
-.timeline-item:nth-child(8) { transition-delay: 0.8s; }
-.timeline-item:nth-child(9) { transition-delay: 0.9s; }
-.timeline-item:nth-child(10) { transition-delay: 1.0s; }
-.timeline-item:nth-child(11) { transition-delay: 1.1s; }
-
-/* ========================================
-   CONTACT US MENU (bottom right)
-======================================== */
-
-.contact-menu {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    z-index: 1001;
-}
-
-.contact-toggle {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
-    background: linear-gradient(135deg, var(--primary-color), #3a8a82);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(74, 154, 146, 0.4);
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.contact-toggle:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(74, 154, 146, 0.5);
-}
-
-.contact-toggle i {
-    font-size: 1.2rem;
-}
-
-.contact-text {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.contact-options {
-    position: absolute;
-    bottom: 70px;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    opacity: 0;
-    transform: translateY(20px);
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.contact-menu.active .contact-options {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-}
-
-.contact-option {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 15px;
-    background: white;
-    border-radius: 25px;
-    text-decoration: none;
-    color: #2c3e50;
-    font-size: 0.9rem;
-    font-weight: 500;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    min-width: 120px;
-}
-
-.contact-option:hover {
-    background: #f8f9fa;
-    transform: translateX(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-.contact-option i {
-    font-size: 1.1rem;
-    width: 20px;
-    text-align: center;
-}
-
-.contact-option:nth-child(1) i { color: #e74c3c; } /* Email */
-.contact-option:nth-child(2) i { color: #25d366; } /* WhatsApp */
-.contact-option:nth-child(3) i { color: #3498db; } /* Phone */
-
-/* Mobile Contact Menu */
-@media (max-width: 768px) {
-    .contact-menu {
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    .contact-toggle {
-        padding: 10px 16px;
-        font-size: 0.9rem;
-    }
-    
-    .contact-toggle i {
-        font-size: 1rem;
-    }
-    
-    .contact-text {
-        font-size: 0.85rem;
-    }
-    
-    .contact-option {
-        padding: 8px 12px;
-        font-size: 0.8rem;
-    }
-}
-
-/* Adjust chatbot position to avoid overlap */
-.chatbot-toggle {
-    bottom: 25px;
-    right: 25px;
-}
-
-/* === FINAL OVERRIDE: Itinerary tiles show only Day + emoji + title on all screen sizes === */
-#what-we-offer-grid .itinerary-day-row .day-description p {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-/* Match original dark section background for itinerary so white text is legible - BETTER SPACING */
-#what-we-offer-grid.itinerary-section {
-    background-color: var(--primary-color) !important;
-    color: var(--light-text-color) !important;
-    padding: 80px 30px !important;
-}
-
-#what-we-offer-grid h2 {
-    color: var(--light-text-color) !important;
-    margin-bottom: 50px !important;
-    font-size: 2.8rem !important;
-}
-
-/* === JOURNEY OPTIONS SECTION === */
-.journey-options-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #3A7A72 100%);
-    color: var(--light-text-color);
-    padding: 80px 30px;
-    text-align: center;
-}
-
-.journey-options-section h2 {
-    color: var(--light-text-color);
-    margin-bottom: 20px;
-    font-size: 2.8rem;
-    font-family: 'Playfair Display', serif;
-}
-
-.journey-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 50px;
-    opacity: 0.9;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.journey-buttons-container {
-    display: flex;
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.journey-btn {
-    flex: 1;
-    min-width: 300px;
-    max-width: 420px;
-    background: rgba(255, 255, 255, 0.95);
-    border: none;
-    border-radius: 20px;
-    padding: 35px 30px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    text-align: left;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(10px);
-    position: relative;
-    overflow: hidden;
-}
-
-.journey-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    transition: left 0.6s;
-}
-
-.journey-btn:hover::before {
-    left: 100%;
-}
-
-.journey-btn:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-    background: rgba(255, 255, 255, 1);
-}
-
-.btn-icon {
-    font-size: 2.5rem;
-    min-width: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-content {
-    flex: 1;
-}
-
-.btn-content h3 {
-    color: var(--text-color);
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-    font-family: 'Playfair Display', serif;
-}
-
-.btn-content p {
-    color: #666;
-    font-size: 0.95rem;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.btn-arrow {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    transition: transform 0.3s ease;
-    font-weight: bold;
-}
-
-.journey-btn:hover .btn-arrow {
-    transform: translateX(8px);
-}
-
-/* === MODAL STYLES === */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.modal-content {
-    background-color: #ffffff;
-    margin: 2% auto;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 900px;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    animation: slideIn 0.4s ease;
-    position: relative;
-}
-
-@keyframes slideIn {
-    from { 
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to { 
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.modal-header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #3A7A72 100%);
-    color: white;
-    padding: 25px 30px;
-    border-radius: 20px 20px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.modal-header h2 {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-}
-
-.close {
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 5px 10px;
-    border-radius: 50%;
-}
-
-.close:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: rotate(90deg);
-}
-
-.modal-body {
-    padding: 40px 30px;
-}
-
-/* === HIGHLIGHTS MODAL === */
-.highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
-}
-
-.highlight-card {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 15px;
-    padding: 25px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.highlight-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    border-color: var(--primary-color);
-}
-
-.highlight-icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-.highlight-card h3 {
-    color: var(--text-color);
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    font-family: 'Playfair Display', serif;
-}
-
-.highlight-card p {
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.modal-cta {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-}
-
-.cta-button {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #3A7A72 100%);
-    color: white;
-    border: none;
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(74, 154, 146, 0.4);
-}
-
-/* === CUSTOMIZE MODAL === */
-.customize-intro {
-    font-size: 1.1rem;
-    color: #666;
-    text-align: center;
-    margin-bottom: 35px;
-    line-height: 1.6;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.customize-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
-    display: block;
-    color: var(--text-color);
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #e9ecef;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #fff;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(74, 154, 146, 0.1);
-}
-
-.checkbox-group {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.checkbox-label {
-    display: flex !important;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    font-weight: 400 !important;
-}
-
-.checkbox-label:hover {
-    background-color: #f8f9fa;
-}
-
-.checkbox-label input[type="checkbox"] {
-    width: auto !important;
-    margin: 0;
-}
-
-.submit-button {
-    width: 100%;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #3A7A72 100%);
-    color: white;
-    border: none;
-    padding: 18px 25px;
-    border-radius: 15px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.submit-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(74, 154, 146, 0.4);
-}
-
-/* === RESPONSIVE DESIGN === */
-@media (max-width: 768px) {
-    .journey-buttons-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .journey-btn {
-        min-width: auto;
-        max-width: none;
-        padding: 25px 20px;
-    }
-    
-    .modal-content {
-        margin: 5% auto;
-        width: 95%;
-        max-height: 85vh;
-    }
-    
-    .modal-header {
-        padding: 20px;
-    }
-    
-    .modal-header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .modal-body {
-        padding: 25px 20px;
-    }
-    
-    .highlights-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .checkbox-group {
-        grid-template-columns: 1fr;
-    }
-    
-    .journey-options-section {
-        padding: 60px 20px;
-    }
-    
-    .journey-options-section h2 {
-        font-size: 2.2rem;
-    }
-}
-
-/* === CAMBIO: REGLAS AÑADIDAS PARA CORREGIR EL TITULAR === */
-#tocca-offerings .why-us-text-block h3 {
-    color: var(--text-color); /* Usa el color de texto normal para toda la oración */
-    font-weight: 400; /* Asegura que el texto base no esté en negrita */
-}
-
-#tocca-offerings .why-us-text-block h3 strong {
-    color: var(--secondary-color); /* Hace que solo la parte resaltada sea negra */
-    font-weight: 700; /* Asegura que la parte resaltada esté en negrita */
-}
-/* === FIN DEL CAMBIO === */
-
-
-/* === TOCCA OFFERINGS CARDS STYLES === */
+/* === TOCCA OFFERINGS CARDS STYLES (SECCIÓN ANTIGUA) === */
 .offerings-cards {
     display: grid;
     /* CAMBIO: 2 columnas fijas */
@@ -2979,8 +1392,6 @@ section.animate-on-scroll.is-visible {
     max-height: 500px;
     transform: translateY(0);
 }
-
-
 
 .offering-card:hover h4 {
     color: #2A5A52;
@@ -3152,44 +1563,1394 @@ section.animate-on-scroll.is-visible {
     margin: 0 auto !important;
 }
 
-@media (max-width: 768px) {
-    .promise-title {
-        font-size: 1.3rem !important;
+/* ========================================
+   NUEVA SECCIÓN JOURNEYS (TOCCA OFFERINGS)
+======================================== */
+
+.journey-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.journey-section h2 {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.journey-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.journey-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+/* Línea vertical divisoria - opcional */
+.journey-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    bottom: 5%;
+    width: 1px;
+    background-color: rgba(255,255,255,0.3);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.journey-card {
+    position: relative;
+    padding: 60px 40px;
+    border-radius: 15px;
+    text-decoration: none;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.journey-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.journey-card:hover::after {
+    opacity: 0.85;
+}
+
+/* Tarjeta Signature - Azul oscuro con imagen de boat */
+.signature-card {
+    background-image: url('imagenes/boat.jpg');
+    background-color: #23374d;
+}
+
+.signature-card::after {
+    background: linear-gradient(135deg, rgba(35, 55, 77, 0.92) 0%, rgba(35, 55, 77, 0.88) 100%);
+}
+
+.signature-card:hover::after {
+    background: linear-gradient(135deg, rgba(35, 55, 77, 0.85) 0%, rgba(35, 55, 77, 0.80) 100%);
+}
+
+/* Tarjeta Bespoke - Beige claro con imagen de views */
+.bespoke-card {
+    background-image: url('imagenes/views.jpg');
+    background-color: #f4f1eb;
+}
+
+.bespoke-card::after {
+    background: linear-gradient(135deg, rgba(244, 241, 235, 0.98) 0%, rgba(244, 241, 235, 0.96) 100%);
+}
+
+.bespoke-card:hover::after {
+    background: linear-gradient(135deg, rgba(244, 241, 235, 0.95) 0%, rgba(244, 241, 235, 0.93) 100%);
+}
+
+/* Contenido de las tarjetas */
+.journey-card-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+
+.journey-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+.signature-card h3 {
+    color: #c9a970; /* Dorado */
+}
+
+.bespoke-card h3 {
+    color: #23374d; /* Azul oscuro */
+}
+
+.journey-subtitle-card {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.signature-card .journey-subtitle-card {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.bespoke-card .journey-subtitle-card {
+    color: #4a4a4a;
+}
+
+.journey-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.journey-features li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+.signature-card .journey-features li {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.bespoke-card .journey-features li {
+    color: #4a4a4a;
+}
+
+.journey-features i {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.signature-card .journey-features i {
+    color: #c9a970; /* Dorado */
+}
+
+.bespoke-card .journey-features i {
+    color: #23374d; /* Azul oscuro */
+}
+
+.journey-features em {
+    font-style: italic;
+}
+
+.journey-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.signature-card .journey-link {
+    color: #c9a970;
+    border-bottom-color: #c9a970;
+}
+
+.bespoke-card .journey-link {
+    color: #23374d;
+    border-bottom-color: #23374d;
+}
+
+.journey-card:hover .journey-link {
+    transform: translateX(8px);
+    border-bottom-color: currentColor;
+}
+
+.journey-promise {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px 20px;
+}
+
+.journey-promise h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    margin: 0 0 12px 0;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.journey-promise p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive para la nueva sección */
+@media (max-width: 920px) {
+    .journey-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
     
-    .promise-text {
+    .journey-container::before {
+        display: none;
+    }
+    
+    .journey-card {
+        min-height: 450px;
+        padding: 40px 30px;
+    }
+    
+    .journey-card h3 {
+        font-size: 2.2rem;
+    }
+    
+    .journey-subtitle-card {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .journey-features li {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+    
+    .journey-promise h4 {
+        font-size: 1.2rem;
+    }
+    
+    .journey-promise p {
         font-size: 1rem;
     }
 }
 
-/* CAMBIO: Añadir números a las tarjetas de oferta */
-.offering-card:not(.promise-card)::after {
-    counter-increment: offering-counter;
-    content: "#" counter(offering-counter);
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 2rem;
-    font-weight: 700;
-    font-family: 'Playfair Display', serif;
-    color: var(--primary-color);
-    opacity: 0.2;
-    z-index: 0;
-}
-
-/* Mobile styles for offerings cards */
+/* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
-    .offerings-cards {
-        grid-template-columns: 1fr;
+    .journey-buttons-container {
+        flex-direction: column;
         gap: 20px;
-        margin-top: 30px;
     }
     
-    .offering-card {
+    .journey-btn {
+        min-width: auto;
+        max-width: none;
         padding: 25px 20px;
     }
     
-    .offering-card h4 {
-        font-size: 1.2rem;
+    .journey-options-section {
+        padding: 60px 20px;
+    }
+    
+    .journey-options-section h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* === MODAL STYLES === */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 2% auto;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.4s ease;
+    position: relative;
+}
+
+@keyframes slideIn {
+    from { 
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3A7A72 100%);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+}
+
+.close {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.modal-body {
+    padding: 40px 30px;
+}
+
+/* === HIGHLIGHTS MODAL === */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.highlight-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.highlight-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.highlight-card h3 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.highlight-card p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-cta {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3A7A72 100%);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 154, 146, 0.4);
+}
+
+/* === CUSTOMIZE MODAL === */
+.customize-intro {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.customize-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 154, 146, 0.1);
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.checkbox-label {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: 400 !important;
+}
+
+.checkbox-label:hover {
+    background-color: #f8f9fa;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto !important;
+    margin: 0;
+}
+
+.submit-button {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3A7A72 100%);
+    color: white;
+    border: none;
+    padding: 18px 25px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(74, 154, 146, 0.4);
+}
+
+/* === MODAL RESPONSIVE === */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 5% auto;
+        width: 95%;
+        max-height: 85vh;
+    }
+    
+    .modal-header {
+        padding: 20px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-body {
+        padding: 25px 20px;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === MISSING CAROUSEL STYLES === */
+.what-we-offer-carousel {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 20px 0 !important;
+    overflow: hidden !important;
+}
+
+.what-we-offer-carousel.slick-initialized {
+    display: block !important;
+}
+
+.what-we-offer-carousel .slick-track {
+    display: flex !important;
+}
+
+.what-we-offer-carousel .slick-slide {
+    display: block !important;
+    width: 100% !important;
+    height: 250px !important;
+}
+
+.what-we-offer-carousel .slick-slide img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    display: block !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+.what-we-offer-carousel .slick-dots {
+    bottom: -25px !important;
+    position: relative !important;
+    text-align: center !important;
+}
+
+.what-we-offer-carousel .slick-dots li {
+    display: inline-block !important;
+    margin: 0 5px !important;
+}
+
+.what-we-offer-carousel .slick-dots li button:before {
+    font-size: 10px !important;
+    color: var(--primary-color) !important;
+    opacity: 0.5 !important;
+}
+
+.what-we-offer-carousel .slick-dots li.slick-active button:before {
+    color: var(--primary-color) !important;
+    opacity: 1 !important;
+}
+
+/* Ensure carousel arrows are visible */
+.what-we-offer-carousel .slick-arrow {
+    display: block !important;
+    z-index: 10 !important;
+}
+
+.what-we-offer-carousel .slick-prev {
+    left: 10px !important;
+}
+
+.what-we-offer-carousel .slick-next {
+    right: 10px !important;
+}
+
+/* === CONTACT MENU STYLES === */
+.contact-menu {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1001;
+}
+
+.contact-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, var(--primary-color), #3a8a82);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(74, 154, 146, 0.4);
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 154, 146, 0.5);
+}
+
+.contact-toggle i {
+    font-size: 1.2rem;
+}
+
+.contact-text {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-options {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.contact-menu.active .contact-options {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    min-width: 120px;
+}
+
+.contact-option:hover {
+    background: #f8f9fa;
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.contact-option i {
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-option:nth-child(1) i { color: #e74c3c; } /* Email */
+.contact-option:nth-child(2) i { color: #25d366; } /* WhatsApp */
+.contact-option:nth-child(3) i { color: #3498db; } /* Phone */
+
+/* Mobile Contact Menu */
+@media (max-width: 768px) {
+    .contact-menu {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .contact-toggle {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .contact-toggle i {
+        font-size: 1rem;
+    }
+    
+    .contact-text {
+        font-size: 0.85rem;
+    }
+    
+    .contact-option {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* === JOURNEY OPTIONS SECTION === */
+.journey-options-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3A7A72 100%);
+    color: var(--light-text-color);
+    padding: 80px 30px;
+    text-align: center;
+}
+
+.journey-options-section h2 {
+    color: var(--light-text-color);
+    margin-bottom: 20px;
+    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.journey-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    opacity: 0.9;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.journey-buttons-container {
+    display: flex;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.journey-btn {
+    flex: 1;
+    min-width: 300px;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 20px;
+    padding: 35px 30px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.journey-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s;
+}
+
+.journey-btn:hover::before {
+    left: 100%;
+}
+
+.journey-btn:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 1);
+}
+
+.btn-icon {
+    font-size: 2.5rem;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-content {
+    flex: 1;
+}
+
+.btn-content h3 {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+}
+
+.btn-content p {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-arrow {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.journey-btn:hover .btn-arrow {
+    transform: translateX(8px);
+}
+
+/* === CHATBOT QUICK BUTTONS === */
+.quick-btn {
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+    padding: 6px 12px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quick-btn:hover {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+/* === SLOGAN STYLES === */
+.slogan {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.9;
+    margin: 20px 0;
+    grid-row: 4;
+}
+
+/* === ENSURE NO SCROLL ON MOBILE MENU === */
+.no-scroll {
+    overflow: hidden;
+}
+
+/* ========================================
+   DAY PAGE STYLES
+======================================== */
+
+.day-hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    max-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.day-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.day-hero-copy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+    width: 90%;
+    max-width: 800px;
+}
+
+.day-hero-copy h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+
+.day-detail-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.day-detail-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.day-detail-section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.day-actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-to-home {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 154, 146, 0.3);
+}
+
+.back-to-home:hover {
+    background-color: #3A7A72;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 154, 146, 0.4);
+}
+
+.day-nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    gap: 20px;
+}
+
+.day-nav a {
+    flex: 1;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.day-nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 154, 146, 0.3);
+}
+
+.day-nav .prev {
+    background-color: transparent;
+}
+
+.day-nav .next {
+    background-color: transparent;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .day-hero {
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    .day-detail-section {
+        padding: 40px 20px;
+    }
+    
+    .day-detail-section h1 {
+        font-size: 2rem;
+    }
+    
+    .day-detail-section p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .day-nav {
+        flex-direction: column;
+        padding: 0 20px 40px;
+    }
+    
+    .day-nav a {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================
+   INCLUSIONS SECTION STYLES
+======================================== */
+
+.inclusions-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+}
+
+.inclusions-section h2 {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-family: 'Playfair Display', serif;
+}
+
+.inclusions-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.includes-column,
+.not-includes-column {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.includes-column:hover,
+.not-includes-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.includes-column h3,
+.not-includes-column h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.includes-column h3 i {
+    color: #28a745 !important;
+    font-size: 1.5rem;
+}
+
+.not-includes-column h3 i {
+    color: #dc3545 !important;
+    font-size: 1.5rem;
+}
+
+.includes-column ul,
+.not-includes-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.includes-column li,
+.not-includes-column li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    line-height: 1.6;
+}
+
+.includes-column li i {
+    color: #4A9A92 !important;
+    font-size: 1.2rem;
+    min-width: 20px;
+}
+
+.not-includes-column li i {
+    color: #6c757d !important;
+    font-size: 1.2rem;
+    min-width: 20px;
+}
+
+/* Colores específicos para cada icono de "What's included" */
+.includes-column li .fa-bed {
+    color: #e67e22 !important; /* Naranja para alojamiento */
+}
+
+.includes-column li .fa-car-side {
+    color: #3498db !important; /* Azul para transporte */
+}
+
+.includes-column li .fa-utensils {
+    color: #e74c3c !important; /* Rojo para comida */
+}
+
+.includes-column li .fa-ticket-alt {
+    color: #9b59b6 !important; /* Morado para tickets */
+}
+
+.includes-column li .fa-ship {
+    color: #1abc9c !important; /* Turquesa para barco */
+}
+
+.includes-column li .fa-user-friends {
+    color: #f39c12 !important; /* Dorado para guías */
+}
+
+/* Colores para "Not Included" */
+.not-includes-column li .fa-plane-departure {
+    color: #95a5a6 !important; /* Gris para vuelos */
+}
+
+.not-includes-column li .fa-shopping-bag {
+    color: #7f8c8d !important; /* Gris oscuro para compras */
+}
+
+@media (max-width: 768px) {
+    .inclusions-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .includes-column,
+    .not-includes-column {
+        padding: 30px 25px;
+    }
+    
+    .includes-column h3,
+    .not-includes-column h3 {
+        font-size: 1.5rem;
+    }
+    
+    .includes-column li,
+    .not-includes-column li {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   TESTIMONIALS SECTION STYLES
+======================================== */
+
+.testimonials-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3A7A72 100%);
+    color: white;
+}
+
+.testimonials-section h2 {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-family: 'Playfair Display', serif;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    font-size: 6rem;
+    color: var(--primary-color);
+    font-family: 'Playfair Display', serif;
+    opacity: 0.3;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.testimonial-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 0 0 20px 0;
+    font-style: italic;
+}
+
+.testimonial-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    text-align: right;
+    margin: 0;
+    font-weight: 600;
+}
+
+.testimonial-card:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 60px 20px;
+    }
+    
+    .testimonials-section h2 {
+        font-size: 2rem;
+    }
+    
+    .testimonial-card {
+        padding: 25px;
+    }
+    
+    .testimonial-card::before {
+        font-size: 4rem;
+        top: -15px;
+        left: 20px;
+    }
+    
+    .testimonial-card p {
+        font-size: 1rem;
+    }
+    
+    .testimonial-card h4 {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   CONTACT US SECTION STYLES
+======================================== */
+
+.contact-us-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.contact-us-section h2 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-us-section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.contact-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3A7A72 100%);
+    color: white;
+    padding: 18px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(74, 154, 146, 0.4);
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(74, 154, 146, 0.5);
+    background: linear-gradient(135deg, #3A7A72 0%, var(--primary-color) 100%);
+}
+
+@media (max-width: 768px) {
+    .contact-us-section {
+        padding: 60px 20px;
+    }
+    
+    .contact-us-section h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-us-section p {
+        font-size: 1rem;
+    }
+    
+    .contact-button {
+        padding: 15px 40px;
+        font-size: 1.1rem;
     }
 }
