@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Journey - Tocca Amalfi Coast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&family=Style+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="contact-menu" class="contact-menu">
+        <button class="contact-toggle" onclick="toggleContactMenu()">
+            <i class="fas fa-envelope"></i>
+            <span class="contact-text">Contact Us</span>
+        </button>
+        <div class="contact-options">
+            <a href="mailto:info@toccaamalfi.com" class="contact-option" title="Email Us">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <a href="https://wa.me/1234567890?text=Hello!%20I'd%20like%20to%20know%20more%20about%20the%20tours." target="_blank" class="contact-option" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="tel:+1234567890" class="contact-option" title="Call Us">
+                <i class="fas fa-phone"></i>
+                <span>Call</span>
+            </a>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html#hero" class="nav-logo-container">
+                <img src="imagenes/tocca_amalfi_nav.png" alt="Tocca Amalfi Logo" class="nav-logo">
+            </a>
+            <div class="nav-menu">
+                <a href="index.html#why-tocca-amalfi" class="nav-link">Why Us?</a>
+                <a href="index.html#what-we-offer-grid" class="nav-link">Itinerary</a>
+                <a href="index.html#tocca-offerings" class="nav-link">Journeys</a>
+                <a href="index.html#inclusions" class="nav-link">Inclusions</a>
+                <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+                <a href="index.html#contact-section" class="nav-link">Contact</a>
+            </div>
+            <button class="hamburger" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="day-hero" style="height: 50vh; max-height: 400px;">
+             <img class="hero-img" src="imagenes/boat.jpg" alt="Amalfi Coast sailing" style="filter: brightness(0.7);">
+            <div class="day-hero-copy">
+                <h1 style="color: var(--hero-text-color-beige); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">Signature Journey</h1>
+                <p style="font-size: 1.2rem; color: var(--hero-text-color-beige); text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);">For those who want to simply arrive and be embraced by the Coast</p>
+            </div>
+        </section>
+
+        <section class="day-detail-section animate-on-scroll is-visible">
+            <h1>Nuestra Experiencia Signature</h1>
+            
+            <p>Llega con tu maleta y tu curiosidad; nosotros nos encargamos del resto. El "Signature Journey" es una experiencia meticulosamente curada que te lleva al corazón de la Costa Amalfitana sin que tengas que preocuparte por nada.</p>
+            <p>Durante 10 días, te sumergirás en la verdadera esencia de este paraíso: desde pueblos escondidos hasta sabores auténticos, desde atardeceres dorados hasta encuentros inolvidables con lugareños. Todo está diseñado para que simplemente disfrutes, te conectes y te dejes llevar por la magia de este lugar.</p>
+
+            <h3 style="margin-top: 30px;">¿Qué incluye nuestro Signature Journey?</h3>
+            
+            <ul class="journey-features" style="font-size: 1.1rem; list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 15px;"><i class="fas fa-sun" style="color: var(--primary-color); margin-right: 10px;"></i> 10 días de experiencias cuidadosamente seleccionadas</li>
+                <li style="margin-bottom: 15px;"><i class="fas fa-hotel" style="color: var(--primary-color); margin-right: 10px;"></i> Alojamientos boutique y anfitriones locales excepcionales</li>
+                <li style="margin-bottom: 15px;"><i class="fas fa-car" style="color: var(--primary-color); margin-right: 10px;"></i> Logística impecable y traslados privados</li>
+                <li style="margin-bottom: 15px;"><i class="fas fa-users" style="color: var(--primary-color); margin-right: 10px;"></i> Grupos pequeños para crear conexiones auténticas</li>
+                <li style="margin-bottom: 15px;"><i class="fas fa-cocktail" style="color: var(--primary-color); margin-right: 10px;"></i> Toques diarios de <em>la dolce vita</em></li>
+            </ul>
+
+            <h3 style="margin-top: 30px;">Itinerario destacado:</h3>
+            
+            <div style="max-width: 800px; margin: 20px auto;">
+                <p><strong>Día 1-2:</strong> Bienvenida a Positano, la joya de la Costa</p>
+                <p><strong>Día 3-4:</strong> Explora Ravello y sus jardines encantadores</p>
+                <p><strong>Día 5:</strong> Excursión privada a Capri y la Gruta Azul</p>
+                <p><strong>Día 6-7:</strong> Experiencias gastronómicas en viñedos y cocina con Nonna</p>
+                <p><strong>Día 8:</strong> Descubre los secretos de Pompeii con guías expertos</p>
+                <p><strong>Día 9:</strong> Paseo en Vespa y navegación al atardecer</p>
+                <p><strong>Día 10:</strong> Despedida con una cena especial frente al mar</p>
+            </div>
+
+            <p style="margin-top: 30px; font-size: 1.1rem;"><strong>Esta es tu invitación a vivir la Costa Amalfitana de verdad, no solo a visitarla.</strong></p>
+            
+            <a href="index.html#tocca-offerings" class="back-to-home" style="margin-right: 15px;">Volver a Journeys</a>
+            <a href="index.html#contact-section" class="cta-button">Reservar mi Lugar</a>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // CONTACT MENU TOGGLE
+        let contactMenuOpen = false;
+        function toggleContactMenu() {
+            const menu = document.getElementById('contact-menu');
+            menu.classList.toggle('active');
+            contactMenuOpen = !contactMenuOpen;
+        }
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('contact-menu');
+            if (menu && !menu.contains(event.target) && contactMenuOpen) {
+                toggleContactMenu();
+            }
+        });
+    </script>
+</body>
+
+</html>
