@@ -2443,7 +2443,7 @@ section.animate-on-scroll.is-visible {
     margin: 40px 0;
     padding: 50px 20px;
     background: transparent;
-    text-align: center;
+    text-align: left;
     width: 100%;
 }
 
@@ -2453,7 +2453,7 @@ section.animate-on-scroll.is-visible {
     color: var(--text-color);
     margin-bottom: 15px;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
 }
 
 .timeline-subtitle {
@@ -2462,9 +2462,9 @@ section.animate-on-scroll.is-visible {
     color: #666;
     font-style: italic;
     max-width: 750px;
-    margin: 0 auto 50px;
+    margin: 0 0 50px 0;
     line-height: 1.6;
-    text-align: center;
+    text-align: left;
 }
 
 .journey-timeline {
