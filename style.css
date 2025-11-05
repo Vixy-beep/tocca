@@ -1445,6 +1445,23 @@ section.animate-on-scroll.is-visible {
     z-index: 2;
 }
 
+.journey-card-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #c9a970;
+}
+
+.signature-card .journey-card-content h3 {
+    color: #c9a970;
+}
+
+.bespoke-card .journey-card-content h3 {
+    color: #4A9A92;
+}
+
 .journey-card::after {
     content: '';
     position: absolute;
@@ -2425,7 +2442,7 @@ section.animate-on-scroll.is-visible {
 .journey-timeline-section {
     margin: 0;
     padding: 60px 30px;
-    background: #f4f1eb;
+    background: #e8dcc8;
     text-align: center;
     width: 100%;
 }
@@ -2495,7 +2512,7 @@ section.animate-on-scroll.is-visible {
 }
 
 .timeline-line {
-    width: 100px;
+    width: 60px;
     height: 2px;
     background: #c9a970;
     margin: 0 0 85px 0;
