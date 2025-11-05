@@ -2468,10 +2468,23 @@ section.animate-on-scroll.is-visible {
 .journey-timeline {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 10px;
+    position: relative;
+}
+
+.journey-timeline::before {
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 2px;
+    background: #c9a970;
+    z-index: 0;
 }
 
 .timeline-item {
@@ -2481,6 +2494,8 @@ section.animate-on-scroll.is-visible {
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease;
+    flex: 1;
+    z-index: 1;
 }
 
 .timeline-icon {
@@ -2494,6 +2509,8 @@ section.animate-on-scroll.is-visible {
     margin-bottom: 15px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(201, 169, 112, 0.3);
+    position: relative;
+    z-index: 2;
 }
 
 .timeline-icon i {
@@ -2512,10 +2529,7 @@ section.animate-on-scroll.is-visible {
 }
 
 .timeline-line {
-    width: 60px;
-    height: 2px;
-    background: #c9a970;
-    margin: 0 0 85px 0;
+    display: none;
 }
 
 .timeline-tooltip {
