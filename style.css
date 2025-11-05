@@ -2442,7 +2442,7 @@ section.animate-on-scroll.is-visible {
 .journey-timeline-section {
     margin: 40px 0;
     padding: 50px 20px;
-    background: #e8dcc8;
+    background: transparent;
     text-align: center;
     width: 100%;
 }
