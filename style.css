@@ -2456,6 +2456,7 @@ section.animate-on-scroll.is-visible {
     margin-bottom: 15px;
     font-weight: 400;
     text-align: center !important;
+    padding-left: 80px;
 }
 
 .timeline-subtitle {
@@ -2467,6 +2468,7 @@ section.animate-on-scroll.is-visible {
     margin: 0 auto 50px;
     line-height: 1.6;
     text-align: center !important;
+    padding-left: 80px;
 }
 
 .journey-timeline {
