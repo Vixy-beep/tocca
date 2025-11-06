@@ -2673,37 +2673,38 @@ section.animate-on-scroll.is-visible {
     /* Hero responsive fixes */
     .hero-content {
         padding: 20px;
-        gap: 15px;
+        gap: 10px;
     }
     
     .hero-main-title {
         font-size: clamp(4rem, 12vw, 7rem);
-        transform: translateY(0);
+        transform: translateY(5px);
     }
     
     .hero-subtitle {
         font-size: clamp(1.2rem, 3vw, 1.8rem);
         letter-spacing: 4px;
-        transform: translateY(0) translateX(0);
-        margin-top: 10px;
+        transform: translateY(-10px) translateX(15px);
+        margin-top: 0;
     }
     
     .hero-description {
-        font-size: clamp(0.9rem, 2vw, 1.2rem);
-        letter-spacing: 1px;
-        transform: translateY(0) translateX(0);
-        margin-left: 0;
-        margin-top: 10px;
-        padding: 0 20px;
+        font-size: clamp(0.85rem, 2vw, 1.1rem);
+        letter-spacing: 1.5px;
+        transform: translateY(-5px) translateX(30px);
+        margin-left: 40px;
+        margin-top: 0;
+        padding: 0 15px;
+        max-width: 85vw;
     }
     
     .slogan {
-        font-size: clamp(0.85rem, 2vw, 1rem);
-        margin-top: 15px;
+        font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+        margin-top: 10px;
     }
     
     .cta-button {
-        margin-top: 20px;
+        margin-top: 15px;
         padding: 10px 20px;
         font-size: 0.9rem;
     }
@@ -2714,4 +2715,52 @@ section.animate-on-scroll.is-visible {
         display: none;
     }
 }
+
+/* ========================================
+   RESPONSIVE NAVBAR
+======================================== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 20px 0;
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 15px 20px;
+        margin: 0;
+        white-space: nowrap;
+        font-size: 0.95rem;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
 
