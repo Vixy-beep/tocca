@@ -2471,6 +2471,10 @@ section.animate-on-scroll.is-visible {
     padding-left: 0;
 }
 
+.timeline-toggle-btn {
+    display: none;
+}
+
 .journey-timeline {
     display: flex;
     justify-content: space-between;
@@ -2595,6 +2599,46 @@ section.animate-on-scroll.is-visible {
         flex-direction: column;
         gap: 30px;
         padding: 20px;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    }
+    
+    .journey-timeline.expanded {
+        max-height: 2000px;
+        opacity: 1;
+        padding: 20px;
+    }
+    
+    .timeline-toggle-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 15px 30px;
+        background-color: #5B8A93;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(91, 138, 147, 0.3);
+    }
+    
+    .timeline-toggle-btn:hover {
+        background-color: #4a7380;
+        box-shadow: 0 6px 20px rgba(91, 138, 147, 0.5);
+    }
+    
+    .timeline-toggle-btn i {
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+    }
+    
+    .timeline-toggle-btn.active i {
+        transform: rotate(180deg);
     }
     
     .timeline-line {
@@ -2624,6 +2668,50 @@ section.animate-on-scroll.is-visible {
         opacity: 1;
         visibility: visible;
         transform: none;
+    }
+    
+    /* Hero responsive fixes */
+    .hero-content {
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .hero-main-title {
+        font-size: clamp(4rem, 12vw, 7rem);
+        transform: translateY(0);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        letter-spacing: 4px;
+        transform: translateY(0) translateX(0);
+        margin-top: 10px;
+    }
+    
+    .hero-description {
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+        letter-spacing: 1px;
+        transform: translateY(0) translateX(0);
+        margin-left: 0;
+        margin-top: 10px;
+        padding: 0 20px;
+    }
+    
+    .slogan {
+        font-size: clamp(0.85rem, 2vw, 1rem);
+        margin-top: 15px;
+    }
+    
+    .cta-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 921px) {
+    .timeline-toggle-btn {
+        display: none;
     }
 }
 

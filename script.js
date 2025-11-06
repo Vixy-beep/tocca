@@ -171,3 +171,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Remove all carousel initialization code from here - it's now in index.html
 });
+
+// Timeline toggle function (outside DOMContentLoaded to be accessible globally)
+function toggleTimeline() {
+    const timeline = document.querySelector('.journey-timeline');
+    const btn = document.querySelector('.timeline-toggle-btn');
+    
+    if (timeline && btn) {
+        timeline.classList.toggle('expanded');
+        btn.classList.toggle('active');
+        
+        if (timeline.classList.contains('expanded')) {
+            btn.innerHTML = 'Hide Journey Details <i class="fas fa-chevron-up"></i>';
+        } else {
+            btn.innerHTML = 'View Journey Details <i class="fas fa-chevron-down"></i>';
+        }
+    }
+}
