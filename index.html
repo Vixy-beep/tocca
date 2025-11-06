@@ -125,88 +125,83 @@
 
             <!-- Journey Timeline Section -->
             <div class="journey-timeline-section">
-                <h3 class="timeline-title">Your journey, flawlessly curated.</h3>
-                <p class="timeline-subtitle">From arrival to departure, every detail is seamlessly arranged—so you can simply arrive, unwind, and live <em>la dolce vita</em>.</p>
-                
-                <button class="timeline-toggle-btn" onclick="toggleTimeline()">
-                    View Journey Details <i class="fas fa-chevron-down"></i>
-                </button>
-                
-                <div class="journey-timeline">
-                    <div class="timeline-item" data-stage="arrival">
-                        <div class="timeline-icon">
-                            <i class="fas fa-plane-arrival"></i>
-                        </div>
-                        <div class="timeline-label">Arrival</div>
-                        <div class="timeline-tooltip">
-                            <h4>Warm Welcome</h4>
-                            <p>Private airport transfer and seamless check-in to your boutique accommodation</p>
-                        </div>
+                <div class="everything-taken-care-container">
+                    <!-- Left Side - Text Content -->
+                    <div class="etc-left-content">
+                        <h2 class="etc-title">Everything's taken care of</h2>
+                        <p class="etc-subtitle">From arrival to farewell – curated, hosted, effortless.</p>
+                        <p class="etc-description">Every stay, transfer, tasting and experience is pre-arranged, hosted and locally curated – so you simply arrive and savor the Amalfi Coast.</p>
+                        <button class="etc-cta-button">REQUEST YOUR DATES</button>
                     </div>
-
-                    <div class="timeline-line"></div>
-
-                    <div class="timeline-item" data-stage="transportation">
-                        <div class="timeline-icon">
-                            <i class="fas fa-ship"></i>
+                    
+                    <!-- Right Side - Circular Diagram -->
+                    <div class="etc-circle-container">
+                        <div class="etc-center-text">
+                            <h3>Everything's<br>taken care of</h3>
+                            <p>– from arrival to farewell</p>
                         </div>
-                        <div class="timeline-label">Transportation<br>(Boats and Cars)</div>
-                        <div class="timeline-tooltip">
-                            <h4>Effortless Movement</h4>
-                            <p>Private boats and luxury vehicles for all your coastal journeys</p>
+                        
+                        <!-- Circular Items -->
+                        <div class="etc-circle-item" style="--angle: 0deg;">
+                            <div class="etc-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="etc-label">Curated<br>Day Trips</div>
                         </div>
-                    </div>
-
-                    <div class="timeline-line"></div>
-
-                    <div class="timeline-item" data-stage="accommodations">
-                        <div class="timeline-icon">
-                            <i class="fas fa-home"></i>
+                        
+                        <div class="etc-circle-item" style="--angle: 45deg;">
+                            <div class="etc-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="etc-label">Curated<br>Day Trips</div>
                         </div>
-                        <div class="timeline-label">Accommodations</div>
-                        <div class="timeline-tooltip">
-                            <h4>Handpicked Stays</h4>
-                            <p>Boutique hotels and charming properties with authentic Italian character</p>
+                        
+                        <div class="etc-circle-item" style="--angle: 90deg;">
+                            <div class="etc-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div class="etc-label">Private<br>Transfers</div>
                         </div>
-                    </div>
-
-                    <div class="timeline-line"></div>
-
-                    <div class="timeline-item" data-stage="meals">
-                        <div class="timeline-icon">
-                            <i class="fas fa-utensils"></i>
+                        
+                        <div class="etc-circle-item" style="--angle: 135deg;">
+                            <div class="etc-icon">
+                                <i class="fas fa-hotel"></i>
+                            </div>
+                            <div class="etc-label">Boutique<br>Stays</div>
                         </div>
-                        <div class="timeline-label">Meals</div>
-                        <div class="timeline-tooltip">
-                            <h4>Culinary Delights</h4>
-                            <p>Daily breakfasts, curated dining experiences, and authentic Italian cuisine</p>
+                        
+                        <div class="etc-circle-item" style="--angle: 180deg;">
+                            <div class="etc-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="etc-label">Local<br>Dining</div>
                         </div>
-                    </div>
-
-                    <div class="timeline-line"></div>
-
-                    <div class="timeline-item" data-stage="experiences">
-                        <div class="timeline-icon">
-                            <i class="fas fa-motorcycle"></i>
+                        
+                        <div class="etc-circle-item" style="--angle: 225deg;">
+                            <div class="etc-icon">
+                                <i class="fas fa-lemon"></i>
+                            </div>
+                            <div class="etc-label">Authentic<br>Experiences</div>
                         </div>
-                        <div class="timeline-label">Curated<br>Experiences</div>
-                        <div class="timeline-tooltip">
-                            <h4>Unforgettable Moments</h4>
-                            <p>Vespa rides, wine tastings, local artisans, and coastal adventures</p>
+                        
+                        <div class="etc-circle-item" style="--angle: 270deg;">
+                            <div class="etc-icon">
+                                <i class="fas fa-sailboat"></i>
+                            </div>
+                            <div class="etc-label">Private<br>Boat Day</div>
                         </div>
-                    </div>
-
-                    <div class="timeline-line"></div>
-
-                    <div class="timeline-item" data-stage="departure">
-                        <div class="timeline-icon">
-                            <i class="fas fa-plane-departure"></i>
+                        
+                        <div class="etc-circle-item" style="--angle: 315deg;">
+                            <div class="etc-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="etc-label">Concierge<br>Support</div>
                         </div>
-                        <div class="timeline-label">Departure</div>
-                        <div class="timeline-tooltip">
-                            <h4>Fond Farewell</h4>
-                            <p>Private transfer to airport with memories to last a lifetime</p>
-                        </div>
+                        
+                        <!-- Connecting Lines -->
+                        <svg class="etc-connecting-lines" viewBox="0 0 500 500">
+                            <circle cx="250" cy="250" r="200" fill="none" stroke="#E5E5E5" stroke-width="2"/>
+                        </svg>
                     </div>
                 </div>
             </div>

@@ -2438,7 +2438,244 @@ section.animate-on-scroll.is-visible {
 }
 
 /* ========================================
-   JOURNEY TIMELINE SECTION
+   EVERYTHING'S TAKEN CARE OF - CIRCULAR DESIGN
+======================================== */
+.journey-timeline-section {
+    background: linear-gradient(135deg, #E8F4F8 0%, #D4EAF1 100%);
+    padding: 80px 20px;
+    margin: 40px 0;
+}
+
+.everything-taken-care-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    align-items: center;
+}
+
+.etc-left-content {
+    padding: 40px;
+}
+
+.etc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #2C3E50;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.etc-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    color: #2C3E50;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.etc-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.etc-cta-button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 15px 35px;
+    border: 2px solid #2C3E50;
+    background: transparent;
+    color: #2C3E50;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.etc-cta-button:hover {
+    background: #2C3E50;
+    color: white;
+}
+
+.etc-circle-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.etc-center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    max-width: 200px;
+}
+
+.etc-center-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #2C3E50;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+}
+
+.etc-center-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+    font-style: italic;
+}
+
+.etc-circle-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    transform-origin: 50% 50%;
+    transform: rotate(var(--angle)) translate(200px) rotate(calc(-1 * var(--angle)));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    z-index: 10;
+}
+
+.etc-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    
+    /* OPCIÓN 1 - Verde Azulado Primario (ACTIVA) */
+    border: 2px solid #4A9A92;
+    background: white;
+    
+    /* OPCIÓN 2 - Dorado Elegante */
+    /* border: 2px solid #c9a970;
+    background: white; */
+    
+    /* OPCIÓN 3 - Azul Marino */
+    /* border: 2px solid #23374d;
+    background: white; */
+    
+    /* OPCIÓN 4 - Beige Cálido */
+    /* border: 2px solid #8B7355;
+    background: #EFEAE4; */
+    
+    /* OPCIÓN 5 - Verde Menta */
+    /* border: 2px solid #2D9B8F;
+    background: white; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.etc-icon i {
+    font-size: 1.8rem;
+    
+    /* OPCIÓN 1 - Verde Azulado Primario (ACTIVA) */
+    color: #4A9A92;
+    
+    /* OPCIÓN 2 - Dorado Elegante */
+    /* color: #c9a970; */
+    
+    /* OPCIÓN 3 - Azul Marino */
+    /* color: #23374d; */
+    
+    /* OPCIÓN 4 - Beige Cálido */
+    /* color: #8B7355; */
+    
+    /* OPCIÓN 5 - Verde Menta */
+    /* color: #2D9B8F; */
+}
+
+.etc-circle-item:hover .etc-icon {
+    /* OPCIÓN 1 - Verde Azulado Primario (ACTIVA) */
+    background: #4A9A92;
+    
+    /* OPCIÓN 2 - Dorado Elegante */
+    /* background: #c9a970; */
+    
+    /* OPCIÓN 3 - Azul Marino */
+    /* background: #23374d; */
+    
+    /* OPCIÓN 4 - Beige Cálido */
+    /* background: #8B7355; */
+    
+    /* OPCIÓN 5 - Verde Menta */
+    /* background: #2D9B8F; */
+    
+    transform: scale(1.1);
+}
+
+.etc-circle-item:hover .etc-icon i {
+    color: white;
+}
+
+.etc-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #2C3E50;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 90px;
+    position: relative;
+    z-index: 3;
+    background: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.etc-connecting-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.etc-connecting-lines circle {
+    /* OPCIÓN 1 - Verde Azulado Primario (ACTIVA) */
+    stroke: #4A9A92;
+    
+    /* OPCIÓN 2 - Dorado Elegante */
+    /* stroke: #c9a970; */
+    
+    /* OPCIÓN 3 - Azul Marino */
+    /* stroke: #23374d; */
+    
+    /* OPCIÓN 4 - Beige Cálido */
+    /* stroke: #D4C5B0; */
+    
+    /* OPCIÓN 5 - Verde Menta */
+    /* stroke: #2D9B8F; */
+    
+    stroke-width: 2;
+}
+
+/* ========================================
+   JOURNEY TIMELINE SECTION (OLD STYLES - KEEP FOR COMPATIBILITY)
 ======================================== */
 .journey-timeline-section {
     grid-area: timeline;
@@ -2760,6 +2997,58 @@ section.animate-on-scroll.is-visible {
     
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Everything's Taken Care Of - Mobile */
+    .everything-taken-care-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    .etc-left-content {
+        display: none;
+    }
+    
+    .etc-circle-container {
+        width: 100%;
+        max-width: 380px;
+        height: 380px;
+    }
+    
+    .etc-circle-item {
+        width: 80px;
+        height: 80px;
+        margin-left: -40px;
+        margin-top: -40px;
+        transform: rotate(var(--angle)) translate(160px) rotate(calc(-1 * var(--angle)));
+    }
+    
+    .etc-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .etc-icon i {
+        font-size: 1.4rem;
+    }
+    
+    .etc-label {
+        font-size: 0.7rem;
+        max-width: 70px;
+    }
+    
+    .etc-center-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .etc-center-text p {
+        font-size: 0.8rem;
+    }
+    
+    .etc-connecting-lines {
+        width: 100%;
+        height: 100%;
     }
 }
 
