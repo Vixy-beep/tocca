@@ -501,13 +501,14 @@ section.animate-on-scroll.is-visible {
     min-width: 300px !important;
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
+    align-items: flex-start !important;
 }
 
 
 #why-tocca-amalfi .why-us-image-grid img {
     width: 100% !important;
-    height: 400px !important;
+    height: auto !important;
+    max-height: 550px !important;
     object-fit: cover !important;
     border-radius: 12px !important;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
