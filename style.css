@@ -4045,6 +4045,7 @@ section.animate-on-scroll.is-visible {
     gap: 40px;
     margin-top: 50px;
     margin-bottom: 60px;
+    align-items: start;
 }
 
 .included-column,
