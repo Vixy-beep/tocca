@@ -3401,3 +3401,602 @@ section.animate-on-scroll.is-visible {
 }
 
 
+
+
+/* ================================================
+   NEW SIGNATURE JOURNEY PAGE STYLES
+================================================ */
+
+/* Signature Hero */
+.signature-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.signature-hero .hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.signature-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    max-width: 900px;
+}
+
+.signature-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+}
+
+.signature-subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.signature-tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* Container */
+.signature-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Why Signature Journey Section */
+.signature-why-section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.signature-why-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.signature-opening {
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.signature-why-section p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+.signature-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.signature-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.signature-feature i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    min-width: 35px;
+}
+
+.signature-feature p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.signature-closing {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* CTA Buttons */
+.signature-cta-buttons,
+.final-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn-primary-large,
+.btn-primary-xl,
+.btn-secondary-large,
+.btn-secondary-xl {
+    display: inline-block;
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.btn-primary-large,
+.btn-primary-xl {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary-large:hover,
+.btn-primary-xl:hover {
+    background: #3d8179;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(74,154,146,0.3);
+}
+
+.btn-secondary-large,
+.btn-secondary-xl {
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary-large:hover,
+.btn-secondary-xl:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.btn-primary-xl {
+    padding: 20px 50px;
+    font-size: 1.25rem;
+}
+
+.btn-secondary-xl {
+    padding: 18px 45px;
+    font-size: 1.2rem;
+}
+
+/* About Section */
+.signature-about-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.signature-about-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.signature-about-section h2 i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.signature-about-section p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.signature-about-section h3 {
+    font-size: 1.4rem;
+    margin: 40px 0 20px;
+    color: var(--text-color);
+}
+
+.journey-perfect-for {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.journey-perfect-for li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.journey-perfect-for i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+/* Included Section */
+.signature-included-section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f3f7f6 0%, #ffffff 100%);
+}
+
+.signature-included-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.signature-included-section h2 i {
+    color: #FFD700;
+    margin-right: 10px;
+}
+
+.included-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.included-category {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.included-category h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.included-category h3 i {
+    font-size: 1.5rem;
+}
+
+.included-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.included-category li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.included-category li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Departures Section */
+.signature-departures-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.signature-departures-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.signature-departures-section h2 i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.departures-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.departures-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.departure-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.departure-card.featured {
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 25px rgba(74,154,146,0.2);
+}
+
+.departure-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.departure-header h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.availability {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.availability.filling-fast {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.availability.high-availability {
+    background: #d4edda;
+    color: #155724;
+}
+
+.availability.almost-full {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.departure-ideal {
+    margin: 20px 0;
+    line-height: 1.6;
+    color: #666;
+}
+
+.btn-departure {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-departure:hover {
+    background: #3d8179;
+    transform: translateY(-2px);
+}
+
+/* Why Choose Section */
+.signature-why-choose-section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.signature-why-choose-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 50px;
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.why-choose-item {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.why-choose-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.why-choose-item h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.why-choose-item h3 i {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+
+.why-choose-item p {
+    line-height: 1.7;
+    margin: 0;
+}
+
+.places-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.places-list span {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+}
+
+.places-note {
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* Discovery Section */
+.signature-discovery-section {
+    padding: 60px 20px;
+    background: white;
+    text-align: center;
+}
+
+.signature-discovery-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.signature-discovery-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Final CTA Section */
+.signature-final-cta {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3d8179 100%);
+    color: white;
+    text-align: center;
+}
+
+.signature-final-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.signature-final-cta p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+/* What to Expect Section - Full Width */
+.includes-column-full {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.includes-column-full h3 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.whats-included-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 30px;
+}
+
+.whats-included-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.05rem;
+    padding: 10px 0;
+}
+
+.whats-included-list i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    min-width: 20px;
+}
+
+.inclusions-footer {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 40px;
+    font-style: italic;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .signature-hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .signature-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .signature-features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .journey-perfect-for {
+        grid-template-columns: 1fr;
+    }
+    
+    .included-categories {
+        grid-template-columns: 1fr;
+    }
+    
+    .departures-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .whats-included-list {
+        grid-template-columns: 1fr;
+    }
+}
+
