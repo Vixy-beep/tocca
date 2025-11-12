@@ -536,6 +536,27 @@ section.animate-on-scroll.is-visible {
     }
 }
 
+/* === Subtitle for Why Choose Us === */
+.why-us-subtitle {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--text-color);
+    margin: -10px auto 40px;
+    max-width: 900px;
+    font-weight: 400;
+    padding: 0 20px;
+}
+
+/* === Whats Included Title with letter spacing === */
+.whats-included-title {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
 /* === SPECIFIC STYLES FOR "What We Believe" === */
 #what-we-believe .why-us-image-grid {
     display: flex !important;
