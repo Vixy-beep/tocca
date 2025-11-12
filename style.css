@@ -4039,7 +4039,7 @@ section.animate-on-scroll.is-visible {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 60px;
 }
 
