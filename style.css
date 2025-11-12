@@ -3169,8 +3169,8 @@ section.animate-on-scroll.is-visible {
 .journey-highlights-box {
     background: linear-gradient(135deg, #4A9A92 0%, #3d8179 100%);
     color: white;
-    padding: 40px;
-    border-radius: 15px;
+    padding: 50px 40px;
+    border-radius: 20px;
     margin: 50px 0;
     box-shadow: 0 10px 30px rgba(74, 154, 146, 0.3);
 }
@@ -3178,32 +3178,45 @@ section.animate-on-scroll.is-visible {
 .journey-highlights-box h3 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     text-align: center;
     color: white;
 }
 
-.journey-features-list {
-    list-style: none;
-    padding: 0;
+.journey-features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.journey-features-list li {
-    font-size: 1.1rem;
-    padding: 12px 0;
+.feature-item {
     display: flex;
-    align-items: center;
-    line-height: 1.6;
+    align-items: flex-start;
+    gap: 15px;
 }
 
-.journey-features-list i {
-    font-size: 1.4rem;
-    margin-right: 15px;
+.feature-item i {
+    font-size: 1.8rem;
     color: #ffd700;
-    min-width: 25px;
+    min-width: 30px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.feature-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: white;
+}
+
+.feature-text strong {
+    font-weight: 600;
+}
+
+.feature-text em {
+    font-style: italic;
 }
 
 /* Itinerary Preview */
@@ -3338,11 +3351,30 @@ section.animate-on-scroll.is-visible {
     }
     
     .journey-highlights-box {
-        padding: 30px 20px;
+        padding: 35px 25px;
     }
     
-    .journey-features-list {
+    .journey-highlights-box h3 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+    
+    .journey-features-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .feature-item {
+        gap: 12px;
+    }
+    
+    .feature-item i {
+        font-size: 1.5rem;
+        min-width: 25px;
+    }
+    
+    .feature-text {
+        font-size: 1rem;
     }
     
     .itinerary-item {
