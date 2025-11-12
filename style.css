@@ -550,11 +550,15 @@ section.animate-on-scroll.is-visible {
 
 /* === Whats Included Title with letter spacing === */
 .whats-included-title {
+    font-family: 'Playfair Display', serif;
     letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 1.3rem;
-    margin-top: 30px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 0;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 /* === SPECIFIC STYLES FOR "What We Believe" === */
@@ -4049,6 +4053,7 @@ section.animate-on-scroll.is-visible {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    align-self: start;
 }
 
 .whats-not-included-title {
@@ -4058,6 +4063,7 @@ section.animate-on-scroll.is-visible {
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 3px;
+    margin-top: 0;
     margin-bottom: 20px;
     text-align: center;
 }
