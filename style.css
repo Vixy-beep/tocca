@@ -4040,7 +4040,7 @@ section.animate-on-scroll.is-visible {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     margin-top: 30px;
-    margin-bottom: 45px;
+    margin-bottom: 60px;
 }
 
 .included-column,
