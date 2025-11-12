@@ -4033,3 +4033,59 @@ section.animate-on-scroll.is-visible {
     line-height: 1.6;
 }
 
+
+/* Two-column layout for What's Included section */
+.inclusions-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.included-column,
+.not-included-column {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.whats-not-included-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.whats-not-included-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.whats-not-included-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: var(--text-color);
+}
+
+.whats-not-included-list i {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    min-width: 20px;
+}
+
+@media (max-width: 768px) {
+    .inclusions-two-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
