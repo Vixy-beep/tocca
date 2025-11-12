@@ -4000,3 +4000,36 @@ section.animate-on-scroll.is-visible {
     }
 }
 
+
+
+/* What's Included List Inline for What We Offer */
+.whats-included-list-inline {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.whats-included-list-inline li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.whats-included-list-inline i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    min-width: 20px;
+    margin-top: 3px;
+}
+
+.inclusions-footer-inline {
+    font-style: italic;
+    color: #666;
+    margin-top: 30px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
