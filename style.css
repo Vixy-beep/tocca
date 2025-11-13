@@ -4132,11 +4132,10 @@ section.animate-on-scroll.is-visible {
 /* What's Included Full Section - 2x5 Grid Desktop */
 .inclusions-full-section {
     width: 100%;
-    max-width: 1400px;
+    max-width: 100%;
     margin: 60px auto;
-    padding: 40px;
+    padding: 60px 40px;
     background: #f9f9f9;
-    border-radius: 20px;
 }
 
 .whats-included-main-title,
@@ -4160,8 +4159,12 @@ section.animate-on-scroll.is-visible {
 .inclusions-grid-2x5 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
+    gap: 30px 88px;
     margin-bottom: 40px;
+    max-width: 1438px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
 }
 
 .inclusion-item {
@@ -4198,8 +4201,12 @@ section.animate-on-scroll.is-visible {
 .not-inclusions-list {
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 100px;
     margin-bottom: 40px;
+    max-width: 1438px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
 }
 
 .not-inclusion-item {
@@ -4365,5 +4372,80 @@ section.animate-on-scroll.is-visible {
     
     .offer-list li {
         font-size: 1rem;
+    }
+}
+
+/* Glimpse Section 2-Column Layout */
+.glimpse-section-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto 80px auto;
+    padding: 0 40px;
+}
+
+.glimpse-section-wrapper .what-we-offer-list {
+    flex: 1;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.glimpse-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+    margin: 80px auto 40px auto;
+    max-width: 1400px;
+    padding: 0 40px;
+}
+
+.glimpse-section-wrapper .offer-list {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 30px;
+    text-align: left;
+}
+
+.glimpse-section-wrapper .what-we-offer-carousel {
+    flex: 0 0 500px;
+    width: 500px;
+    max-width: 500px;
+    margin: 0;
+}
+
+@media (max-width: 968px) {
+    .glimpse-section-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+    
+    .glimpse-section-wrapper .glimpse-title {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    
+    .glimpse-section-wrapper .what-we-offer-list {
+        text-align: center;
+    }
+    
+    .glimpse-section-wrapper .offer-list {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+    
+    .glimpse-section-wrapper .what-we-offer-carousel {
+        flex: none;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
