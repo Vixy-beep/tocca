@@ -4128,3 +4128,242 @@ section.animate-on-scroll.is-visible {
         grid-template-columns: 1fr;
     }
 }
+
+/* What's Included Full Section - 2x5 Grid Desktop */
+.inclusions-full-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #f9f9f9;
+    border-radius: 20px;
+}
+
+.whats-included-main-title,
+.whats-not-included-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+}
+
+.whats-not-included-main-title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+/* 2x5 Grid for Desktop */
+.inclusions-grid-2x5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.inclusion-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 15px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inclusion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.inclusion-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.inclusion-item p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Not Included List - Horizontal */
+.not-inclusions-list {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.not-inclusion-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.not-inclusion-item i {
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.not-inclusion-item p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.inclusions-footer {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 30px;
+}
+
+/* Glimpse Title Styling */
+.glimpse-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+    margin: 60px 0 40px 0;
+    line-height: 1.4;
+}
+
+/* Responsive - Mobile 3x3 Grid + Vertical Not Included */
+@media (max-width: 968px) {
+    .inclusions-grid-2x5 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .inclusion-item i {
+        font-size: 2.5rem;
+    }
+    
+    .inclusion-item p {
+        font-size: 0.85rem;
+    }
+    
+    .whats-included-main-title,
+    .whats-not-included-main-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .not-inclusions-list {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .inclusions-full-section {
+        padding: 30px 20px;
+        margin: 40px 20px;
+    }
+    
+    .glimpse-title {
+        font-size: 1.5rem;
+        margin: 40px 20px 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .inclusions-grid-2x5 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .inclusion-item {
+        padding: 20px 10px;
+    }
+    
+    .inclusion-item i {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .inclusion-item p {
+        font-size: 0.8rem;
+    }
+    
+    .whats-included-main-title,
+    .whats-not-included-main-title {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+}
+
+/* Center the entire What's Included section */
+.why-us-text-block .inclusions-full-section {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Fix A Glimpse Section Styling */
+.what-we-offer-list {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto 60px auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.glimpse-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+    margin: 0 0 40px 0;
+    line-height: 1.4;
+}
+
+.offer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 30px;
+    text-align: left;
+}
+
+.offer-list li {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+@media (max-width: 968px) {
+    .what-we-offer-list {
+        padding: 0 20px;
+        margin: 60px auto 40px auto;
+    }
+    
+    .glimpse-title {
+        font-size: 1.6rem;
+    }
+    
+    .offer-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .offer-list li {
+        font-size: 1rem;
+    }
+}
