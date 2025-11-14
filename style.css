@@ -2391,30 +2391,57 @@ section.animate-on-scroll.is-visible {
 ======================================== */
 .testimonials-section {
     background-color: #ffffff;
+    padding: 60px 40px;
+}
+
+.testimonials-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.testimonials-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.testimonials-section h2 {
+    grid-column: 1 / -1;
+}
+
+.testimonial-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .testimonial-card {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 35px;
+    padding: 30px 20px;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border-left: 4px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .testimonial-card p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-style: italic;
-    line-height: 1.8;
+    line-height: 1.6;
     color: var(--text-color);
     margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .testimonial-card h4 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--primary-color);
     text-align: right;
@@ -4133,7 +4160,7 @@ section.animate-on-scroll.is-visible {
 .inclusions-full-section {
     width: 100%;
     margin: 80px 0 60px 0;
-    padding: 60px 40px 120px 40px;
+    padding: 60px 40px 20px 40px;
     background: #f9f9f9;
     position: relative;
 }
@@ -4223,7 +4250,7 @@ section.animate-on-scroll.is-visible {
     display: flex;
     justify-content: flex-start;
     gap: 230px;
-    margin-bottom: 60px;
+    margin-bottom: 0;
     margin-top: 39px;
     max-width: 1438px;
     margin-left: 370px;
