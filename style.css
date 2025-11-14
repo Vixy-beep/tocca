@@ -4132,10 +4132,21 @@ section.animate-on-scroll.is-visible {
 /* What's Included Full Section - 2x5 Grid Desktop */
 .inclusions-full-section {
     width: 100%;
-    max-width: 100%;
-    margin: 60px auto;
-    padding: 60px 40px;
+    margin: 80px 0 60px 0;
+    padding: 60px 40px 120px 40px;
     background: #f9f9f9;
+    position: relative;
+}
+
+.inclusions-full-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    right: -100vw;
+    bottom: 0;
+    background: #f9f9f9;
+    z-index: -1;
 }
 
 .whats-included-main-title,
@@ -4151,8 +4162,8 @@ section.animate-on-scroll.is-visible {
 }
 
 .whats-not-included-main-title {
-    margin-top: 60px;
-    margin-bottom: 30px;
+    margin-top: 150px;
+    margin-bottom: 40px;
 }
 
 /* 2x5 Grid for Desktop */
@@ -4171,12 +4182,16 @@ section.animate-on-scroll.is-visible {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     text-align: center;
-    padding: 25px 15px;
+    padding: 30px 12px 20px 12px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
 }
 
 .inclusion-item:hover {
@@ -4185,27 +4200,34 @@ section.animate-on-scroll.is-visible {
 }
 
 .inclusion-item i {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .inclusion-item p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--text-color);
-    line-height: 1.5;
+    line-height: 1.3;
     margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 2.6em;
 }
 
 /* Not Included List - Horizontal */
 .not-inclusions-list {
     display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-bottom: 40px;
+    justify-content: flex-start;
+    gap: 230px;
+    margin-bottom: 60px;
+    margin-top: 39px;
     max-width: 1438px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 370px;
+    margin-right: 0;
     padding: 0;
 }
 
@@ -4213,20 +4235,28 @@ section.animate-on-scroll.is-visible {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     text-align: center;
-    padding: 20px;
+    padding: 40px 12px 20px 12px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
 }
 
 .not-inclusion-item i {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: #e74c3c;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .not-inclusion-item p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-color);
     margin: 0;
+    line-height: 1.4;
 }
 
 .inclusions-footer {
@@ -4379,7 +4409,7 @@ section.animate-on-scroll.is-visible {
 .glimpse-section-wrapper {
     display: flex;
     gap: 60px;
-    align-items: flex-start;
+    align-items: center;
     max-width: 1400px;
     margin: 0 auto 80px auto;
     padding: 0 40px;
