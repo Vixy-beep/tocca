@@ -3438,59 +3438,80 @@ section.animate-on-scroll.is-visible {
    NEW SIGNATURE JOURNEY PAGE STYLES
 ================================================ */
 
-/* Signature Hero */
+/* Signature Hero - Two Column Layout */
 .signature-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 65vh;
+    max-height: 650px;
+    min-height: 500px;
+    background: #1a1a1a;
     position: relative;
-    height: 85vh;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 }
 
-.signature-hero .hero-img {
-    position: absolute;
-    top: 0;
-    left: 0;
+.signature-hero-image {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.signature-hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.65);
+    filter: brightness(0.85);
 }
 
 .signature-hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 60px;
+    background: #2a2a2a;
     color: white;
-    padding: 0 30px;
-    max-width: 950px;
+    height: 100%;
+    overflow: hidden;
 }
 
 .signature-hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 400;
-    margin-bottom: 25px;
-    text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+    margin-bottom: 18px;
     letter-spacing: 2px;
-    line-height: 1.2;
+    line-height: 1.1;
+    color: #ffffff;
 }
 
 .signature-subtitle {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 20px;
     font-weight: 300;
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
     font-style: italic;
     font-family: 'Playfair Display', serif;
+    color: #c9a876;
+}
+
+.signature-description {
+    font-size: 1.05rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    color: #e0e0e0;
+}
+
+.signature-hero-cta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .signature-tagline {
     font-size: 1.1rem;
     font-style: normal;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     letter-spacing: 0.5px;
@@ -3989,6 +4010,30 @@ section.animate-on-scroll.is-visible {
     text-align: center;
 }
 
+/* Pricing Section */
+.signature-pricing-section {
+    padding: 90px 20px;
+    background: #ffffff;
+}
+
+.signature-pricing-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    text-align: center;
+    color: #3a3a3a;
+    margin-bottom: 55px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.signature-pricing-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 /* Discovery Section */
 .signature-discovery-section {
     padding: 80px 20px;
@@ -4082,16 +4127,48 @@ section.animate-on-scroll.is-visible {
 
 /* Responsive Design */
 @media (max-width: 968px) {
+    .signature-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .signature-hero-image {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .signature-hero-content {
+        padding: 50px 30px;
+    }
+    
     .signature-hero-content h1 {
         font-size: 3rem;
     }
     
     .signature-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+    }
+    
+    .signature-description {
+        font-size: 1.05rem;
+    }
+    
+    .signature-hero-cta {
+        flex-direction: column;
+    }
+    
+    .signature-hero-cta a {
+        width: 100%;
+        text-align: center;
     }
     
     .signature-features-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .signature-pricing-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .journey-perfect-for {
@@ -4112,6 +4189,24 @@ section.animate-on-scroll.is-visible {
     
     .whats-included-list {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .signature-hero-content {
+        padding: 40px 20px;
+    }
+    
+    .signature-hero-content h1 {
+        font-size: 2.3rem;
+    }
+    
+    .signature-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .signature-description {
+        font-size: 1rem;
     }
 }
 
