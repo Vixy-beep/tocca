@@ -4590,3 +4590,687 @@ section.animate-on-scroll.is-visible {
         margin: 0 auto;
     }
 }
+
+
+/* ========================================
+   BESPOKE JOURNEY STYLES
+   ======================================== */
+
+/* Bespoke Hero - Estilo Maqueta 2 - Layout dos columnas */
+.bespoke-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 65vh;
+    max-height: 650px;
+    min-height: 500px;
+    background: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+}
+
+.bespoke-hero-image {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.bespoke-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+
+.bespoke-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 60px;
+    background: #2a2a2a;
+    color: white;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bespoke-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.bespoke-subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    color: #c9a876;
+}
+
+.bespoke-description {
+    font-size: 1.05rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    color: #e0e0e0;
+}
+
+.bespoke-hero-cta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Bespoke Intro Section */
+.bespoke-intro-section {
+    padding: 90px 20px;
+    background: #f5f1eb;
+}
+
+.bespoke-intro-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #3a3a3a;
+    margin-bottom: 35px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.bespoke-opening {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #5a5a5a;
+    margin-bottom: 35px;
+    line-height: 1.7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bespoke-intro-section p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    color: #4a4a4a;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* How It Works Section */
+.bespoke-how-section {
+    padding: 90px 20px;
+    background: #ffffff;
+}
+
+.bespoke-how-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    text-align: center;
+    color: #3a3a3a;
+    margin-bottom: 60px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.bespoke-how-section h2 i {
+    color: #c9a876;
+    margin-right: 10px;
+}
+
+.bespoke-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bespoke-step {
+    text-align: center;
+    padding: 30px 20px;
+    background: #faf8f5;
+    border-radius: 8px;
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: #c9a876;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 auto 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.bespoke-step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #3a3a3a;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.bespoke-step p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #5a5a5a;
+    margin: 0;
+}
+
+/* What's Possible Section */
+.bespoke-possible-section {
+    padding: 90px 20px;
+    background: #f5f1eb;
+}
+
+.bespoke-possible-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    text-align: center;
+    color: #3a3a3a;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.bespoke-possible-intro {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #5a5a5a;
+    margin-bottom: 50px;
+}
+
+.bespoke-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bespoke-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.bespoke-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+.bespoke-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.bespoke-card-content {
+    padding: 25px;
+}
+
+.bespoke-card-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #3a3a3a;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.bespoke-card-content h3 i {
+    color: #c9a876;
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.bespoke-card-content p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #5a5a5a;
+    margin: 0;
+}
+
+/* Who Is This For Section */
+.bespoke-for-section {
+    padding: 90px 20px;
+    background: #ffffff;
+}
+
+.bespoke-for-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    text-align: center;
+    color: #3a3a3a;
+    margin-bottom: 55px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.bespoke-for-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bespoke-for-item {
+    text-align: center;
+    padding: 40px 30px;
+    background: #faf8f5;
+    border-radius: 8px;
+}
+
+.bespoke-for-item i {
+    font-size: 3rem;
+    color: #c9a876;
+    margin-bottom: 20px;
+}
+
+.bespoke-for-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #3a3a3a;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.bespoke-for-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #5a5a5a;
+    margin: 0;
+}
+
+/* Sample Itinerary Section */
+.bespoke-sample-section {
+    padding: 90px 20px;
+    background: #f5f1eb;
+}
+
+.bespoke-sample-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    text-align: center;
+    color: #3a3a3a;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.bespoke-sample-section h2 i {
+    color: #c9a876;
+    margin-right: 10px;
+}
+
+.bespoke-sample-intro {
+    text-align: center;
+    font-size: 1.08rem;
+    color: #5a5a5a;
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bespoke-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 100px;
+}
+
+.bespoke-timeline::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #c9a876;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -100px;
+    width: 80px;
+    height: 80px;
+    background: #c9a876;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    border: 4px solid #f5f1eb;
+}
+
+.timeline-content {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.timeline-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #3a3a3a;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #5a5a5a;
+    margin: 0;
+}
+
+.bespoke-note {
+    text-align: center;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #6a6a6a;
+    margin-top: 50px;
+}
+
+/* Pricing Section */
+.bespoke-pricing-section {
+    padding: 90px 20px;
+    background: #ffffff;
+}
+
+.bespoke-pricing-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    text-align: center;
+    color: #3a3a3a;
+    margin-bottom: 55px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.bespoke-pricing-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pricing-left {
+    background: linear-gradient(135deg, #d4b896 0%, #c9a876 100%);
+    padding: 50px 40px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+}
+
+.pricing-left h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+.pricing-amount {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.pricing-note {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    margin: 0;
+}
+
+.pricing-right {
+    background: #faf8f5;
+    padding: 50px 40px;
+    border-radius: 8px;
+}
+
+.pricing-right h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: #3a3a3a;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.pricing-includes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-includes li {
+    padding: 12px 0;
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    line-height: 1.6;
+}
+
+.pricing-includes i {
+    color: #c9a876;
+    font-size: 1.2rem;
+}
+
+.pricing-flights-note {
+    font-size: 0.95rem;
+    color: #6a6a6a;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.pricing-cta-wrapper {
+    margin-top: 30px;
+}
+
+.btn-pricing-cta {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #c9a876;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-pricing-cta:hover {
+    background: #b89560;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(201,168,118,0.3);
+}
+
+.final-cta-poetic {
+    font-size: 1.2rem !important;
+    line-height: 1.8 !important;
+    margin-bottom: 30px !important;
+    font-style: italic;
+}
+
+.final-cta-tagline {
+    font-size: 1.15rem !important;
+    margin-bottom: 40px !important;
+    font-family: 'Playfair Display', serif !important;
+}
+
+.final-cta-tagline strong {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.final-cta-tagline em {
+    font-style: italic;
+    color: rgba(255,255,255,0.95);
+}
+
+/* Bespoke CTA Section */
+.bespoke-cta-section {
+    padding: 90px 20px;
+    background: #f5f1eb;
+    text-align: center;
+}
+
+.bespoke-cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #3a3a3a;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.bespoke-cta-section p {
+    font-size: 1.2rem;
+    color: #5a5a5a;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design for Bespoke */
+@media (max-width: 968px) {
+    .bespoke-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .bespoke-hero-image {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .bespoke-hero-content {
+        padding: 50px 30px;
+    }
+    
+    .bespoke-hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .bespoke-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .bespoke-description {
+        font-size: 1.05rem;
+    }
+    
+    .bespoke-hero-cta {
+        flex-direction: column;
+    }
+    
+    .bespoke-hero-cta a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .bespoke-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .bespoke-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .bespoke-for-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .bespoke-timeline {
+        padding-left: 80px;
+    }
+    
+    .timeline-marker {
+        left: -80px;
+        width: 60px;
+        height: 60px;
+        font-size: 0.8rem;
+    }
+    
+    .bespoke-pricing-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .bespoke-hero-content {
+        padding: 40px 20px;
+    }
+    
+    .bespoke-hero-content h1 {
+        font-size: 2.3rem;
+    }
+    
+    .bespoke-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .bespoke-description {
+        font-size: 1rem;
+    }
+    
+    .bespoke-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .bespoke-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bespoke-timeline {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    
+    .bespoke-timeline::before {
+        display: none;
+    }
+    
+    .timeline-marker {
+        position: relative;
+        left: auto;
+        margin: 0 auto 15px;
+    }
+}
