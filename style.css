@@ -4717,8 +4717,8 @@ section.animate-on-scroll.is-visible {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    min-height: 180px;
     flex-shrink: 0;
 }
 
@@ -4749,13 +4749,13 @@ section.animate-on-scroll.is-visible {
 /* Not Included List - Horizontal */
 .not-inclusions-list {
     display: flex;
-    justify-content: flex-start;
-    gap: 230px;
+    justify-content: center;
+    gap: 40px;
     margin-bottom: 0;
     margin-top: 39px;
-    max-width: 1438px;
-    margin-left: 370px;
-    margin-right: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
 }
 
@@ -4765,12 +4765,13 @@ section.animate-on-scroll.is-visible {
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    padding: 40px 12px 20px 12px;
+    padding: 40px 20px 20px 20px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    max-width: 250px;
+    min-height: 180px;
     flex-shrink: 0;
 }
 
@@ -4859,6 +4860,8 @@ section.animate-on-scroll.is-visible {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        width: 100%;
+        min-height: 150px;
     }
     
     .inclusion-item i {
