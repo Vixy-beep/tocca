@@ -4849,10 +4849,16 @@ section.animate-on-scroll.is-visible {
     .inclusions-grid-2x5 {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
+        justify-items: center;
+        align-items: start;
     }
     
     .inclusion-item {
         padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     
     .inclusion-item i {
