@@ -3445,7 +3445,7 @@ section.animate-on-scroll.is-visible {
     height: 65vh;
     max-height: 650px;
     min-height: 500px;
-    background: #1a1a1a;
+    background: #f5f1eb;
     position: relative;
     overflow: hidden;
 }
@@ -3460,7 +3460,7 @@ section.animate-on-scroll.is-visible {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.85);
+    filter: brightness(0.95);
 }
 
 .signature-hero-content {
@@ -3468,8 +3468,8 @@ section.animate-on-scroll.is-visible {
     flex-direction: column;
     justify-content: center;
     padding: 50px 60px;
-    background: #2a2a2a;
-    color: white;
+    background: #faf8f5;
+    color: #3a3a3a;
     height: 100%;
     overflow: hidden;
 }
@@ -3481,7 +3481,7 @@ section.animate-on-scroll.is-visible {
     margin-bottom: 18px;
     letter-spacing: 2px;
     line-height: 1.1;
-    color: #ffffff;
+    color: #2d2d2d;
 }
 
 .signature-subtitle {
@@ -3500,7 +3500,7 @@ section.animate-on-scroll.is-visible {
     letter-spacing: 0.3px;
     line-height: 1.7;
     margin-bottom: 35px;
-    color: #e0e0e0;
+    color: #5a5a5a;
 }
 
 .signature-hero-cta {
@@ -3527,37 +3527,133 @@ section.animate-on-scroll.is-visible {
 /* Why Signature Journey Section */
 .signature-why-section {
     padding: 90px 20px;
-    background: #f5f1eb;
+    background: #ffffff;
+}
+
+.signature-why-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.signature-why-content {
+    padding-right: 20px;
 }
 
 .signature-why-section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    text-align: center;
+    font-size: 2.8rem;
+    text-align: left;
     color: #3a3a3a;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     font-weight: 400;
     font-style: italic;
 }
 
 .signature-opening {
-    font-size: 1.3rem;
-    text-align: center;
+    font-size: 1.2rem;
+    text-align: left;
     color: #5a5a5a;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     line-height: 1.7;
     font-family: 'Montserrat', sans-serif;
 }
 
 .signature-why-section p {
-    font-size: 1.1rem;
-    line-height: 1.9;
-    margin-bottom: 25px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
     color: #4a4a4a;
-    text-align: center;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left;
+}
+
+/* Carousel Styles */
+.signature-why-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    color: #3a3a3a;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+    border-radius: 4px;
+}
+
+.carousel-btn:hover {
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-btn.prev {
+    left: 15px;
+}
+
+.carousel-btn.next {
+    right: 15px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+    background: white;
+    transform: scale(1.2);
 }
 
 .signature-features-grid {
@@ -3668,15 +3764,20 @@ section.animate-on-scroll.is-visible {
 /* About Section */
 .signature-about-section {
     padding: 90px 20px;
-    background: #ffffff;
+    background: #f5f1eb;
+}
+
+.signature-about-section .signature-container {
+    max-width: 900px;
+    margin-left: 100px;
 }
 
 .signature-about-section h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
     color: #3a3a3a;
-    text-align: center;
-    margin-bottom: 40px;
+    text-align: left;
+    margin-bottom: 30px;
     font-weight: 400;
     font-style: italic;
 }
@@ -3690,21 +3791,18 @@ section.animate-on-scroll.is-visible {
 .signature-about-section p {
     font-size: 1.1rem;
     line-height: 1.9;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     color: #4a4a4a;
-    text-align: center;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left;
 }
 
 .signature-about-section h3 {
-    font-size: 1.5rem;
-    margin: 45px 0 25px;
+    font-size: 1.4rem;
+    margin: 35px 0 20px;
     color: #3a3a3a;
-    text-align: center;
+    text-align: left;
     font-family: 'Playfair Display', serif;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .journey-perfect-for {
@@ -3712,17 +3810,14 @@ section.animate-on-scroll.is-visible {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 30px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    gap: 15px;
+    margin-top: 20px;
+    max-width: 600px;
 }
 
 .journey-perfect-for li {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 12px;
     font-size: 1.05rem;
     color: #4a4a4a;
@@ -4229,9 +4324,9 @@ section.animate-on-scroll.is-visible {
 
 .signature-experiences-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1200px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -4250,20 +4345,21 @@ section.animate-on-scroll.is-visible {
 
 .experience-card img {
     width: 100%;
-    height: 220px;
+    height: 150px;
     object-fit: cover;
 }
 
 .experience-card-content {
-    padding: 25px;
+    padding: 12px;
 }
 
 .experience-card-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
+    font-size: 0.95rem;
+    margin-bottom: 0;
     color: #3a3a3a;
     font-family: 'Playfair Display', serif;
     font-weight: 500;
+    text-align: center;
 }
 
 .experience-card-content h3 i {
@@ -4359,18 +4455,37 @@ section.animate-on-scroll.is-visible {
         text-align: center;
     }
     
+    .signature-why-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .signature-why-content {
+        padding-right: 0;
+    }
+    
+    .signature-why-carousel {
+        max-width: 100%;
+        height: 500px;
+        margin: 0 auto;
+    }
+    
     .signature-features-grid {
         grid-template-columns: 1fr;
     }
     
     .signature-experiences-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
     }
     
     .signature-pricing-content {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+    
+    .signature-about-section .signature-container {
+        margin-left: 20px;
     }
     
     .journey-perfect-for {
@@ -4412,7 +4527,8 @@ section.animate-on-scroll.is-visible {
     }
     
     .signature-experiences-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 }
 

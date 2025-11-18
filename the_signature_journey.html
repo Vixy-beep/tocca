@@ -61,9 +61,6 @@
     <main>
         <!-- HERO SECTION - Two Column Layout -->
         <section class="signature-hero">
-            <div class="signature-hero-image">
-                <img src="imagenes/signature journey.jpg" alt="Amalfi Coast panoramic view">
-            </div>
             <div class="signature-hero-content">
                 <h1>The Signature Journey</h1>
                 <p class="signature-subtitle">10 Days to Touch the Soul of the Amalfi Coast</p>
@@ -73,41 +70,75 @@
                     <a href="#signature-why" class="btn-secondary-large">Learn More</a>
                 </div>
             </div>
+            <div class="signature-hero-image">
+                <img src="imagenes/signature journey.jpg" alt="Amalfi Coast panoramic view">
+            </div>
         </section>
 
         <!-- WHY SIGNATURE JOURNEY -->
         <section id="signature-why" class="signature-why-section">
-            <div class="signature-container">
-                <h2>Why the Signature Journey?</h2>
-                <p class="signature-opening">Because the Amalfi Coast isn't a place you simply visit — <strong>it's a place you feel.</strong></p>
-                
-                <p>Our Signature Journey is Tocca Amalfi Coast's flagship immersion, designed for travelers who want to uncover the true essence of the Coast: its spirit, its flavors, its people, and the quiet magic that lives between the cliffs and the sea.</p>
-                
-                <p>Across 10 unforgettable days, you will not only see the Coast — you will <strong>touch its soul</strong> through curated experiences, private connections, and a rhythm of slow, intentional travel that lets every moment breathe.</p>
-                
-                <div class="signature-features-grid">
-                    <div class="signature-feature">
-                        <i class="fas fa-hotel"></i>
-                        <p>Boutique hotels with sea-view terraces</p>
+            <div class="signature-why-wrapper">
+                <div class="signature-why-content">
+                    <h2>Why the Signature Journey?</h2>
+                    <p class="signature-opening">Because the Amalfi Coast isn't a place you simply visit — <strong>it's a place you feel.</strong></p>
+                    
+                    <p>Our Signature Journey is Tocca Amalfi Coast's flagship immersion, designed for travelers who want to uncover the true essence of the Coast: its spirit, its flavors, its people, and the quiet magic that lives between the cliffs and the sea.</p>
+                    
+                    <p>Across 10 unforgettable days, you will not only see the Coast — you will <strong>touch its soul</strong> through curated experiences, private connections, and a rhythm of slow, intentional travel that lets every moment breathe.</p>
+                    
+                    <div class="signature-features-grid">
+                        <div class="signature-feature">
+                            <i class="fas fa-hotel"></i>
+                            <p>Boutique hotels with sea-view terraces</p>
+                        </div>
+                        <div class="signature-feature">
+                            <i class="fas fa-users"></i>
+                            <p>Local hosts who open their homes, kitchens, and stories</p>
+                        </div>
+                        <div class="signature-feature">
+                            <i class="fas fa-gem"></i>
+                            <p>Exclusive experiences impossible to access on your own</p>
+                        </div>
+                        <div class="signature-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>A seamless flow — every detail handled for you</p>
+                        </div>
                     </div>
-                    <div class="signature-feature">
-                        <i class="fas fa-users"></i>
-                        <p>Local hosts who open their homes, kitchens, and stories</p>
-                    </div>
-                    <div class="signature-feature">
-                        <i class="fas fa-gem"></i>
-                        <p>Exclusive experiences impossible to access on your own</p>
-                    </div>
-                    <div class="signature-feature">
-                        <i class="fas fa-check-circle"></i>
-                        <p>A seamless flow — every detail handled for you</p>
+                    
+                    <p class="signature-closing"><strong>This is more than a trip. It's an invitation to live the Coast the way locals do.</strong></p>
+                    
+                    <div class="signature-cta-buttons">
+                        <a href="index.html#contact-section" class="btn-primary-large">Reserve Your Spot</a>
                     </div>
                 </div>
                 
-                <p class="signature-closing"><strong>This is more than a trip. It's an invitation to live the Coast the way locals do.</strong></p>
-                
-                <div class="signature-cta-buttons">
-                    <a href="index.html#contact-section" class="btn-primary-large">Reserve Your Spot</a>
+                <div class="signature-why-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide active">
+                            <img src="imagenes/views.jpg" alt="Amalfi Coast views">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenes/boat.jpg" alt="Coastal boat tour">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenes/experiencias_gastronomicas.jpg" alt="Culinary experiences">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenes/lemons.jpg" alt="Lemon groves">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenes/alojamiento_boutique.jpg" alt="Boutique accommodations">
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
+                    <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -136,54 +167,111 @@
         <section class="signature-experiences-section">
             <div class="signature-container">
                 <h2>What Awaits You</h2>
-                <p class="experiences-intro">Immerse yourself in the authentic soul of the Amalfi Coast through these curated experiences:</p>
+                <p class="experiences-intro">Immerse yourself in the authentic soul of the Amalfi Coast</p>
                 
                 <div class="signature-experiences-grid">
                     <div class="experience-card">
-                        <img src="imagenes/experiencias_gastronomicas.jpg" alt="Culinary experiences">
+                        <img src="imagenes/experiencias_gastronomicas.jpg" alt="Experience 1">
                         <div class="experience-card-content">
-                            <h3><i class="fas fa-utensils"></i> Culinary Traditions</h3>
-                            <p>Cook with Nonna, taste limoncello in century-old lemon groves, enjoy vineyard lunches in the hills of Tramonti.</p>
+                            <h3>Experience 1</h3>
                         </div>
                     </div>
                     
                     <div class="experience-card">
-                        <img src="imagenes/boat.jpg" alt="Private boat tours">
+                        <img src="imagenes/boat.jpg" alt="Experience 2">
                         <div class="experience-card-content">
-                            <h3><i class="fas fa-ship"></i> Coastal Adventures</h3>
-                            <p>Private boat day to Capri, swimming in hidden coves, discovering the coast from the sea's perspective.</p>
+                            <h3>Experience 2</h3>
                         </div>
                     </div>
                     
                     <div class="experience-card">
-                        <img src="imagenes/alojamiento_boutique.jpg" alt="Boutique accommodations">
+                        <img src="imagenes/alojamiento_boutique.jpg" alt="Experience 3">
                         <div class="experience-card-content">
-                            <h3><i class="fas fa-hotel"></i> Boutique Stays</h3>
-                            <p>Sea-view terraces, carefully selected hotels that capture the essence of coastal elegance and comfort.</p>
+                            <h3>Experience 3</h3>
                         </div>
                     </div>
                     
                     <div class="experience-card">
-                        <img src="imagenes/views.jpg" alt="Panoramic views">
+                        <img src="imagenes/views.jpg" alt="Experience 4">
                         <div class="experience-card-content">
-                            <h3><i class="fas fa-mountain"></i> Hidden Gems</h3>
-                            <p>Explore villages untouched by mass tourism, walk ancient paths, discover the real Amalfi Coast.</p>
+                            <h3>Experience 4</h3>
                         </div>
                     </div>
                     
                     <div class="experience-card">
-                        <img src="imagenes/vespa.jpg" alt="Vespa tours">
+                        <img src="imagenes/vespa.jpg" alt="Experience 5">
                         <div class="experience-card-content">
-                            <h3><i class="fas fa-motorcycle"></i> Iconic Moments</h3>
-                            <p>Vespa-style coastal rides, scenic drives through mountain villages, unforgettable Mediterranean moments.</p>
+                            <h3>Experience 5</h3>
                         </div>
                     </div>
                     
                     <div class="experience-card">
-                        <img src="imagenes/lemons.jpg" alt="Lemon groves">
+                        <img src="imagenes/lemons.jpg" alt="Experience 6">
                         <div class="experience-card-content">
-                            <h3><i class="fas fa-lemon"></i> Local Connections</h3>
-                            <p>Meet the people who bring the Coast to life, from artisans to farmers, hosts who open their hearts and homes.</p>
+                            <h3>Experience 6</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <img src="imagenes/gapes.jpg" alt="Experience 7">
+                        <div class="experience-card-content">
+                            <h3>Experience 7</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <img src="imagenes/transporte_lujo.jpg" alt="Experience 8">
+                        <div class="experience-card-content">
+                            <h3>Experience 8</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <img src="imagenes/guia_local.jpg" alt="Experience 9">
+                        <div class="experience-card-content">
+                            <h3>Experience 9</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <img src="imagenes/hero1.jpg" alt="Experience 10">
+                        <div class="experience-card-content">
+                            <h3>Experience 10</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <img src="imagenes/hero2.jpg" alt="Experience 11">
+                        <div class="experience-card-content">
+                            <h3>Experience 11</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <img src="imagenes/hero3.jpg" alt="Experience 12">
+                        <div class="experience-card-content">
+                            <h3>Experience 12</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <img src="imagenes/carousel-1.jpg" alt="Experience 13">
+                        <div class="experience-card-content">
+                            <h3>Experience 13</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <img src="imagenes/carousel-2.jpg" alt="Experience 14">
+                        <div class="experience-card-content">
+                            <h3>Experience 14</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <img src="imagenes/carousel-3.jpg" alt="Experience 15">
+                        <div class="experience-card-content">
+                            <h3>Experience 15</h3>
                         </div>
                     </div>
                 </div>
@@ -389,6 +477,41 @@
                 toggleContactMenu();
             }
         });
+
+        // CAROUSEL FUNCTIONALITY
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function moveCarousel(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("carousel-slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            
+            slides[slideIndex - 1].classList.add("active");
+            dots[slideIndex - 1].classList.add("active");
+        }
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(() => {
+            moveCarousel(1);
+        }, 5000);
     </script>
 </body>
 
