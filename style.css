@@ -2530,10 +2530,12 @@ section.animate-on-scroll.is-visible {
 
 .etc-subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
-    color: #2C3E50;
+    font-size: 1.05rem;
+    color: #5a5a5a;
     margin-bottom: 20px;
-    font-weight: 300;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.6;
 }
 
 .etc-description {
@@ -3530,7 +3532,7 @@ section.animate-on-scroll.is-visible {
 
 /* Why Signature Journey Section */
 .signature-why-section {
-    padding: 90px 20px;
+    padding: 40px 20px;
     background: #ffffff;
 }
 
