@@ -3767,9 +3767,17 @@ section.animate-on-scroll.is-visible {
     background: #f5f1eb;
 }
 
-.signature-about-section .signature-container {
-    max-width: 900px;
-    margin-left: 100px;
+.signature-about-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.signature-about-content {
+    padding-left: 40px;
 }
 
 .signature-about-section h2 {
@@ -3805,6 +3813,22 @@ section.animate-on-scroll.is-visible {
     font-weight: 500;
 }
 
+.signature-about-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signature-about-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
 .journey-perfect-for {
     list-style: none;
     padding: 0;
@@ -3828,7 +3852,128 @@ section.animate-on-scroll.is-visible {
     font-size: 1.4rem;
 }
 
-/* Included Section */
+/* New Signature What's Included Section - Full Width */
+.signature-whats-included-full {
+    width: 100%;
+    padding: 100px 0;
+    background: linear-gradient(135deg, #faf8f5 0%, #f5f1eb 100%);
+    position: relative;
+}
+
+.signature-included-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.signature-whats-included-full h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    color: #2d2d2d;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.included-subtitle {
+    font-size: 1.2rem;
+    color: #5a5a5a;
+    text-align: center;
+    margin-bottom: 60px;
+    font-style: italic;
+}
+
+.signature-inclusions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+.signature-inclusion-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 200px;
+}
+
+.signature-inclusion-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 35px rgba(201, 168, 118, 0.3);
+}
+
+.signature-inclusion-card i {
+    font-size: 3rem;
+    color: #c9a876;
+    margin-bottom: 20px;
+}
+
+.signature-inclusion-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #2d2d2d;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.signature-inclusion-card p {
+    font-size: 0.95rem;
+    color: #5a5a5a;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.signature-not-included {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 2px solid #e0dcd5;
+}
+
+.signature-not-included h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.signature-not-included-items {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.signature-not-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 30px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    min-width: 180px;
+}
+
+.signature-not-item i {
+    font-size: 2.5rem;
+    color: #999;
+}
+
+.signature-not-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Old Included Section - Keep for backward compatibility */
 .signature-included-section {
     padding: 90px 20px;
     background: #faf8f5;
@@ -4484,8 +4629,31 @@ section.animate-on-scroll.is-visible {
         gap: 30px;
     }
     
+    .signature-about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .signature-about-content {
+        padding-left: 20px;
+    }
+    
+    .signature-about-image img {
+        height: 400px;
+    }
+    
     .signature-about-section .signature-container {
         margin-left: 20px;
+    }
+    
+    .signature-inclusions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .signature-inclusion-card {
+        min-height: 180px;
+        padding: 30px 20px;
     }
     
     .journey-perfect-for {
@@ -4529,6 +4697,25 @@ section.animate-on-scroll.is-visible {
     .signature-experiences-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+    }
+    
+    .signature-inclusions-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .signature-inclusion-card {
+        min-height: 160px;
+        padding: 25px 15px;
+    }
+    
+    .signature-whats-included-full h2 {
+        font-size: 2.2rem;
+    }
+    
+    .signature-not-included-items {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
