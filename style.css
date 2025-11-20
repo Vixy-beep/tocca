@@ -4921,9 +4921,9 @@ section.animate-on-scroll.is-visible {
 .inclusions-grid-2x5 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 30px 88px;
+    gap: 25px;
     margin-bottom: 40px;
-    max-width: 1438px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
