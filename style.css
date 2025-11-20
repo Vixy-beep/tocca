@@ -4937,11 +4937,11 @@ section.animate-on-scroll.is-visible {
     text-align: center;
     padding: 30px 15px;
     background: white;
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
-    aspect-ratio: 1;
+    min-height: 180px;
     flex-shrink: 0;
 }
 
@@ -4972,14 +4972,15 @@ section.animate-on-scroll.is-visible {
 /* Not Included List - Horizontal */
 .not-inclusions-list {
     display: flex;
-    justify-content: flex-start;
-    gap: 35px;
+    justify-content: space-between;
+    gap: 0;
     margin-bottom: 0;
-    margin-top: 30px;
+    margin-top: -80px;
     max-width: 100%;
     margin-left: 0;
     margin-right: 0;
     padding: 0;
+    position: relative;
 }
 
 .not-inclusion-item {
@@ -4988,14 +4989,21 @@ section.animate-on-scroll.is-visible {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 30px 15px;
+    padding: 25px 15px;
     background: white;
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    width: 100%;
-    max-width: 200px;
-    aspect-ratio: 1;
+    width: 200px;
+    min-height: 180px;
     flex-shrink: 0;
+}
+
+.not-inclusion-item:first-child {
+    margin-left: 0;
+}
+
+.not-inclusion-item:last-child {
+    margin-right: 0;
 }
 
 .not-inclusion-item i {
