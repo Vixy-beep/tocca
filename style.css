@@ -3445,7 +3445,7 @@ section.animate-on-scroll.is-visible {
     height: 65vh;
     max-height: 650px;
     min-height: 500px;
-    background: #f5f1eb;
+    background: #e8f4f8;
     position: relative;
     overflow: hidden;
 }
@@ -3468,8 +3468,8 @@ section.animate-on-scroll.is-visible {
     flex-direction: column;
     justify-content: center;
     padding: 50px 60px;
-    background: #faf8f5;
-    color: #3a3a3a;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f3f7 100%);
+    color: #2d2d2d;
     height: 100%;
     overflow: hidden;
 }
@@ -3490,7 +3490,7 @@ section.animate-on-scroll.is-visible {
     font-weight: 300;
     font-style: italic;
     font-family: 'Playfair Display', serif;
-    color: #c9a876;
+    color: #20b2aa;
 }
 
 .signature-description {
@@ -3726,27 +3726,27 @@ section.animate-on-scroll.is-visible {
 
 .btn-primary-large,
 .btn-primary-xl {
-    background: #c9a876;
+    background: linear-gradient(135deg, #20b2aa 0%, #48d1cc 100%);
     color: white;
 }
 
 .btn-primary-large:hover,
 .btn-primary-xl:hover {
-    background: #b89560;
+    background: linear-gradient(135deg, #1a9d96 0%, #3cbec2 100%);
     transform: translateY(-2px);
-    box-shadow: 0 5px 18px rgba(201,168,118,0.3);
+    box-shadow: 0 5px 18px rgba(32,178,170,0.4);
 }
 
 .btn-secondary-large,
 .btn-secondary-xl {
     background: white;
-    color: #c9a876;
-    border: 2px solid #c9a876;
+    color: #20b2aa;
+    border: 2px solid #20b2aa;
 }
 
 .btn-secondary-large:hover,
 .btn-secondary-xl:hover {
-    background: #c9a876;
+    background: #20b2aa;
     color: white;
     transform: translateY(-2px);
 }
@@ -3764,7 +3764,7 @@ section.animate-on-scroll.is-visible {
 /* About Section */
 .signature-about-section {
     padding: 90px 20px;
-    background: #f5f1eb;
+    background: linear-gradient(135deg, #f5fbff 0%, #e8f4f8 100%);
 }
 
 .signature-about-wrapper {
@@ -3791,7 +3791,7 @@ section.animate-on-scroll.is-visible {
 }
 
 .signature-about-section h2 i {
-    color: #c9a876;
+    color: #20b2aa;
     margin-right: 10px;
     font-size: 2.5rem;
 }
@@ -3848,7 +3848,7 @@ section.animate-on-scroll.is-visible {
 }
 
 .journey-perfect-for i {
-    color: #c9a876;
+    color: #20b2aa;
     font-size: 1.4rem;
 }
 
@@ -3856,7 +3856,7 @@ section.animate-on-scroll.is-visible {
 .signature-whats-included-full {
     width: 100%;
     padding: 100px 0;
-    background: linear-gradient(135deg, #faf8f5 0%, #f5f1eb 100%);
+    background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f2 100%);
     position: relative;
 }
 
@@ -3884,15 +3884,18 @@ section.animate-on-scroll.is-visible {
 }
 
 .signature-inclusions-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    margin-bottom: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    margin-bottom: 60px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x proximity;
 }
 
 .signature-inclusion-card {
     background: white;
-    padding: 35px 25px;
+    padding: 25px 20px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     text-align: center;
@@ -3901,7 +3904,11 @@ section.animate-on-scroll.is-visible {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-height: 200px;
+    min-width: 220px;
+    max-width: 220px;
+    min-height: 180px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
 }
 
 .signature-inclusion-card:hover {
@@ -3910,9 +3917,9 @@ section.animate-on-scroll.is-visible {
 }
 
 .signature-inclusion-card i {
-    font-size: 3rem;
-    color: #c9a876;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #20b2aa;
+    margin-bottom: 15px;
 }
 
 .signature-inclusion-card h3 {
@@ -4169,7 +4176,10 @@ section.animate-on-scroll.is-visible {
 /* Why Choose Section */
 .signature-why-choose-section {
     padding: 90px 20px;
-    background: #f5f1eb;
+    background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('../imagenes/views.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .signature-why-choose-section h2 {
@@ -4647,13 +4657,17 @@ section.animate-on-scroll.is-visible {
     }
     
     .signature-inclusions-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 15px;
     }
     
     .signature-inclusion-card {
-        min-height: 180px;
-        padding: 30px 20px;
+        min-width: 200px;
+        max-width: 200px;
+        min-height: 170px;
+        padding: 25px 18px;
     }
     
     .journey-perfect-for {
@@ -4700,13 +4714,29 @@ section.animate-on-scroll.is-visible {
     }
     
     .signature-inclusions-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
     }
     
     .signature-inclusion-card {
-        min-height: 160px;
-        padding: 25px 15px;
+        min-width: 180px;
+        max-width: 180px;
+        min-height: 150px;
+        padding: 20px 12px;
+    }
+    
+    .signature-inclusion-card i {
+        font-size: 2rem;
+    }
+    
+    .signature-inclusion-card h3 {
+        font-size: 1.05rem;
+    }
+    
+    .signature-inclusion-card p {
+        font-size: 0.85rem;
     }
     
     .signature-whats-included-full h2 {
