@@ -1506,13 +1506,13 @@ section.animate-on-scroll.is-visible {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.65);
+    background-color: rgba(0,0,0,0.85);
     z-index: 1;
     transition: background-color 0.4s ease;
 }
 
 .journey-card:hover::after {
-    background-color: rgba(0,0,0,0.35);
+    background-color: rgba(0,0,0,0.55);
 }
 
 .journey-card:hover {
@@ -1529,10 +1529,10 @@ section.animate-on-scroll.is-visible {
     color: var(--card-text-light);
 }
 .signature-card::after {
-    background-color: rgba(18, 46, 66, 0.7);
+    background-color: rgba(18, 46, 66, 0.88);
 }
 .signature-card:hover::after {
-    background-color: rgba(18, 46, 66, 0.35);
+    background-color: rgba(18, 46, 66, 0.6);
 }
 .signature-card h4 {
     color: #ffffff;
@@ -1556,10 +1556,10 @@ section.animate-on-scroll.is-visible {
     object-position: center;
 }
 .bespoke-card::after {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.88);
 }
 .bespoke-card:hover::after {
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .bespoke-card h4 {
     color: #ffffff;
@@ -2549,6 +2549,47 @@ section.animate-on-scroll.is-visible {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Responsive Timeline Styles */
+@media (max-width: 768px) {
+    .journey-timeline {
+        padding: 0 10px !important;
+        overflow-x: auto;
+        justify-content: flex-start !important;
+    }
+    
+    .journey-timeline .timeline-item {
+        margin-right: 30px !important;
+        min-width: 60px;
+    }
+    
+    .journey-timeline .timeline-item > div {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .journey-timeline .timeline-item i {
+        font-size: 1.2rem !important;
+    }
+    
+    .journey-timeline .timeline-item span {
+        font-size: 0.7rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .journey-timeline > div:first-child {
+        top: 25px !important;
+        left: 35px !important;
+    }
+    
+    .etc-title {
+        font-size: 1.8rem;
+    }
+    
+    .etc-subtitle {
+        font-size: 0.95rem;
+    }
 }
 
 .etc-description {
@@ -3574,6 +3615,12 @@ section.animate-on-scroll.is-visible {
     font-style: italic;
 }
 
+@media (max-width: 768px) {
+    .signature-why-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
 .signature-opening {
     font-size: 1.2rem;
     text-align: left;
@@ -3826,6 +3873,17 @@ section.animate-on-scroll.is-visible {
     font-weight: 400;
     font-style: italic;
     white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .signature-about-section h2 {
+        font-size: 1.3rem;
+        white-space: normal;
+    }
+    
+    .signature-about-section h2 i {
+        font-size: 1.2rem;
+    }
 }
 
 .signature-about-section h2 i {
@@ -4154,11 +4212,66 @@ section.animate-on-scroll.is-visible {
 }
 
 .departure-header h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #3a3a3a;
     margin-bottom: 18px;
     font-family: 'Playfair Display', serif;
-    font-weight: 500;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.departure-header h3 .dates-range {
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .signature-departures-section {
+        padding: 30px 15px;
+    }
+    
+    .signature-departures-section h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .departures-intro {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .departures-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+    
+    .departure-card {
+        padding: 18px 16px;
+    }
+    
+    .departure-header h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .departure-header h3 .dates-range {
+        font-size: 1rem;
+    }
+    
+    .availability {
+        padding: 5px 12px;
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+    
+    .btn-departure {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+        margin-top: 15px;
+    }
 }
 
 .availability {
