@@ -1,4 +1,4 @@
-/* --- ESTILOS GENERALES Y FUENTES --- */
+/* --- ESTILOS GENERALES Y FUENTES --- v2.0 FIX WHY CHOOSE GRID */
 :root {
     --primary-color: #4A9A92;
     --secondary-color: #000;
@@ -1402,7 +1402,7 @@ section.animate-on-scroll.is-visible {
 ======================================== */
 
 .journey-section {
-    padding: 40px 20px;
+    padding: 20px 20px;
     background-color: #f8f9fa; /* Fondo claro */
     position: relative;
     overflow: hidden;
@@ -1511,12 +1511,16 @@ section.animate-on-scroll.is-visible {
 }
 
 .journey-card:hover::after {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.2);
 }
 
 .journey-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.journey-card:hover .journey-card-image {
+    filter: brightness(1.15) saturate(1.3);
 }
 
 /* Tarjeta Signature */
@@ -2395,7 +2399,7 @@ section.animate-on-scroll.is-visible {
 ======================================== */
 .testimonials-section {
     background-color: #ffffff;
-    padding: 60px 40px;
+    padding: 30px 40px;
 }
 
 .testimonials-section h2 {
@@ -2502,18 +2506,15 @@ section.animate-on-scroll.is-visible {
 ======================================== */
 .journey-timeline-section {
     background: linear-gradient(135deg, #E8F4F8 0%, #D4EAF1 100%);
-    padding: 80px 20px;
-    margin: 40px 0;
+    padding: 40px 20px;
+    margin: 20px 0;
 }
 
 .everything-taken-care-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    align-items: center;
+    text-align: center;
 }
 
 .etc-left-content {
@@ -2532,10 +2533,14 @@ section.animate-on-scroll.is-visible {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.05rem;
     color: #5a5a5a;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-weight: 400;
-    font-style: italic;
+    font-style: normal;
     line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .etc-description {
@@ -4065,11 +4070,10 @@ section.animate-on-scroll.is-visible {
 
 /* Departures Section */
 .signature-departures-section {
-    padding: 90px 20px;
+    padding: 40px 20px;
     background: linear-gradient(rgba(12, 32, 50, 0.7), rgba(12, 32, 50, 0.7)), url('imagenes/boat.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 .signature-departures-section h2 {
@@ -4103,11 +4107,12 @@ section.animate-on-scroll.is-visible {
 }
 
 .departure-card {
-    background: rgba(255,255,255,0.92);
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 8px;
+    background: #ffffff;
+    border: 2px solid rgba(201,168,118,0.3);
+    border-radius: 12px;
     padding: 35px 28px;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .departure-card.featured {
@@ -4140,18 +4145,21 @@ section.animate-on-scroll.is-visible {
 }
 
 .availability.filling-fast {
-    background: #f8ecd1;
-    color: #8b6914;
+    background: #ff9800;
+    color: #000000;
+    font-weight: 500;
 }
 
 .availability.high-availability {
-    background: #e1f0e5;
-    color: #2d6a3e;
+    background: #00c853;
+    color: #000000;
+    font-weight: 500;
 }
 
 .availability.almost-full {
-    background: #f7dfe0;
-    color: #8b3a3f;
+    background: #f44336;
+    color: #ffffff;
+    font-weight: 500;
 }
 
 .departure-ideal {
@@ -4191,6 +4199,11 @@ section.animate-on-scroll.is-visible {
     background-attachment: fixed;
 }
 
+.signature-why-choose-section .signature-container {
+    max-width: 1500px;
+    width: 100%;
+}
+
 .signature-why-choose-section h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
@@ -4202,11 +4215,13 @@ section.animate-on-scroll.is-visible {
 }
 
 .why-choose-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex !important;
     gap: 25px;
-    max-width: 1100px;
+    justify-content: space-between;
+    align-items: stretch;
     margin: 0 auto;
+    width: 100%;
+    flex-wrap: nowrap !important;
 }
 
 .why-choose-item {
@@ -4214,6 +4229,9 @@ section.animate-on-scroll.is-visible {
     padding: 38px 32px;
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
 }
 
 .why-choose-item.full-width {
@@ -4691,12 +4709,30 @@ section.animate-on-scroll.is-visible {
         grid-template-columns: 1fr;
     }
     
-    .why-choose-grid {
+    .whats-included-list {
         grid-template-columns: 1fr;
     }
     
-    .whats-included-list {
-        grid-template-columns: 1fr;
+    .why-choose-grid {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .why-choose-item {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose-grid {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .why-choose-item {
+        max-width: 100% !important;
+        width: 100% !important;
     }
 }
 
@@ -4916,6 +4952,7 @@ section.animate-on-scroll.is-visible {
     font-weight: 600;
     color: #666;
     text-align: center;
+    margin-top: -60px;
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 10px;
@@ -4953,15 +4990,16 @@ section.animate-on-scroll.is-visible {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
-    padding: 30px 12px 20px 12px;
+    padding: 20px 12px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 200px;
-    height: 200px;
+    height: auto;
+    min-height: 140px;
     flex-shrink: 0;
 }
 
@@ -4996,7 +5034,7 @@ section.animate-on-scroll.is-visible {
     justify-content: space-between;
     gap: 0;
     margin-bottom: 0;
-    margin-top: -100px;
+    margin-top: -160px;
     max-width: 1438px;
     margin-left: auto;
     margin-right: auto;
