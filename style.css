@@ -1410,6 +1410,7 @@ section.animate-on-scroll.is-visible {
 
 .journey-section h2 {
     color: var(--text-color);
+    filter: saturate(1.5);
 }
 
 .journey-intro {
@@ -1505,13 +1506,13 @@ section.animate-on-scroll.is-visible {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.65);
     z-index: 1;
     transition: background-color 0.4s ease;
 }
 
 .journey-card:hover::after {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.35);
 }
 
 .journey-card:hover {
@@ -1528,10 +1529,10 @@ section.animate-on-scroll.is-visible {
     color: var(--card-text-light);
 }
 .signature-card::after {
-    background-color: rgba(18, 46, 66, 0.4);
+    background-color: rgba(18, 46, 66, 0.7);
 }
 .signature-card:hover::after {
-    background-color: rgba(18, 46, 66, 0.3);
+    background-color: rgba(18, 46, 66, 0.35);
 }
 .signature-card h4 {
     color: #ffffff;
@@ -1555,10 +1556,10 @@ section.animate-on-scroll.is-visible {
     object-position: center;
 }
 .bespoke-card::after {
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 .bespoke-card:hover::after {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.35);
 }
 .bespoke-card h4 {
     color: #ffffff;
@@ -2424,6 +2425,13 @@ section.animate-on-scroll.is-visible {
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .testimonial-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 .testimonial-card {
@@ -3539,6 +3547,7 @@ section.animate-on-scroll.is-visible {
 .signature-why-section {
     padding: 40px 20px;
     background: #ffffff;
+    overflow-x: visible;
 }
 
 .signature-why-wrapper {
@@ -3547,11 +3556,12 @@ section.animate-on-scroll.is-visible {
     gap: 60px;
     max-width: 1400px;
     margin: 0 auto;
-    align-items: center;
+    align-items: flex-start;
+    padding: 0 20px;
 }
 
 .signature-why-content {
-    padding-right: 20px;
+    padding-right: 0;
 }
 
 .signature-why-section h2 {
@@ -3701,12 +3711,28 @@ section.animate-on-scroll.is-visible {
 }
 
 .signature-closing {
-    font-size: 1.25rem;
-    text-align: center;
-    margin: 50px 0 30px;
-    color: #3a3a3a;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    font-family: 'Cinzel', serif !important;
+    font-size: 1.8rem !important;
+    font-weight: 400 !important;
+    text-align: center !important;
+    margin: 60px -20px 0 -20px !important;
+    padding: 50px calc(20px + 5vw) !important;
+    color: white !important;
+    background: linear-gradient(90deg, #2c5f6f 0%, #4A9A92 50%, #5fb4a8 100%) !important;
+    font-style: normal !important;
+    text-transform: uppercase !important;
+    letter-spacing: 4px !important;
+    line-height: 1.4 !important;
+    width: calc(100% + 40px) !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+    .signature-closing {
+        font-size: 1.2rem !important;
+        letter-spacing: 2px !important;
+        padding: 35px 15px !important;
+    }
 }
 
 /* CTA Buttons */
@@ -3793,18 +3819,19 @@ section.animate-on-scroll.is-visible {
 
 .signature-about-section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     color: #3a3a3a;
     text-align: left;
     margin-bottom: 30px;
     font-weight: 400;
     font-style: italic;
+    white-space: nowrap;
 }
 
 .signature-about-section h2 i {
     color: #20b2aa;
     margin-right: 10px;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .signature-about-section p {
@@ -4071,7 +4098,7 @@ section.animate-on-scroll.is-visible {
 /* Departures Section */
 .signature-departures-section {
     padding: 40px 20px;
-    background: linear-gradient(rgba(12, 32, 50, 0.7), rgba(12, 32, 50, 0.7)), url('imagenes/boat.jpg');
+    background: #4A9A92;
     background-size: cover;
     background-position: center;
 }
@@ -4087,7 +4114,7 @@ section.animate-on-scroll.is-visible {
 }
 
 .signature-departures-section h2 i {
-    color: #f0d9a1;
+    color: #ffffff;
     margin-right: 10px;
 }
 
@@ -4095,7 +4122,7 @@ section.animate-on-scroll.is-visible {
     text-align: center;
     font-size: 1.05rem;
     margin-bottom: 50px;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.95);
 }
 
 .departures-grid {
@@ -4193,10 +4220,9 @@ section.animate-on-scroll.is-visible {
 /* Why Choose Section */
 .signature-why-choose-section {
     padding: 90px 20px;
-    background: linear-gradient(rgba(18, 46, 66, 0.78), rgba(18, 46, 66, 0.78)), url('imagenes/hero3.jpg');
+    background: #f5f1eb;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 .signature-why-choose-section .signature-container {
@@ -4208,7 +4234,7 @@ section.animate-on-scroll.is-visible {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
     text-align: center;
-    color: #ffffff;
+    color: #3a3a3a;
     margin-bottom: 55px;
     font-weight: 400;
     font-style: italic;
@@ -4225,13 +4251,21 @@ section.animate-on-scroll.is-visible {
 }
 
 .why-choose-item {
-    background: rgba(255, 255, 255, 0.82);
+    background: #ffffff;
     padding: 38px 32px;
     border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border: 3px solid #4A9A92;
     flex: 1 1 0 !important;
     min-width: 0 !important;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.why-choose-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(74, 154, 146, 0.3);
+    border-color: #c9a876;
 }
 
 .why-choose-item.full-width {
@@ -4434,8 +4468,8 @@ section.animate-on-scroll.is-visible {
 
 /* Final CTA Section */
 .signature-final-cta {
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #d4b896 0%, #c9a876 100%);
+    padding: 80px 20px;
+    background: linear-gradient(90deg, #2c5f6f 0%, #4A9A92 50%, #5fb4a8 100%);
     color: white;
     text-align: center;
 }
@@ -4447,6 +4481,34 @@ section.animate-on-scroll.is-visible {
     color: white;
     font-weight: 400;
     font-style: italic;
+}
+
+.signature-final-cta .final-cta-buttons {
+    margin-bottom: 60px;
+}
+
+.signature-final-cta .signature-banner-text,
+h2.signature-banner-text {
+    font-family: 'Cinzel', serif !important;
+    font-size: 2.5rem !important;
+    line-height: 1.4 !important;
+    margin: 0 auto !important;
+    color: white !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+    max-width: 100% !important;
+    padding: 40px 20px !important;
+    text-align: center !important;
+}
+
+@media (max-width: 768px) {
+    .signature-final-cta .signature-banner-text,
+    h2.signature-banner-text {
+        font-size: 1.5rem !important;
+        letter-spacing: 2px !important;
+    }
 }
 
 .signature-final-cta p {
