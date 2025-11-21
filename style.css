@@ -405,6 +405,14 @@ section.animate-on-scroll.is-visible {
     overflow-wrap: break-word;
 }
 
+.hero-cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    align-items: center;
+}
+
 .cta-button {
     display: inline-block;
     background-color: var(--warning-color);
@@ -413,13 +421,23 @@ section.animate-on-scroll.is-visible {
     border-radius: 6px;
     text-decoration: none;
     font-weight: 700;
-    margin-top: 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button.cta-secondary {
+    background-color: transparent;
+    color: #333;
+    border: none;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.cta-button.cta-secondary:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: #000;
 }
 
 /* --- SECCIÓN WHY US --- */
@@ -449,6 +467,21 @@ section.animate-on-scroll.is-visible {
     min-width: 300px;
     max-width: 100%;
     box-sizing: border-box;
+}
+
+.why-us-text-block strong {
+    color: #000000;
+    font-weight: 700;
+}
+
+.what-we-offer-cta {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.what-we-offer-cta .cta-button {
+    display: inline-block;
+    margin-top: 0;
 }
 
 .why-us-text-block h3 {
@@ -1424,7 +1457,7 @@ section.animate-on-scroll.is-visible {
 }
 
 .journey-intro strong {
-    color: var(--text-color);
+    color: #000000;
     font-weight: 700;
 }
 
@@ -1636,12 +1669,17 @@ section.animate-on-scroll.is-visible {
     text-decoration: none;
     position: relative;
     z-index: 2;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: inline-block;
+    background-color: #4A9A92;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
 }
 
 .journey-card:hover .journey-link {
     transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .journey-promise {
@@ -4304,12 +4342,17 @@ section.animate-on-scroll.is-visible {
     .departure-header h3 {
         font-size: 0.8rem;
         margin-bottom: 4px;
-        line-height: 1.2;
+        line-height: 1.1;
+        height: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     
     .departure-header h3 .dates-range {
         font-size: 0.65rem;
-        margin-top: 2px;
+        margin-top: 1px;
     }
     
     .availability {
@@ -4832,6 +4875,31 @@ h2.signature-banner-text {
 }
 
 /* Responsive Design */
+/* Medium screens (laptops) */
+@media (max-width: 1366px) and (min-width: 969px) {
+    .signature-hero {
+        height: 60vh;
+        max-height: 600px;
+    }
+    
+    .signature-hero-content {
+        padding: 40px 45px;
+    }
+    
+    .signature-hero-content h1 {
+        font-size: 3.2rem;
+    }
+    
+    .signature-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .signature-description {
+        font-size: 1rem;
+        margin-bottom: 28px;
+    }
+}
+
 @media (max-width: 968px) {
     .signature-hero {
         grid-template-columns: 1fr;
@@ -5612,7 +5680,7 @@ h2.signature-banner-text {
     height: 65vh;
     max-height: 650px;
     min-height: 500px;
-    background: #1a1a1a;
+    background: #f5f1eb;
     position: relative;
     overflow: hidden;
 }
@@ -5627,7 +5695,7 @@ h2.signature-banner-text {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.85);
+    filter: brightness(0.95);
 }
 
 .bespoke-hero-content {
@@ -5635,8 +5703,8 @@ h2.signature-banner-text {
     flex-direction: column;
     justify-content: center;
     padding: 50px 60px;
-    background: #2a2a2a;
-    color: white;
+    background: linear-gradient(135deg, #f5f1eb 0%, #e8e3d9 100%);
+    color: #23374d;
     height: 100%;
     overflow: hidden;
 }
@@ -5648,7 +5716,7 @@ h2.signature-banner-text {
     margin-bottom: 18px;
     letter-spacing: 2px;
     line-height: 1.1;
-    color: #ffffff;
+    color: #23374d;
 }
 
 .bespoke-subtitle {
@@ -5657,7 +5725,7 @@ h2.signature-banner-text {
     font-weight: 300;
     font-style: italic;
     font-family: 'Playfair Display', serif;
-    color: #c9a876;
+    color: #4A9A92;
 }
 
 .bespoke-description {
@@ -5667,7 +5735,7 @@ h2.signature-banner-text {
     letter-spacing: 0.3px;
     line-height: 1.7;
     margin-bottom: 35px;
-    color: #e0e0e0;
+    color: #3a3a3a;
 }
 
 .bespoke-hero-cta {
@@ -6175,6 +6243,31 @@ h2.signature-banner-text {
 }
 
 /* Responsive Design for Bespoke */
+/* Medium screens (laptops) */
+@media (max-width: 1366px) and (min-width: 969px) {
+    .bespoke-hero {
+        height: 60vh;
+        max-height: 600px;
+    }
+    
+    .bespoke-hero-content {
+        padding: 40px 45px;
+    }
+    
+    .bespoke-hero-content h1 {
+        font-size: 3.2rem;
+    }
+    
+    .bespoke-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .bespoke-description {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+}
+
 @media (max-width: 968px) {
     .bespoke-hero {
         grid-template-columns: 1fr;
@@ -6226,6 +6319,20 @@ h2.signature-banner-text {
         gap: 25px;
     }
     
+    .bespoke-intro-section {
+        padding: 60px 20px;
+    }
+    
+    .bespoke-intro-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+    
+    .bespoke-intro-section p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
     .bespoke-timeline {
         padding-left: 80px;
     }
@@ -6258,6 +6365,20 @@ h2.signature-banner-text {
     
     .bespoke-description {
         font-size: 1rem;
+    }
+    
+    .bespoke-intro-section {
+        padding: 50px 15px;
+    }
+    
+    .bespoke-intro-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .bespoke-intro-section p {
+        font-size: 0.95rem;
+        line-height: 1.7;
     }
     
     .bespoke-steps {
@@ -6447,6 +6568,174 @@ h2.signature-banner-text {
     line-height: 1.3 !important;
     color: #3E2D23 !important;
     text-align: center !important;
+}
+
+/* REQUEST SPOT MODAL */
+.request-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+}
+
+.request-modal-content {
+    background-color: #ffffff;
+    margin: 3% auto;
+    padding: 40px 50px;
+    border-radius: 12px;
+    max-width: 900px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    position: relative;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.request-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.request-modal-close:hover,
+.request-modal-close:focus {
+    color: #000;
+}
+
+.request-modal-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #23374d;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.request-modal-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    padding: 0 20px;
+}
+
+.request-contact-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.request-option {
+    text-align: center;
+    padding: 30px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.request-option:hover {
+    border-color: #4A9A92;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(74,154,146,0.15);
+}
+
+.request-option i {
+    font-size: 3rem;
+    color: #4A9A92;
+    margin-bottom: 15px;
+}
+
+.request-option h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: #23374d;
+    margin-bottom: 12px;
+}
+
+.request-option p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.contact-detail {
+    font-weight: 600;
+    color: #23374d !important;
+    margin-top: 12px;
+    margin-bottom: 15px;
+}
+
+.request-btn {
+    display: inline-block;
+    background: #4A9A92;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.request-btn:hover {
+    background: #3a7a72;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(74,154,146,0.3);
+}
+
+.request-modal-footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+    line-height: 1.6;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .request-modal-content {
+        padding: 30px 20px;
+        margin: 10% auto;
+        width: 95%;
+    }
+    
+    .request-contact-options {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .request-modal-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .request-option {
+        padding: 25px 15px;
+    }
 }
 
 /* 4. Si tu HTML todavía tiene dos listas separadas, esto las une visualmente */
