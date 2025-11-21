@@ -4183,6 +4183,36 @@ section.animate-on-scroll.is-visible {
     color: rgba(255,255,255,0.95);
 }
 
+.departures-carousel-wrapper {
+    margin-top: 40px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #4A9A92 #e0e0e0;
+}
+
+.departures-carousel-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.departures-carousel-wrapper::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+.departures-carousel-wrapper::-webkit-scrollbar-thumb {
+    background: #4A9A92;
+    border-radius: 10px;
+}
+
+.departures-carousel {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+    min-width: min-content;
+    justify-content: center;
+}
+
 .departures-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -4195,9 +4225,17 @@ section.animate-on-scroll.is-visible {
     background: #ffffff;
     border: 2px solid rgba(201,168,118,0.3);
     border-radius: 12px;
-    padding: 35px 28px;
+    padding: 20px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 
 .departure-card.featured {
@@ -4211,76 +4249,94 @@ section.animate-on-scroll.is-visible {
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
+.departure-header {
+    width: 100%;
+    text-align: center;
+}
+
 .departure-header h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #3a3a3a;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     line-height: 1.3;
 }
 
 .departure-header h3 .dates-range {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     display: block;
+    margin-top: 3px;
 }
 
 @media (max-width: 768px) {
     .signature-departures-section {
-        padding: 30px 15px;
+        padding: 15px 10px;
     }
     
     .signature-departures-section h2 {
-        font-size: 2rem;
-        margin-bottom: 15px;
+        font-size: 1.4rem;
+        margin-bottom: 8px;
     }
     
     .departures-intro {
-        font-size: 0.9rem;
-        margin-bottom: 25px;
-    }
-    
-    .departures-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        max-width: 380px;
-        margin: 0 auto;
-    }
-    
-    .departure-card {
-        padding: 18px 16px;
-    }
-    
-    .departure-header h3 {
-        font-size: 1.2rem;
-        margin-bottom: 12px;
-    }
-    
-    .departure-header h3 .dates-range {
-        font-size: 1rem;
-    }
-    
-    .availability {
-        padding: 5px 12px;
         font-size: 0.75rem;
         margin-bottom: 12px;
     }
     
+    .departures-carousel {
+        gap: 8px;
+        padding: 0 5px 5px 5px;
+        justify-content: flex-start;
+    }
+    
+    .departure-card {
+        padding: 12px;
+        min-width: 115px;
+        max-width: 115px;
+        width: 115px;
+        height: 115px;
+        gap: 5px;
+        justify-content: center;
+    }
+    
+    .departure-header h3 {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+    
+    .departure-header h3 .dates-range {
+        font-size: 0.65rem;
+        margin-top: 2px;
+    }
+    
+    .availability {
+        padding: 4px 7px;
+        font-size: 0.52rem;
+        border-radius: 8px;
+        white-space: normal;
+        line-height: 1.2;
+        text-align: center;
+        max-width: 100px;
+        word-wrap: break-word;
+    }
+    
     .btn-departure {
-        padding: 10px 16px;
-        font-size: 0.85rem;
-        margin-top: 15px;
+        padding: 6px 10px;
+        font-size: 0.65rem;
     }
 }
 
 .availability {
     display: inline-block;
-    padding: 7px 16px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    margin-bottom: 22px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: fit-content;
     letter-spacing: 0.3px;
 }
 
@@ -4310,16 +4366,16 @@ section.animate-on-scroll.is-visible {
 }
 
 .btn-departure {
-    display: block;
-    width: 100%;
-    padding: 14px 20px;
+    display: inline-block;
+    width: fit-content;
+    padding: 10px 20px;
     background: #c9a876;
     color: white;
     text-align: center;
     text-decoration: none;
     border-radius: 6px;
     font-weight: 500;
-    margin-top: 25px;
+    font-size: 0.85rem;
     transition: all 0.3s ease;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.5px;
@@ -6407,18 +6463,4 @@ h2.signature-banner-text {
         background-attachment: scroll;
     }
 
-    .departures-grid {
-        display: flex;
-        overflow-x: auto;
-        gap: 16px;
-        padding: 10px 15px 24px;
-        margin: 0 -15px;
-        scroll-snap-type: x mandatory;
-    }
-
-    .departure-card {
-        min-width: 260px;
-        flex-shrink: 0;
-        scroll-snap-align: start;
-    }
 }
