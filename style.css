@@ -4605,35 +4605,44 @@ section.animate-on-scroll.is-visible {
     .signature-hero {
         grid-template-columns: 1fr;
         min-height: auto;
+        height: auto;
     }
     
     .signature-hero-image {
-        height: 50vh;
-        min-height: 400px;
+        height: 45vh;
+        min-height: 350px;
+        max-height: 450px;
+        order: -1;
     }
     
     .signature-hero-content {
-        padding: 50px 30px;
+        padding: 40px 30px;
     }
     
     .signature-hero-content h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
+        margin-bottom: 15px;
     }
     
     .signature-subtitle {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        margin-bottom: 18px;
     }
     
     .signature-description {
-        font-size: 1.05rem;
+        font-size: 1rem;
+        margin-bottom: 25px;
     }
     
     .signature-hero-cta {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
     }
     
     .signature-hero-cta a {
-        width: 100%;
+        flex: 1;
+        max-width: 200px;
         text-align: center;
     }
     
@@ -4736,21 +4745,66 @@ section.animate-on-scroll.is-visible {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .signature-hero-image {
+        height: 40vh;
+        min-height: 300px;
+        max-height: 400px;
+    }
+    
     .signature-hero-content {
-        padding: 40px 20px;
+        padding: 35px 25px;
     }
     
     .signature-hero-content h1 {
-        font-size: 2.3rem;
+        font-size: 2.5rem;
+        margin-bottom: 12px;
     }
     
     .signature-subtitle {
         font-size: 1.2rem;
+        margin-bottom: 15px;
     }
     
     .signature-description {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    
+    .signature-hero-cta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .signature-hero-cta a {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .signature-hero-image {
+        height: 35vh;
+        min-height: 280px;
+        max-height: 350px;
+    }
+    
+    .signature-hero-content {
+        padding: 30px 20px;
+    }
+    
+    .signature-hero-content h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .signature-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .signature-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
     }
     
     .signature-experiences-grid {
