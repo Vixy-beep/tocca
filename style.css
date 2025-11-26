@@ -3983,11 +3983,18 @@ section.animate-on-scroll.is-visible {
 
 @media (max-width: 968px) {
     .signature-stamp-overlay {
-        bottom: 100px;
+        position: static;
+        bottom: auto;
+        width: 100%;
+        padding: 0 20px;
+        margin: 40px auto 0;
     }
     
     .stamp-content {
         padding: 35px 20px;
+        max-width: 640px;
+        margin: 0 auto;
+        border-radius: 14px;
     }
     
     .stamp-content::before,
@@ -4011,11 +4018,13 @@ section.animate-on-scroll.is-visible {
 
 @media (max-width: 600px) {
     .signature-stamp-overlay {
-        bottom: 90px;
+        padding: 0 15px;
+        margin: 30px auto 0;
     }
     
     .stamp-content {
         padding: 25px 15px;
+        border-radius: 12px;
     }
     
     .stamp-content::before,
