@@ -5973,6 +5973,24 @@ h2.signature-banner-text {
     color: #23374d;
     height: 100%;
     overflow: hidden;
+    position: relative;
+}
+
+.bespoke-hero-content::before {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -15%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(201, 168, 118, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.bespoke-hero-content > * {
+    position: relative;
+    z-index: 1;
 }
 
 .bespoke-hero-content h1 {
@@ -6013,7 +6031,18 @@ h2.signature-banner-text {
 /* Bespoke Intro Section */
 .bespoke-intro-section {
     padding: 90px 20px;
-    background: #f5f1eb;
+    background: linear-gradient(135deg, #f5f1eb 0%, #ede8df 100%);
+    position: relative;
+}
+
+.bespoke-intro-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent 0%, rgba(201, 168, 118, 0.3) 50%, transparent 100%);
 }
 
 .bespoke-intro-section h2 {
@@ -6024,6 +6053,18 @@ h2.signature-banner-text {
     margin-bottom: 35px;
     font-weight: 400;
     font-style: italic;
+    position: relative;
+}
+
+.bespoke-intro-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #d4b896, #c9a876, #b89560);
 }
 
 .bespoke-opening {
@@ -6036,20 +6077,37 @@ h2.signature-banner-text {
 }
 
 .bespoke-intro-section p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.9;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     color: #4a4a4a;
     text-align: center;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 300;
+}
+
+.bespoke-intro-section p:first-of-type {
+    font-size: 1.2rem;
+    color: #3a3a3a;
 }
 
 /* How It Works Section */
 .bespoke-how-section {
     padding: 90px 20px;
-    background: #ffffff;
+    background: linear-gradient(to bottom, #ffffff 0%, #fafaf8 100%);
+    position: relative;
+}
+
+.bespoke-how-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent 0%, rgba(201, 168, 118, 0.3) 50%, transparent 100%);
 }
 
 .bespoke-how-section h2 {
@@ -6065,6 +6123,8 @@ h2.signature-banner-text {
 .bespoke-how-section h2 i {
     color: #c9a876;
     margin-right: 10px;
+    font-size: 2.5rem;
+    vertical-align: middle;
 }
 
 .bespoke-steps {
@@ -6077,25 +6137,35 @@ h2.signature-banner-text {
 
 .bespoke-step {
     text-align: center;
-    padding: 30px 20px;
-    background: #faf8f5;
-    border-radius: 8px;
+    padding: 35px 25px;
+    background: linear-gradient(135deg, #faf8f5 0%, #f5f3ef 100%);
+    border-radius: 12px;
     position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(201, 168, 118, 0.1);
+}
+
+.bespoke-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 .step-number {
-    width: 60px;
-    height: 60px;
-    background: #c9a876;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #d4b896 0%, #c9a876 100%);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
     margin: 0 auto 20px;
     font-family: 'Playfair Display', serif;
+    box-shadow: 0 4px 15px rgba(201, 168, 118, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .bespoke-step h3 {
@@ -6116,7 +6186,19 @@ h2.signature-banner-text {
 /* What's Possible Section */
 .bespoke-possible-section {
     padding: 90px 20px;
-    background: #f5f1eb;
+    background: linear-gradient(to bottom, #f5f1eb 0%, #ede8df 100%);
+    position: relative;
+}
+
+.bespoke-possible-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(to right, transparent 0%, #c9a876 50%, transparent 100%);
 }
 
 .bespoke-possible-section h2 {
@@ -6146,15 +6228,33 @@ h2.signature-banner-text {
 
 .bespoke-possible-section .bespoke-card {
     background: white;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(201, 168, 118, 0.1);
+    position: relative;
+}
+
+.bespoke-possible-section .bespoke-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #d4b896, #c9a876, #b89560);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .bespoke-possible-section .bespoke-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(201, 168, 118, 0.25);
+}
+
+.bespoke-possible-section .bespoke-card:hover::before {
+    opacity: 1;
 }
 
 .bespoke-possible-section .bespoke-card img {
@@ -6191,7 +6291,18 @@ h2.signature-banner-text {
 /* Who Is This For Section */
 .bespoke-for-section {
     padding: 90px 20px;
-    background: #ffffff;
+    background: linear-gradient(to bottom, #ffffff 0%, #fafaf8 100%);
+    position: relative;
+}
+
+.bespoke-for-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent 0%, rgba(201, 168, 118, 0.3) 50%, transparent 100%);
 }
 
 .bespoke-for-section h2 {
@@ -6214,15 +6325,28 @@ h2.signature-banner-text {
 
 .bespoke-for-item {
     text-align: center;
-    padding: 40px 30px;
-    background: #faf8f5;
-    border-radius: 8px;
+    padding: 45px 35px;
+    background: linear-gradient(135deg, #faf8f5 0%, #f5f3ef 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(201, 168, 118, 0.1);
+}
+
+.bespoke-for-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 .bespoke-for-item i {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #c9a876;
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.bespoke-for-item:hover i {
+    transform: scale(1.1);
 }
 
 .bespoke-for-item h3 {
@@ -6486,8 +6610,27 @@ h2.signature-banner-text {
 /* Bespoke CTA Section */
 .bespoke-cta-section {
     padding: 90px 20px;
-    background: #f5f1eb;
+    background: linear-gradient(135deg, #f5f1eb 0%, #ede8df 100%);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bespoke-cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(201, 168, 118, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.bespoke-cta-section .signature-container {
+    position: relative;
+    z-index: 1;
 }
 
 .bespoke-cta-section h2 {
@@ -6497,6 +6640,46 @@ h2.signature-banner-text {
     color: #3a3a3a;
     font-weight: 400;
     font-style: italic;
+}
+
+/* Bespoke Stamp Overlay */
+.bespoke-stamp-overlay {
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bespoke-stamp-content {
+    background: linear-gradient(135deg, #d4b896 0%, #c9a876 100%);
+    color: white;
+    padding: 30px 50px;
+    border-radius: 8px;
+    border: 3px solid #b89560;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: rotate(-2deg);
+    position: relative;
+}
+
+.bespoke-stamp-content::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.bespoke-stamp-content p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.5px;
 }
 
 .bespoke-cta-section p {
