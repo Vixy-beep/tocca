@@ -43,128 +43,139 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
 }
 
-#what-we-offer-grid .itinerary-day-row:hover {
-    background: rgba(255,255,255,0.22) !important;
-    transform: translateY(-4px) !important;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
-    border-color: rgba(255,255,255,0.25) !important;
+/* Who Is This For Section */
+.bespoke-for-section {
+    padding: 90px 20px;
+    background: linear-gradient(to bottom, #ffffff 0%, #fafaf8 100%);
+    position: relative;
 }
 
-#what-we-offer-grid .day-title {
-    font-size: 2rem !important;
-    margin-bottom: 8px !important;
-    font-weight: 700 !important;
-    color: rgba(255,255,255,0.95) !important;
+.bespoke-for-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent 0%, rgba(201, 168, 118, 0.3) 50%, transparent 100%);
 }
 
-#what-we-offer-grid .day-description {
-    width: 100% !important;
-    text-align: center !important;
-}
-
-#what-we-offer-grid .day-description h3 {
-    font-size: 1.1rem !important;
-    margin: 0 !important;
-    line-height: 1.4 !important;
-    color: rgba(255,255,255,0.98) !important;
-    font-weight: 600 !important;
-}
-
-@media (min-width: 768px) {
-    #what-we-offer-grid .itinerary-grid {
-        max-width: 600px !important;
-        gap: 18px !important;
-    }
-    
-    #what-we-offer-grid .itinerary-day-row {
-        min-height: 140px !important;
-    }
-}
-
-@media (min-width: 1000px) {
-    #what-we-offer-grid .itinerary-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-        max-width: 900px !important;
-        gap: 20px !important;
-    }
-    
-    #what-we-offer-grid .itinerary-day-row {
-        min-height: 150px !important;
-    }
-    
-    #what-we-offer-grid .day-description h3 {
-        font-size: 1.15rem !important;
-    }
-}
-
-/* Ensure descriptions inside the itinerary tiles are visible and styled consistently */
-#what-we-offer-grid .itinerary-day-row .day-description p {
-    display: block !important;
-    color: rgba(255,255,255,0.95) !important;
-    font-style: italic !important;
-    font-size: 0.85rem !important;
-    margin-top: 6px !important;
-}
-
-#what-we-offer-grid .itinerary-day-row .day-description h3 {
-    color: rgba(255,255,255,0.98) !important;
-    font-size: 1.05rem !important;
-}
-
-#what-we-offer-grid .itinerary-day-row { 
-    background: rgba(255,255,255,0.12) !important;
-}
-
-/* ==== Itinerary: force two-column card layout and preserve square tiles ==== */
-.luxury-package-section .itinerary-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
-    max-width: 520px !important;
-    margin: 0 auto !important;
-    padding: 6px !important;
-}
-
-.luxury-package-section .itinerary-day-row {
-    aspect-ratio: 1 / 1 !important;
-    min-height: 120px !important;
-    padding: 16px !important;
-}
-
-@media (min-width: 1000px) {
-    .luxury-package-section .itinerary-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-        max-width: 960px !important;
-    }
-}
-
-html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    max-width: 100vw;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: var(--text-color);
-    line-height: 1.6;
-    background-color: #fff;
-    overflow-x: hidden;
-    max-width: 100vw;
-}
-
-h1,
-h2,
-h3 {
+.bespoke-for-section h2 {
     font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    text-align: center;
+    color: #3a3a3a;
+    margin-bottom: 55px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.bespoke-for-intro {
+    max-width: 780px;
+    margin: 0 auto 45px auto;
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+}
+
+.bespoke-for-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.bespoke-for-item {
+    padding: 45px 35px;
+    background: linear-gradient(135deg, #faf8f5 0%, #f5f3ef 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(201, 168, 118, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.bespoke-for-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.bespoke-for-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(201, 168, 118, 0.18);
+    color: #b88d58;
+    font-size: 0.75rem;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.bespoke-for-item i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(74, 154, 146, 0.15);
+    color: #4A9A92;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.bespoke-for-item:hover i {
+    transform: translateY(-2px);
+    background: rgba(74, 154, 146, 0.25);
+}
+
+.bespoke-for-item h3 {
+    font-size: 1.4rem;
+    margin: 0;
+    color: #23374d;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.bespoke-for-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #5a5a5a;
+    margin: 0;
+}
+
+.bespoke-for-highlights {
+    list-style: none;
+    margin: 6px 0 0 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+    width: 100%;
+}
+
+.bespoke-for-highlights li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #3a3a3a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bespoke-for-highlights li::before {
+    content: '\\2022';
+    color: #4A9A92;
+    font-size: 0.9rem;
+    display: inline-block;
+    width: 8px;
 }
 
 h2 {
@@ -223,13 +234,14 @@ section.animate-on-scroll.is-visible {
 }
 
 .nav-logo-container {
-    padding-top: 5px;
+    padding-top: 0;
     display: flex;
     align-items: center;
 }
 
 .nav-logo {
-    height: 80px;
+    display: block;
+    max-height: 62px;
     width: auto;
 }
 
@@ -341,13 +353,14 @@ section.animate-on-scroll.is-visible {
 
 .hero-journey-links {
     position: absolute;
-    inset-inline: 40px;
-    bottom: 45px;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
-    gap: 20px;
+    gap: 12px;
 }
 
 .hero-journey-link {
@@ -372,19 +385,15 @@ section.animate-on-scroll.is-visible {
     box-shadow: 0 14px 35px rgba(255, 193, 7, 0.35);
 }
 
-.hero-journey-link--left {
-    align-self: flex-start;
-}
-
+.hero-journey-link--left,
 .hero-journey-link--right {
-    align-self: flex-end;
-    text-align: right;
+    align-self: center;
+    text-align: center;
 }
 
 @media (max-width: 900px) {
     .hero-journey-links {
-        inset-inline: 20px;
-        bottom: 35px;
+        padding: 90px 20px 40px;
     }
 
     .hero-journey-link {
@@ -399,6 +408,8 @@ section.animate-on-scroll.is-visible {
         margin: 25px auto 0 auto;
         flex-direction: column;
         align-items: center;
+        transform: none;
+        gap: 12px;
     }
 
     .hero-journey-link {
@@ -1656,6 +1667,8 @@ section.animate-on-scroll.is-visible {
 .bespoke-card .journey-card-image {
     object-fit: cover;
     object-position: center;
+    filter: brightness(0.92) saturate(0.85);
+    transition: filter 0.4s ease;
 }
 .bespoke-card::after {
     background-color: rgba(0, 0, 0, 0.88);
@@ -1674,6 +1687,10 @@ section.animate-on-scroll.is-visible {
 }
 .bespoke-card .journey-link {
     color: rgba(255, 255, 255, 0.95);
+}
+
+.bespoke-card:hover .journey-card-image {
+    filter: brightness(1.05) saturate(1.05);
 }
 
 
@@ -3625,13 +3642,41 @@ section.animate-on-scroll.is-visible {
    NEW SIGNATURE JOURNEY PAGE STYLES
 ================================================ */
 
+.back-home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    background: rgba(35, 55, 77, 0.86);
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1.4px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    align-self: flex-start;
+    box-shadow: 0 12px 22px rgba(23, 41, 58, 0.18);
+    margin-bottom: 24px;
+}
+
+.back-home-link:hover {
+    transform: translateY(-2px);
+    background: rgba(35, 55, 77, 0.95);
+    box-shadow: 0 16px 28px rgba(23, 41, 58, 0.25);
+}
+
+.back-home-link i {
+    font-size: 0.85rem;
+}
+
+
 /* Signature Hero - Two Column Layout */
 .signature-hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 65vh;
-    max-height: 650px;
-    min-height: 500px;
+    min-height: 620px;
     background: #e8f4f8;
     position: relative;
     overflow: hidden;
@@ -3654,11 +3699,12 @@ section.animate-on-scroll.is-visible {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 50px 60px;
+    padding: 90px 60px 90px;
     background: linear-gradient(135deg, #f0f8ff 0%, #e6f3f7 100%);
     color: #2d2d2d;
     height: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .signature-hero-content h1 {
@@ -5126,7 +5172,7 @@ h2.signature-banner-text {
 
 .experience-card-content h3 {
     font-size: 0.95rem;
-    margin-bottom: 0;
+    margin-bottom: 6px;
     color: #3a3a3a;
     font-family: 'Playfair Display', serif;
     font-weight: 500;
@@ -5140,10 +5186,11 @@ h2.signature-banner-text {
 }
 
 .experience-card-content p {
-    font-size: 0.98rem;
-    line-height: 1.7;
+    font-size: 0.85rem;
+    line-height: 1.6;
     color: #5a5a5a;
     margin: 0;
+    text-align: center;
 }
 
 /* What to Expect Section - Full Width */
@@ -5193,12 +5240,11 @@ h2.signature-banner-text {
 /* Medium screens (laptops) */
 @media (max-width: 1366px) and (min-width: 969px) {
     .signature-hero {
-        height: 60vh;
-        max-height: 600px;
+        min-height: 560px;
     }
     
     .signature-hero-content {
-        padding: 40px 45px;
+        padding: 80px 45px 80px;
     }
     
     .signature-hero-content h1 {
@@ -5230,7 +5276,7 @@ h2.signature-banner-text {
     }
     
     .signature-hero-content {
-        padding: 40px 30px;
+        padding: 90px 30px 50px;
     }
     
     .signature-hero-content h1 {
@@ -6012,9 +6058,7 @@ h2.signature-banner-text {
 .bespoke-hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 65vh;
-    max-height: 650px;
-    min-height: 500px;
+    min-height: 620px;
     background: #f5f1eb;
     position: relative;
     overflow: hidden;
@@ -6037,7 +6081,7 @@ h2.signature-banner-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 50px 60px;
+    padding: 90px 60px 90px;
     background: linear-gradient(135deg, #f5f1eb 0%, #e8e3d9 100%);
     color: #23374d;
     height: 100%;
@@ -6162,6 +6206,72 @@ h2.signature-banner-text {
     color: #3a3a3a;
 }
 
+.bespoke-intro-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.bespoke-intro-text {
+    flex: 1 1 55%;
+    text-align: left;
+}
+
+.bespoke-intro-text h2,
+.bespoke-intro-text p {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.bespoke-intro-image {
+    flex: 1 1 45%;
+    max-width: 520px;
+    position: relative;
+}
+
+.bespoke-intro-image::before {
+    content: '';
+    position: absolute;
+    inset: -20px -25px -30px -25px;
+    background: radial-gradient(circle at 30% 20%, rgba(201, 168, 118, 0.2), transparent 65%);
+    z-index: 0;
+    border-radius: 22px;
+}
+
+.bespoke-intro-image img {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+    min-height: 320px;
+}
+
+@media (max-width: 968px) {
+    .bespoke-intro-wrapper {
+        flex-direction: column-reverse;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .bespoke-intro-text {
+        text-align: center;
+    }
+
+    .bespoke-intro-text h2,
+    .bespoke-intro-text p {
+        text-align: center;
+    }
+
+    .bespoke-intro-image {
+        max-width: 100%;
+    }
+}
+
 /* How It Works Section */
 .bespoke-how-section {
     padding: 90px 20px;
@@ -6202,17 +6312,47 @@ h2.signature-banner-text {
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    padding: 45px 40px;
+    background: linear-gradient(135deg, rgba(255, 247, 234, 0.95) 0%, rgba(244, 232, 212, 0.95) 100%);
+    border-radius: 22px;
+    box-shadow: 0 20px 45px rgba(201, 168, 118, 0.18);
+    border: 1px solid rgba(201, 168, 118, 0.18);
+    box-sizing: border-box;
 }
+
+.bespoke-steps::before {
+    content: '';
+    position: absolute;
+    inset: 18px;
+    border-radius: 18px;
+    border: 1px dashed rgba(201, 168, 118, 0.25);
+    pointer-events: none;
+}
+
 
 .bespoke-step {
     text-align: center;
-    padding: 35px 25px;
-    background: linear-gradient(135deg, #faf8f5 0%, #f5f3ef 100%);
-    border-radius: 12px;
+    padding: 38px 28px;
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.96) 0%, rgba(247, 235, 216, 0.96) 100%);
+    border-radius: 16px;
     position: relative;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    border: 1px solid rgba(201, 168, 118, 0.1);
+    border: 1px solid rgba(201, 168, 118, 0.18);
+    overflow: hidden;
+}
+
+.bespoke-step::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(201, 168, 118, 0.38) 0%, rgba(201, 168, 118, 0) 70%);
+    z-index: 0;
 }
 
 .bespoke-step:hover {
@@ -6235,6 +6375,73 @@ h2.signature-banner-text {
     font-family: 'Playfair Display', serif;
     box-shadow: 0 4px 15px rgba(201, 168, 118, 0.3);
     border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.bespoke-step h3 {
+    position: relative;
+    z-index: 1;
+    color: #3a2d1f;
+}
+
+.bespoke-step p {
+    position: relative;
+    z-index: 1;
+    color: #574a3d;
+}
+
+.bespoke-step .step-cta {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #c9a876 0%, #dcbc8d 100%);
+    color: #2f271b;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bespoke-step .step-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(201, 168, 118, 0.35);
+}
+
+@media (max-width: 968px) {
+    .bespoke-steps {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 35px 30px;
+        gap: 24px;
+    }
+
+    .bespoke-step {
+        padding: 32px 24px;
+    }
+
+    .bespoke-steps::before {
+        inset: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .bespoke-steps {
+        grid-template-columns: 1fr;
+        padding: 28px 22px;
+    }
+
+    .bespoke-step::before {
+        width: 90px;
+        height: 90px;
+    }
+
+    .bespoke-steps::before {
+        inset: 12px;
+    }
 }
 
 .bespoke-step h3 {
@@ -6408,9 +6615,8 @@ h2.signature-banner-text {
 }
 
 .bespoke-for-item i {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #c9a876;
-    margin-bottom: 20px;
     transition: transform 0.3s ease;
 }
 
@@ -6420,8 +6626,8 @@ h2.signature-banner-text {
 
 .bespoke-for-item h3 {
     font-size: 1.4rem;
-    margin-bottom: 15px;
-    color: #3a3a3a;
+    margin: 0;
+    color: #23374d;
     font-family: 'Playfair Display', serif;
     font-weight: 500;
 }
@@ -6431,6 +6637,55 @@ h2.signature-banner-text {
     line-height: 1.7;
     color: #5a5a5a;
     margin: 0;
+}
+
+.bespoke-for-intro {
+    max-width: 780px;
+    margin: 0 auto 45px auto;
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+}
+
+.bespoke-for-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(201, 168, 118, 0.18);
+    color: #b88d58;
+    font-size: 0.75rem;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.bespoke-for-highlights {
+    list-style: none;
+    margin: 6px 0 0 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+    width: 100%;
+}
+
+.bespoke-for-highlights li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #3a3a3a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bespoke-for-highlights li::before {
+    content: '\2022';
+    color: #4A9A92;
+    font-size: 0.9rem;
+    display: inline-block;
+    width: 8px;
 }
 
 /* Sample Itinerary Section */
@@ -6764,12 +7019,11 @@ h2.signature-banner-text {
 /* Medium screens (laptops) */
 @media (max-width: 1366px) and (min-width: 969px) {
     .bespoke-hero {
-        height: 60vh;
-        max-height: 600px;
+        min-height: 560px;
     }
     
     .bespoke-hero-content {
-        padding: 40px 45px;
+        padding: 80px 45px 80px;
     }
     
     .bespoke-hero-content h1 {
@@ -6798,7 +7052,7 @@ h2.signature-banner-text {
     }
     
     .bespoke-hero-content {
-        padding: 50px 30px;
+        padding: 90px 30px 50px;
     }
     
     .bespoke-hero-content h1 {
@@ -6870,7 +7124,7 @@ h2.signature-banner-text {
 
 @media (max-width: 600px) {
     .bespoke-hero-content {
-        padding: 40px 20px;
+        padding: 90px 20px 40px;
     }
     
     .bespoke-hero-content h1 {
