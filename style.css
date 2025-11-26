@@ -17,6 +17,36 @@
     --card-accent-gold: #c9a970; /* Dorado para acentos */
 }
 
+/* Global base styles restoring original typography */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #fff;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
 /* Final override: ensure the itinerary grid shows 2 columns on typical screens - BETTER FILLED LOOK */
 #what-we-offer-grid .itinerary-grid {
     display: grid !important;
@@ -510,6 +540,10 @@ section.animate-on-scroll.is-visible {
     border: none;
 }
 
+.hero-cta-buttons .cta-button.cta-secondary {
+    color: #ffffff;
+}
+
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
@@ -518,6 +552,11 @@ section.animate-on-scroll.is-visible {
 .cta-button.cta-secondary:hover {
     background-color: rgba(255,255,255,0.1);
     color: #000;
+}
+
+.hero-cta-buttons .cta-button.cta-secondary:hover {
+    background-color: rgba(255,255,255,0.18);
+    color: #ffffff;
 }
 
 /* --- SECCIÓN WHY US --- */
