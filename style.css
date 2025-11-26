@@ -2569,10 +2569,30 @@ section.animate-on-scroll.is-visible {
 
 .etc-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: #2C3E50;
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, #20b2aa 0%, #4A9A92 30%, #c9a876 70%, #d4af37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 20px;
     line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.etc-title::after {
+    content: '✦';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: #c9a876;
+    text-shadow: 0 2px 8px rgba(201, 168, 118, 0.4);
 }
 
 .etc-subtitle {
@@ -3627,6 +3647,7 @@ section.animate-on-scroll.is-visible {
     padding: 40px 20px;
     background: #ffffff;
     overflow-x: visible;
+    position: relative;
 }
 
 .signature-why-wrapper {
@@ -3681,7 +3702,7 @@ section.animate-on-scroll.is-visible {
     position: relative;
     width: 100%;
     max-width: 500px;
-    height: 600px;
+    height: 450px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0,0,0,0.15);
@@ -3795,28 +3816,109 @@ section.animate-on-scroll.is-visible {
     line-height: 1.5;
 }
 
-.signature-closing {
-    font-family: 'Cinzel', serif !important;
-    font-size: 1.8rem !important;
-    font-weight: 400 !important;
-    text-align: center !important;
-    margin: 60px -20px 0 -20px !important;
-    padding: 50px calc(20px + 5vw) !important;
-    color: white !important;
-    background: linear-gradient(90deg, #2c5f6f 0%, #4A9A92 50%, #5fb4a8 100%) !important;
-    font-style: normal !important;
-    text-transform: uppercase !important;
-    letter-spacing: 4px !important;
-    line-height: 1.4 !important;
-    width: calc(100% + 40px) !important;
-    box-sizing: border-box !important;
+/* Stamp Overlay - Full Width Banner */
+.signature-stamp-overlay {
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 50;
 }
 
-@media (max-width: 768px) {
-    .signature-closing {
-        font-size: 1.2rem !important;
-        letter-spacing: 2px !important;
-        padding: 35px 15px !important;
+.stamp-content {
+    background: linear-gradient(90deg, #2c5f6f 0%, #4A9A92 50%, #5fb4a8 100%);
+    color: white;
+    padding: 40px 20px;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.stamp-content::before,
+.stamp-content::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 2px;
+    background: #c9a876;
+}
+
+.stamp-content::before {
+    left: 50px;
+    transform: translateY(-50%);
+}
+
+.stamp-content::after {
+    right: 50px;
+    transform: translateY(-50%);
+}
+
+.stamp-content p {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.4;
+    color: white;
+}
+
+@media (max-width: 968px) {
+    .signature-stamp-overlay {
+        bottom: 100px;
+    }
+    
+    .stamp-content {
+        padding: 35px 20px;
+    }
+    
+    .stamp-content::before,
+    .stamp-content::after {
+        width: 40px;
+    }
+    
+    .stamp-content::before {
+        left: 20px;
+    }
+    
+    .stamp-content::after {
+        right: 20px;
+    }
+    
+    .stamp-content p {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 600px) {
+    .signature-stamp-overlay {
+        bottom: 90px;
+    }
+    
+    .stamp-content {
+        padding: 25px 15px;
+    }
+    
+    .stamp-content::before,
+    .stamp-content::after {
+        width: 30px;
+    }
+    
+    .stamp-content::before {
+        left: 10px;
+    }
+    
+    .stamp-content::after {
+        right: 10px;
+    }
+    
+    .stamp-content p {
+        font-size: 1.1rem;
+        letter-spacing: 1.5px;
     }
 }
 
@@ -4266,14 +4368,47 @@ section.animate-on-scroll.is-visible {
     padding: 20px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: auto;
+    min-height: 220px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 12px;
+}
+
+.departure-cta {
+    display: inline-block;
+    background: #4A9A92;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+.departure-cta:hover {
+    background: #2c5f6f;
+    transform: scale(1.05);
+}
+
+.departure-cta.disabled {
+    background: #999;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.departure-cta.disabled:hover {
+    background: #999;
+    transform: none;
 }
 
 .departure-card.featured {
@@ -4430,26 +4565,113 @@ section.animate-on-scroll.is-visible {
 }
 
 /* Why Choose Section */
+/* Full Width Stamp Section */
+.signature-stamp-section {
+    padding: 0;
+    background: linear-gradient(135deg, #4A9A92 0%, #2c5f6f 50%, #4A9A92 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.signature-stamp-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.03) 10px,
+        rgba(255,255,255,0.03) 20px
+    );
+    animation: stampMove 20s linear infinite;
+}
+
+@keyframes stampMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.stamp-container {
+    max-width: 100%;
+    padding: 60px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.stamp-text {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    line-height: 1.4;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
 .signature-why-choose-section {
     padding: 90px 20px;
-    background: #f5f1eb;
+    background: linear-gradient(135deg, #e8f4f8 0%, #f0f9fc 50%, #e8f4f8 100%);
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.signature-why-choose-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(32, 178, 170, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(201, 168, 118, 0.06) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .signature-why-choose-section .signature-container {
     max-width: 1500px;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .signature-why-choose-section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
+    font-size: 3rem;
     text-align: center;
-    color: #3a3a3a;
+    background: linear-gradient(135deg, #20b2aa 0%, #4A9A92 50%, #2c5f6f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 55px;
-    font-weight: 400;
+    font-weight: 600;
     font-style: italic;
+    position: relative;
+}
+
+.signature-why-choose-section h2::before,
+.signature-why-choose-section h2::after {
+    content: '❖';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #c9a876;
+}
+
+.signature-why-choose-section h2::before {
+    left: -40px;
+}
+
+.signature-why-choose-section h2::after {
+    right: -40px;
 }
 
 .why-choose-grid {
@@ -4463,21 +4685,40 @@ section.animate-on-scroll.is-visible {
 }
 
 .why-choose-item {
-    background: #ffffff;
+    background: linear-gradient(135deg, #e8f9f8 0%, #f0fcfb 50%, #fefcf8 100%);
     padding: 38px 32px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    border: 3px solid #4A9A92;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(32, 178, 170, 0.18);
+    border: 3px solid #20b2aa;
+    border-top: 5px solid #d4af37;
     flex: 1 1 0 !important;
     min-width: 0 !important;
     box-sizing: border-box;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(32, 178, 170, 0.15), transparent);
+    transition: left 0.6s ease;
+}
+
+.why-choose-item:hover::before {
+    left: 100%;
 }
 
 .why-choose-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(74, 154, 146, 0.3);
-    border-color: #c9a876;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(32, 178, 170, 0.3);
+    border-color: #20b2aa;
+    border-top-color: #d4af37;
 }
 
 .why-choose-item.full-width {
@@ -4485,19 +4726,24 @@ section.animate-on-scroll.is-visible {
 }
 
 .why-choose-item h3 {
-    font-size: 1.4rem;
-    color: #3a3a3a;
+    font-size: 1.5rem;
+    color: #2c5f6f;
     margin-bottom: 18px;
     display: flex;
     align-items: center;
     gap: 12px;
     font-family: 'Playfair Display', serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .why-choose-item h3 i {
     color: #c9a876;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    transition: transform 0.3s ease;
+}
+
+.why-choose-item:hover h3 i {
+    transform: scale(1.2) rotate(10deg);
 }
 
 .why-choose-item p {
