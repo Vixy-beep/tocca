@@ -339,6 +339,75 @@ section.animate-on-scroll.is-visible {
     text-align: center;
 }
 
+.hero-journey-links {
+    position: absolute;
+    inset-inline: 40px;
+    bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 1;
+    gap: 20px;
+}
+
+.hero-journey-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.92), rgba(255, 213, 92, 0.92));
+    color: #2f271b;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-journey-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(255, 193, 7, 0.35);
+}
+
+.hero-journey-link--left {
+    align-self: flex-start;
+}
+
+.hero-journey-link--right {
+    align-self: flex-end;
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+    .hero-journey-links {
+        inset-inline: 20px;
+        bottom: 35px;
+    }
+
+    .hero-journey-link {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-journey-links {
+        position: static;
+        margin: 25px auto 0 auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-journey-link {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
 .logo-background {
     display: none;
 }
