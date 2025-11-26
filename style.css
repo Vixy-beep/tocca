@@ -5275,6 +5275,16 @@ h2.signature-banner-text {
     .why-choose-item {
         max-width: 100% !important;
         width: 100% !important;
+        flex: 1 1 auto !important;
+    }
+    
+    .signature-why-choose-section h2::before,
+    .signature-why-choose-section h2::after {
+        display: none;
+    }
+    
+    .signature-why-choose-section h2 {
+        font-size: 2.2rem;
     }
 }
 
@@ -5287,6 +5297,16 @@ h2.signature-banner-text {
     .why-choose-item {
         max-width: 100% !important;
         width: 100% !important;
+        flex: 1 1 auto !important;
+    }
+    
+    .signature-why-choose-section h2::before,
+    .signature-why-choose-section h2::after {
+        display: none;
+    }
+    
+    .signature-why-choose-section h2 {
+        font-size: 2rem;
     }
 }
 
