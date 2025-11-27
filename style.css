@@ -127,7 +127,8 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
 }
 
 .bespoke-for-item:hover {
@@ -382,15 +383,12 @@ section.animate-on-scroll.is-visible {
 }
 
 .hero-journey-links {
-    position: absolute;
-    left: 50%;
-    bottom: 60px;
-    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
-    gap: 12px;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: nowrap;
 }
 
 .hero-journey-link {
@@ -423,7 +421,8 @@ section.animate-on-scroll.is-visible {
 
 @media (max-width: 900px) {
     .hero-journey-links {
-        padding: 90px 20px 40px;
+        gap: 12px;
+        margin-top: 20px;
     }
 
     .hero-journey-link {
@@ -434,12 +433,9 @@ section.animate-on-scroll.is-visible {
 
 @media (max-width: 640px) {
     .hero-journey-links {
-        position: static;
-        margin: 25px auto 0 auto;
         flex-direction: column;
-        align-items: center;
-        transform: none;
         gap: 12px;
+        margin-top: 20px;
     }
 
     .hero-journey-link {
@@ -1710,10 +1706,10 @@ section.animate-on-scroll.is-visible {
     transition: filter 0.4s ease;
 }
 .bespoke-card::after {
-    background-color: rgba(0, 0, 0, 0.88);
+    background-color: rgba(212, 175, 55, 0.75);
 }
 .bespoke-card:hover::after {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(212, 175, 55, 0.55);
 }
 .bespoke-card h4 {
     color: #ffffff;
@@ -2300,6 +2296,41 @@ section.animate-on-scroll.is-visible {
 .contact-option:nth-child(2) i { color: #25d366; } /* WhatsApp */
 .contact-option:nth-child(3) i { color: #3498db; } /* Phone */
 
+/* === HOME BUTTON STYLES === */
+.home-button {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #d4af37, #b8941e);
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.home-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+}
+
+.home-button i {
+    font-size: 1.2rem;
+}
+
+.home-text {
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* Mobile Contact Menu */
 @media (max-width: 768px) {
     .contact-menu {
@@ -2310,6 +2341,17 @@ section.animate-on-scroll.is-visible {
     .contact-toggle {
         padding: 10px 16px;
         font-size: 0.9rem;
+    }
+
+    .home-button {
+        bottom: 20px;
+        left: 20px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .home-button i {
+        font-size: 1.1rem;
     }
     
     .contact-toggle i {
@@ -6102,51 +6144,68 @@ h2.signature-banner-text {
    BESPOKE JOURNEY STYLES
    ======================================== */
 
-/* Bespoke Hero - Estilo Maqueta 2 - Layout dos columnas */
+/* Bespoke Hero - dark overlay to mirror journey-card aesthetic */
 .bespoke-hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 620px;
-    background: #f5f1eb;
     position: relative;
+    min-height: 670px;
+    padding: 130px 6vw 110px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
     overflow: hidden;
+    color: var(--card-text-light);
+    background-color: #23374d;
+}
+
+.bespoke-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(108deg, rgba(12, 26, 39, 0.75) 0%, rgba(35, 55, 77, 0.65) 50%, rgba(35, 55, 77, 0.55) 100%);
+    transition: background 0.4s ease;
+    z-index: 1;
+}
+
+.bespoke-hero:hover::after {
+    background: linear-gradient(108deg, rgba(12, 26, 39, 0.65) 0%, rgba(35, 55, 77, 0.55) 50%, rgba(35, 55, 77, 0.45) 100%);
 }
 
 .bespoke-hero-image {
-    position: relative;
+    position: absolute;
+    inset: 0;
     overflow: hidden;
-    height: 100%;
 }
 
 .bespoke-hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.95);
+    transform: scale(1.02);
+    filter: brightness(1.0) saturate(1.1);
+    transition: filter 0.4s ease;
+}
+
+.bespoke-hero:hover .bespoke-hero-image img {
+    filter: brightness(1.1) saturate(1.15);
 }
 
 .bespoke-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 90px 60px 90px;
-    background: linear-gradient(135deg, #f5f1eb 0%, #e8e3d9 100%);
-    color: #23374d;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+    gap: 18px;
+    color: var(--card-text-light);
+    text-shadow: 0 10px 32px rgba(18, 32, 44, 0.32);
 }
 
 .bespoke-hero-content::before {
     content: '';
     position: absolute;
-    bottom: -30%;
-    left: -15%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(201, 168, 118, 0.12) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: 0;
+    inset: -60px -80px -40px;
+    background: radial-gradient(circle at 15% 20%, rgba(201, 168, 112, 0.18), transparent 70%);
+    z-index: -1;
 }
 
 .bespoke-hero-content > * {
@@ -6158,19 +6217,18 @@ h2.signature-banner-text {
     font-family: 'Playfair Display', serif;
     font-size: 4rem;
     font-weight: 400;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     letter-spacing: 2px;
-    line-height: 1.1;
-    color: #23374d;
+    line-height: 1.05;
+    color: var(--card-text-light);
 }
 
 .bespoke-subtitle {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    font-weight: 300;
+    font-size: 1.5rem;
     font-style: italic;
     font-family: 'Playfair Display', serif;
-    color: #4A9A92;
+    color: rgba(201, 168, 112, 0.88);
+    margin: 0 0 12px 0;
 }
 
 .bespoke-description {
@@ -6178,15 +6236,26 @@ h2.signature-banner-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     letter-spacing: 0.3px;
-    line-height: 1.7;
-    margin-bottom: 35px;
-    color: #3a3a3a;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    color: rgba(255, 255, 255, 0.96);
+    max-width: 560px;
 }
 
 .bespoke-hero-cta {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+}
+
+.bespoke-hero .back-home-link {
+    background: rgba(255, 255, 255, 0.26);
+    color: var(--card-text-light);
+    box-shadow: 0 14px 26px rgba(10, 22, 34, 0.24);
+}
+
+.bespoke-hero .back-home-link:hover {
+    background: rgba(255, 255, 255, 0.36);
 }
 
 /* Bespoke Intro Section */
@@ -7067,61 +7136,69 @@ h2.signature-banner-text {
 /* Medium screens (laptops) */
 @media (max-width: 1366px) and (min-width: 969px) {
     .bespoke-hero {
-        min-height: 560px;
+        min-height: 600px;
+        padding: 110px 6vw 95px;
     }
-    
-    .bespoke-hero-content {
-        padding: 80px 45px 80px;
-    }
-    
+
     .bespoke-hero-content h1 {
-        font-size: 3.2rem;
+        font-size: 3.4rem;
     }
-    
+
     .bespoke-subtitle {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
     }
-    
+
     .bespoke-description {
         font-size: 1rem;
-        margin-bottom: 25px;
+        margin-bottom: 24px;
     }
 }
 
 @media (max-width: 968px) {
     .bespoke-hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
+        min-height: 560px;
+        padding: 110px 32px 90px;
+        justify-content: center;
+        text-align: center;
     }
-    
-    .bespoke-hero-image {
-        height: 50vh;
-        min-height: 400px;
+
+    .bespoke-hero::after {
+        background: linear-gradient(118deg, rgba(12, 26, 39, 0.72) 0%, rgba(35, 55, 77, 0.62) 55%, rgba(35, 55, 77, 0.52) 100%);
     }
-    
+
     .bespoke-hero-content {
-        padding: 90px 30px 50px;
+        align-items: center;
+        max-width: 100%;
     }
-    
+
+    .bespoke-hero-content::before {
+        inset: -40px -40px -20px;
+    }
+
     .bespoke-hero-content h1 {
         font-size: 3rem;
     }
-    
+
     .bespoke-subtitle {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
     }
-    
+
     .bespoke-description {
-        font-size: 1.05rem;
+        font-size: 1rem;
+        margin-bottom: 26px;
     }
-    
+
     .bespoke-hero-cta {
-        flex-direction: column;
+        justify-content: center;
     }
-    
+
     .bespoke-hero-cta a {
         width: 100%;
         text-align: center;
+    }
+
+    .bespoke-hero .back-home-link {
+        align-self: center;
     }
     
     .bespoke-steps {
@@ -7171,20 +7248,29 @@ h2.signature-banner-text {
 }
 
 @media (max-width: 600px) {
-    .bespoke-hero-content {
-        padding: 90px 20px 40px;
+    .bespoke-hero {
+        min-height: 520px;
+        padding: 100px 18px 70px;
     }
-    
+
+    .bespoke-hero::after {
+        background: linear-gradient(122deg, rgba(12, 26, 39, 0.70) 0%, rgba(35, 55, 77, 0.60) 60%, rgba(35, 55, 77, 0.50) 100%);
+    }
+
     .bespoke-hero-content h1 {
-        font-size: 2.3rem;
+        font-size: 2.45rem;
     }
-    
+
     .bespoke-subtitle {
         font-size: 1.2rem;
     }
-    
+
     .bespoke-description {
-        font-size: 1rem;
+        font-size: 0.98rem;
+    }
+
+    .bespoke-hero-content::before {
+        inset: -28px -24px -12px;
     }
     
     .bespoke-intro-section {

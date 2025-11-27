@@ -16,6 +16,11 @@
 
 <body>
 
+    <a href="index.html#hero" class="home-button" title="Back to Home">
+        <i class="fas fa-home"></i>
+        <span class="home-text">Home</span>
+    </a>
+
     <div id="contact-menu" class="contact-menu">
         <button class="contact-toggle" onclick="toggleContactMenu()">
             <i class="fas fa-envelope"></i>
@@ -43,12 +48,10 @@
                 <img src="imagenes/tocca_amalfi_nav.png" alt="Tocca Amalfi Logo" class="nav-logo">
             </a>
             <div class="nav-menu">
-                <a href="index.html#why-tocca-amalfi" class="nav-link">Why Us?</a>
-                <a href="index.html#what-we-offer-grid" class="nav-link">Itinerary</a>
-                <a href="index.html#tocca-offerings" class="nav-link">Journeys</a>
-                <a href="index.html#inclusions" class="nav-link">Inclusions</a>
-                <a href="index.html#testimonials" class="nav-link">Testimonials</a>
-                <a href="index.html#contact-section" class="nav-link">Contact</a>
+                <a href="index.html#why-tocca-amalfi" class="nav-link">Why Choose Us?</a>
+                <a href="index.html#what-we-offer" class="nav-link">What We Offer</a>
+                <a href="index.html#tocca-offerings" class="nav-link">Our Experiences</a>
+                <a href="#" class="nav-link" onclick="openRequestModal(); return false;">Contact Us</a>
             </div>
             <button class="hamburger" aria-label="Open menu">
                 <span class="bar"></span>
@@ -82,13 +85,34 @@
                 <div class="bespoke-intro-text">
                     <h2>The Bespoke Experience - Inspired by You</h2>
                     
-                    <p>Tailored to your passions, pace, and availability — each encounter is created around what moves you most. Whether for a single afternoon, a weekend escape, or an extended journey; Bespoke Amalfi Coast Experience transforms your desires into a tailor-made Italian escape.</p>
+                    <p>Bespoke Amalfi Coast Experience transforms your desires into a tailor-made Italian escape.</p>
                     
                     <p>We begin with what inspires you — food, wellness, the sea, culture, luxury, or quiet discovery — and weave it into a seamless experience designed entirely around you. Whatever you wish to emphasize, we'll bring it to life — with the same artistry, warmth, and attention to detail as our Signature Journey.</p>
                 </div>
 
-                <div class="bespoke-intro-image">
-                    <img src="imagenes/experiencias_gastronomicas.jpg" alt="Curated bespoke experience on the Amalfi Coast">
+                <div class="signature-why-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide active">
+                            <img src="imagenesparapaginas/carrouselbespoke1.jpeg" alt="Amalfi Coast hillside home">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenesparapaginas/carrouselbespoke2.jpeg" alt="Coastal bridge and tunnel">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenesparapaginas/carrouselbespoke3.jpeg" alt="Faraglioni rocks Capri">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenesparapaginas/carrouselbespoke4.jpeg" alt="Kayaking Amalfi Coast">
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveBespokeCarousel(-1)">&#10094;</button>
+                    <button class="carousel-btn next" onclick="moveBespokeCarousel(1)">&#10095;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentBespokeSlide(1)"></span>
+                        <span class="dot" onclick="currentBespokeSlide(2)"></span>
+                        <span class="dot" onclick="currentBespokeSlide(3)"></span>
+                        <span class="dot" onclick="currentBespokeSlide(4)"></span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -103,7 +127,7 @@
                         <div class="step-number">1</div>
                         <h3>Tell Us Your Vision</h3>
                         <p>We start with a Discovery Call where we learn about you: your passions, preferences, must-sees, and dream experiences.</p>
-                        <a href="mailto:info@toccaamalfi.com?subject=Bespoke Journey Inquiry" class="step-cta">Interest? Let's connect →</a>
+                        <a href="mailto:info@toccaamalfi.com?subject=Bespoke Journey Inquiry" class="step-cta">Contact Us →</a>
                     </div>
                     
                     <div class="bespoke-step">
@@ -135,7 +159,7 @@
                 
                 <div class="bespoke-grid">
                     <div class="bespoke-card">
-                        <img src="imagenes/experiencias_gastronomicas.jpg" alt="Culinary experiences">
+                        <img src="imagenesparapaginas/CulinaryImmersion.jpeg" alt="Culinary experiences">
                         <div class="bespoke-card-content">
                             <h3><i class="fas fa-utensils"></i> Culinary Immersion</h3>
                             <p>Private cooking classes with Michelin chefs, wine tastings in hidden cellars, farm-to-table dinners under the stars.</p>
@@ -143,7 +167,7 @@
                     </div>
                     
                     <div class="bespoke-card">
-                        <img src="imagenes/boat.jpg" alt="Private boat tours">
+                        <img src="imagenesparapaginas/withbespokejourneyseaandadventure.jpeg" alt="Private boat tours">
                         <div class="bespoke-card-content">
                             <h3><i class="fas fa-ship"></i> Sea & Adventure</h3>
                             <p>Private yacht charters, sunset sailing, snorkeling in hidden coves, or a day exploring Capri by boat.</p>
@@ -151,7 +175,7 @@
                     </div>
                     
                     <div class="bespoke-card">
-                        <img src="imagenes/alojamiento_boutique.jpg" alt="Luxury accommodations">
+                        <img src="imagenesparapaginas/luxurystays.jpeg" alt="Luxury accommodations">
                         <div class="bespoke-card-content">
                             <h3><i class="fas fa-hotel"></i> Luxury Stays</h3>
                             <p>Boutique hotels, historic villas, or cliffside suites — we select accommodations that match your style.</p>
@@ -159,7 +183,7 @@
                     </div>
                     
                     <div class="bespoke-card">
-                        <img src="imagenes/gapes.jpg" alt="Cultural experiences">
+                        <img src="imagenesparapaginas/Artandculture.jpeg" alt="Cultural experiences">
                         <div class="bespoke-card-content">
                             <h3><i class="fas fa-landmark"></i> Art & Culture</h3>
                             <p>Private tours of Pompeii, ceramics workshops in Vietri, visits to local artists' studios, opera nights in historic theaters.</p>
@@ -167,7 +191,7 @@
                     </div>
                     
                     <div class="bespoke-card">
-                        <img src="imagenes/vespa.jpg" alt="Vespa tours">
+                        <img src="imagenesparapaginas/adventureandmovement.jpeg" alt="Vespa tours">
                         <div class="bespoke-card-content">
                             <h3><i class="fas fa-motorcycle"></i> Adventure & Movement</h3>
                             <p>Vespa tours along the coast, hiking the Path of the Gods, mountain biking in Tramonti, yoga by the sea.</p>
@@ -175,7 +199,7 @@
                     </div>
                     
                     <div class="bespoke-card">
-                        <img src="imagenes/lemons.jpg" alt="Local experiences">
+                        <img src="imagenesparapaginas/autenticconection.jpeg" alt="Local experiences">
                         <div class="bespoke-card-content">
                             <h3><i class="fas fa-lemon"></i> Authentic Connections</h3>
                             <p>Meet local producers, visit lemon groves, learn traditional crafts, dine in family homes.</p>
@@ -288,6 +312,41 @@
                 toggleContactMenu();
             }
         });
+
+        // BESPOKE CAROUSEL FUNCTIONALITY
+        let bespokeSlideIndex = 1;
+        showBespokeSlides(bespokeSlideIndex);
+
+        function moveBespokeCarousel(n) {
+            showBespokeSlides(bespokeSlideIndex += n);
+        }
+
+        function currentBespokeSlide(n) {
+            showBespokeSlides(bespokeSlideIndex = n);
+        }
+
+        function showBespokeSlides(n) {
+            let slides = document.querySelectorAll('.bespoke-intro-section .carousel-slide');
+            let dots = document.querySelectorAll('.bespoke-intro-section .dot');
+            
+            if (n > slides.length) { bespokeSlideIndex = 1 }
+            if (n < 1) { bespokeSlideIndex = slides.length }
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            
+            slides[bespokeSlideIndex - 1].classList.add("active");
+            dots[bespokeSlideIndex - 1].classList.add("active");
+        }
+
+        // Auto-advance bespoke carousel every 5 seconds
+        setInterval(() => {
+            moveBespokeCarousel(1);
+        }, 5000);
     </script>
 </body>
 

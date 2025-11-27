@@ -16,6 +16,11 @@
 
 <body>
 
+    <a href="index.html#hero" class="home-button" title="Back to Home">
+        <i class="fas fa-home"></i>
+        <span class="home-text">Home</span>
+    </a>
+
     <div id="contact-menu" class="contact-menu">
         <button class="contact-toggle" onclick="toggleContactMenu()">
             <i class="fas fa-envelope"></i>
@@ -43,12 +48,10 @@
                 <img src="imagenes/tocca_amalfi_nav.png" alt="Tocca Amalfi Logo" class="nav-logo">
             </a>
             <div class="nav-menu">
-                <a href="index.html#why-tocca-amalfi" class="nav-link">Why Us?</a>
-                <a href="index.html#what-we-offer-grid" class="nav-link">Itinerary</a>
-                <a href="index.html#tocca-offerings" class="nav-link">Journeys</a>
-                <a href="index.html#inclusions" class="nav-link">Inclusions</a>
-                <a href="index.html#testimonials" class="nav-link">Testimonials</a>
-                <a href="index.html#contact-section" class="nav-link">Contact</a>
+                <a href="index.html#why-tocca-amalfi" class="nav-link">Why Choose Us?</a>
+                <a href="index.html#what-we-offer" class="nav-link">What We Offer</a>
+                <a href="index.html#tocca-offerings" class="nav-link">Our Experiences</a>
+                <a href="#" class="nav-link" onclick="openRequestModal(); return false;">Contact Us</a>
             </div>
             <button class="hamburger" aria-label="Open menu">
                 <span class="bar"></span>
@@ -114,19 +117,19 @@
                 <div class="signature-why-carousel">
                     <div class="carousel-container">
                         <div class="carousel-slide active">
-                            <img src="imagenesparapaginas/Garden_of_Villa_Rufolo_in_Ravello_village.jpg" alt="Gardens overlooking the Amalfi Coast">
+                            <img src="imagenesparapaginas/carruselsignature1.jpeg" alt="Amalfi Coast view">
                         </div>
                         <div class="carousel-slide">
-                            <img src="imagenesparapaginas/Amalfi_Coast_Positano.jpg" alt="Positano coastline at dusk">
+                            <img src="imagenesparapaginas/carruselsignature2.jpeg" alt="Amalfi Coast gardens">
                         </div>
                         <div class="carousel-slide">
-                            <img src="imagenesparapaginas/Amalfi_Cathedral.jpg" alt="Amalfi Cathedral facade">
+                            <img src="imagenesparapaginas/carruselsignature3.jpeg" alt="Amalfi Coast village">
                         </div>
                         <div class="carousel-slide">
-                            <img src="imagenesparapaginas/Amalfi_Cathedral%202.jpg" alt="Interior of Amalfi Cathedral">
+                            <img src="imagenesparapaginas/carruselsignature4.jpeg" alt="Amalfi Coast harbor">
                         </div>
                         <div class="carousel-slide">
-                            <img src="imagenesparapaginas/carrousel.jpg" alt="Hand-painted Amalfi ceramics">
+                            <img src="imagenesparapaginas/carruselsignature5.jpeg" alt="Amalfi Coast rocks">
                         </div>
                     </div>
                     <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
@@ -155,7 +158,7 @@
                 <div class="signature-about-content">
                     <h2><i class="fas fa-leaf"></i> What the Signature Journey Is All About</h2>
                     
-                    <p>Every day unveils a different layer of the Amalfi Coast and beyond - from the pastel villages of <strong>Positano and Amalfi</strong> to the quiet beauty of <strong>Maiori, Minori, Atrani, Tramonti, Praiano, Conca dei Marini</strong>, and the island of <strong>Capri</strong> & <strong>Pompeii</strong></p>
+                    <p>Every day unveils a different layer of the Amalfi Coast and beyond - from the pastel villages of <strong>Positano and Amalfi</strong> to the quiet beauty of <strong>Maiori, Minori, Atrani, Ravello, Tramonti, Praiano, Conca dei Marini</strong>, and the island of <strong>Capri</strong> & <strong>Pompeii</strong></p>
                     
                     <p>You will discover the Coast's flavors, landscapes, and traditions in a soft balance of culture, movement, and pure Mediterranean joy.</p>
                     
@@ -170,7 +173,7 @@
                 </div>
                 
                 <div class="signature-about-image">
-                    <img src="imagenes/signature journey.jpg" alt="Amalfi Coast Journey">
+                    <img src="imagenesparapaginas/despuesdelcarrusel.jpeg" alt="Amalfi Coast Journey">
                 </div>
             </div>
         </section>
@@ -199,22 +202,6 @@
                     </div>
 
                     <div class="experience-card">
-                        <img src="imagenesparapaginas/Amalfi_Coast plate.png" alt="Fresh buffalo mozzarella on a tasting board">
-                        <div class="experience-card-content">
-                            <h3>Buffalo Mozzarella Experience</h3>
-                            <p>Meet master cheesemakers and taste silky buffalo mozzarella made only moments before.</p>
-                        </div>
-                    </div>
-
-                    <div class="experience-card">
-                        <img src="imagenes/offer1.jpg" alt="Stretching pizza dough by hand">
-                        <div class="experience-card-content">
-                            <h3>Pizza Making Class</h3>
-                            <p>Roll, toss, and fire your own Neapolitan pie alongside a pizzaiolo who knows every secret.</p>
-                        </div>
-                    </div>
-
-                    <div class="experience-card">
                         <img src="imagenes/experiencias_gastronomicas.jpg" alt="Cooking with seasonal ingredients">
                         <div class="experience-card-content">
                             <h3>Cooking Class</h3>
@@ -231,15 +218,7 @@
                     </div>
 
                     <div class="experience-card">
-                        <img src="imagenesparapaginas/Waterfront_Dining.png" alt="Farm-to-table dinner on the waterfront">
-                        <div class="experience-card-content">
-                            <h3>Farm-to-Table Dinner</h3>
-                            <p>Dine al fresco with produce harvested that morning and stories shared by the farmers themselves.</p>
-                        </div>
-                    </div>
-
-                    <div class="experience-card">
-                        <img src="imagenes/boat.jpg" alt="Private boat cruising the Amalfi Coast">
+                        <img src="imagenesparapaginas/Privateboats.jpeg" alt="Private boat cruising the Amalfi Coast">
                         <div class="experience-card-content">
                             <h3>Private Boat Day</h3>
                             <p>Set your own course on a private vessel, stopping for swims in crystalline coves.</p>
@@ -247,63 +226,7 @@
                     </div>
 
                     <div class="experience-card">
-                        <img src="imagenesparapaginas/Cave Esmerald_Conca del MarinI_SA_Italy.jpg" alt="Inside the Emerald Grotto">
-                        <div class="experience-card-content">
-                            <h3>Sea Cave Visit</h3>
-                            <p>Drift into hidden grottos where emerald light dances across the water.</p>
-                        </div>
-                    </div>
-
-                    <div class="experience-card">
-                        <img src="imagenesparapaginas/Sunset_in_Camiglia_Tramonti.jpg" alt="Sunset aperitivo overlooking the coast">
-                        <div class="experience-card-content">
-                            <h3>Sunset Aperitivo</h3>
-                            <p>Toast the golden hour with spritzes, local bites, and sweeping coastal views.</p>
-                        </div>
-                    </div>
-
-                    <div class="experience-card">
-                        <img src="imagenes/bebidas_bordo.jpg" alt="Dining on board with sea views">
-                        <div class="experience-card-content">
-                            <h3>Meals on the Sea</h3>
-                            <p>Enjoy chef-prepared dishes served on deck while the coastline drifts by.</p>
-                        </div>
-                    </div>
-
-                    <div class="experience-card">
-                        <img src="imagenes/boat.jpeg" alt="Sailing along the Amalfi shoreline">
-                        <div class="experience-card-content">
-                            <h3>Sailing Experience</h3>
-                            <p>Trim the sails with your skipper and feel the breeze carry you past iconic villages.</p>
-                        </div>
-                    </div>
-
-                    <div class="experience-card">
-                        <img src="imagenes/tiempo_libre.jpg" alt="Outdoor wellness session">
-                        <div class="experience-card-content">
-                            <h3>Fitness &amp; Wellness</h3>
-                            <p>Rebalance with sunrise yoga, coastal hikes, or bespoke spa rituals tailored to you.</p>
-                        </div>
-                    </div>
-
-                    <div class="experience-card">
-                        <img src="imagenesparapaginas/Sport.jpg" alt="Active adventures on the coast">
-                        <div class="experience-card-content">
-                            <h3>Sports Activities</h3>
-                            <p>Choose from kayaking, paddleboarding, or adrenaline-fueled cliffside excursions.</p>
-                        </div>
-                    </div>
-
-                    <div class="experience-card">
-                        <img src="imagenes/newbackgrounglemon.jpg" alt="Trail through lemon groves">
-                        <div class="experience-card-content">
-                            <h3>Lemon Trail Hike</h3>
-                            <p>Follow ancient pathways perfumed with citrus and framed by sweeping sea views.</p>
-                        </div>
-                    </div>
-
-                    <div class="experience-card">
-                        <img src="imagenesparapaginas/Cluster of Grapes in a Vineyard.jpg" alt="Vineyard on the Amalfi Coast">
+                        <img src="imagenesparapaginas/Vineyardandwinetasting.jpeg" alt="Vineyard on the Amalfi Coast">
                         <div class="experience-card-content">
                             <h3>Vineyard &amp; Wine Tasting</h3>
                             <p>Sip rare vintages in hillside cellars and meet the winemakers behind each bottle.</p>
@@ -311,7 +234,7 @@
                     </div>
 
                     <div class="experience-card">
-                        <img src="imagenes/vespa.jpg" alt="Couple riding a Vespa in Amalfi">
+                        <img src="imagenesparapaginas/vesparide.jpeg" alt="Couple riding a Vespa in Amalfi">
                         <div class="experience-card-content">
                             <h3>Vespa Ride</h3>
                             <p>Feel the coastal breeze as you zip past pastel villages on a vintage Vespa.</p>
@@ -327,7 +250,7 @@
                     </div>
 
                     <div class="experience-card">
-                        <img src="imagenesparapaginas/Amalfi_Coast_Positano.jpg" alt="Colorful Positano cliffs">
+                        <img src="imagenesparapaginas/positano.jpeg" alt="Colorful Positano cliffs">
                         <div class="experience-card-content">
                             <h3>Positano</h3>
                             <p>Climb the vibrant stairways of Positano and browse chic boutiques tucked into the cliffs.</p>
@@ -335,10 +258,10 @@
                     </div>
 
                     <div class="experience-card">
-                        <img src="imagenesparapaginas/Amalfi_Cathedral.jpg" alt="Amalfi Cathedral façade">
+                        <img src="imagenesparapaginas/Coast.jpg" alt="Amalfi Cathedral façade">
                         <div class="experience-card-content">
                             <h3>Amalfi</h3>
-                            <p>Discover Amalfi’s maritime legacy and its striking cathedral overlooking the piazza.</p>
+                            <p>Discover Amalfi's maritime legacy and its striking cathedral overlooking the piazza.</p>
                         </div>
                     </div>
 
@@ -354,7 +277,15 @@
                         <img src="imagenesparapaginas/Coast.jpg" alt="Atrani coastline">
                         <div class="experience-card-content">
                             <h3>Atrani</h3>
-                            <p>Wander the winding alleys of Atrani, Italy’s smallest seaside village.</p>
+                            <p>Wander the winding alleys of Atrani, Italy's smallest seaside village.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/Capri.jpeg" alt="Capri island day trip">
+                        <div class="experience-card-content">
+                            <h3>Capri Island Day</h3>
+                            <p>Sail to Capri for chic piazzettas, hidden coves, and the legendary Blue Grotto.</p>
                         </div>
                     </div>
 
@@ -371,14 +302,6 @@
                         <div class="experience-card-content">
                             <h3>Conca dei Marini</h3>
                             <p>Take in sweeping vistas and the famed Emerald Grotto in picturesque Conca dei Marini.</p>
-                        </div>
-                    </div>
-
-                    <div class="experience-card">
-                        <img src="imagenesparapaginas/Amalfi_Coast, italy.jpg" alt="Capri island day trip">
-                        <div class="experience-card-content">
-                            <h3>Capri Island Day</h3>
-                            <p>Sail to Capri for chic piazzettas, hidden coves, and the legendary Blue Grotto.</p>
                         </div>
                     </div>
                 </div>
@@ -544,33 +467,33 @@
         <!-- 2025 DEPARTURES -->
         <section class="signature-departures-section">
             <div class="signature-container">
-                <h2><i class="fas fa-calendar-alt"></i> 2026 Departures & Availability</h2>
+                <h2><i class="fas fa-calendar-alt"></i> 2025 Departures & Availability</h2>
                 <p class="departures-intro">Below are the three Signature Journey dates, with current availability:</p>
                 
                 <div class="departures-carousel-wrapper">
                     <div class="departures-carousel">
                         <div class="departure-card">
                             <div class="departure-header">
-                                <h3>July<br><span class="dates-range">1st–12th</span></h3>
+                                <h3>June<br><span class="dates-range">17th–26th</span></h3>
                             </div>
                             <span class="availability filling-fast">Few spots</span>
-                            <a href="#" class="departure-cta" onclick="openRequestModal(); return false;">Reserve July 1st →</a>
+                            <a href="#" class="departure-cta" onclick="openRequestModal(); return false;">Few Spots →</a>
                         </div>
                         
                         <div class="departure-card featured">
                             <div class="departure-header">
-                                <h3>October<br><span class="dates-range">5th–15th</span></h3>
+                                <h3>September<br><span class="dates-range">22nd–Oct 1st</span></h3>
                             </div>
                             <span class="availability high-availability">Available</span>
-                            <a href="#" class="departure-cta" onclick="openRequestModal(); return false;">Reserve October 5th →</a>
+                            <a href="#" class="departure-cta" onclick="openRequestModal(); return false;">Available →</a>
                         </div>
                         
                         <div class="departure-card">
                             <div class="departure-header">
-                                <h3>September<br><span class="dates-range">8th–16th</span></h3>
+                                <h3>October<br><span class="dates-range">5th–14th</span></h3>
                             </div>
-                            <span class="availability almost-full">Not available</span>
-                            <a href="#" class="departure-cta disabled" onclick="return false;">Fully Booked</a>
+                            <span class="availability high-availability">Available</span>
+                            <a href="#" class="departure-cta" onclick="openRequestModal(); return false;">Available →</a>
                         </div>
                     </div>
                 </div>
