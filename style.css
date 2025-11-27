@@ -452,7 +452,7 @@ section.animate-on-scroll.is-visible {
 /* Estilos para "Tocca" */
 .hero-main-title {
     font-family: 'Style Script', cursive;
-    font-size: clamp(5rem, 15vw, 10rem);
+    font-size: clamp(3.5rem, 15vw, 10rem);
     font-weight: 400;
     margin: 0;
     line-height: 0.9;
@@ -658,6 +658,7 @@ section.animate-on-scroll.is-visible {
     height: auto !important;
     max-height: 550px !important;
     object-fit: cover !important;
+    object-position: center top !important;
     border-radius: 12px !important;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
 }
@@ -7667,5 +7668,432 @@ h2.signature-banner-text {
     .signature-departures-section {
         background-attachment: scroll;
     }
+}
 
+/* ============================================
+   FAQ PAGE STYLES
+   ============================================ */
+
+.faq-hero-section {
+    background: linear-gradient(135deg, rgba(74,154,146,0.95) 0%, rgba(18,46,66,0.95) 100%),
+                url('imagenes/newbackgrounglemon.jpg') center/cover no-repeat;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 80px;
+    position: relative;
+}
+
+.faq-hero-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.faq-hero-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.95);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq-content-section {
+    padding: 80px 20px;
+    background: #f8f8f8;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.faq-question {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.faq-question:hover {
+    background: #f8f8f8;
+}
+
+.faq-item.active .faq-question {
+    background: linear-gradient(135deg, rgba(74,154,146,0.1) 0%, rgba(18,46,66,0.1) 100%);
+}
+
+.faq-number {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #4A9A92;
+    min-width: 35px;
+}
+
+.faq-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    flex: 1;
+    line-height: 1.4;
+}
+
+.faq-icon {
+    font-size: 1rem;
+    color: #4A9A92;
+    transition: transform 0.3s ease;
+    margin-left: auto;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: white;
+}
+
+.faq-answer p {
+    padding: 0 30px 25px 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer strong {
+    color: #2c2c2c;
+    font-weight: 600;
+}
+
+.faq-cta-section {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, rgba(74,154,146,0.05) 0%, rgba(18,46,66,0.05) 100%);
+    text-align: center;
+}
+
+.faq-cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.faq-cta-content h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.faq-cta-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* FAQ RESPONSIVE */
+@media (max-width: 768px) {
+    .faq-hero-section {
+        min-height: 40vh;
+        padding: 100px 20px 60px;
+    }
+    
+    .faq-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .faq-hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .faq-content-section {
+        padding: 60px 15px;
+    }
+    
+    .faq-question {
+        padding: 20px;
+        gap: 10px;
+    }
+    
+    .faq-number {
+        font-size: 1.1rem;
+        min-width: 30px;
+    }
+    
+    .faq-text {
+        font-size: 1rem;
+    }
+    
+    .faq-answer p {
+        padding: 0 20px 20px 50px;
+        font-size: 0.95rem;
+    }
+    
+    .faq-cta-section {
+        padding: 60px 20px;
+    }
+    
+    .faq-cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .faq-cta-content p {
+        font-size: 1.05rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .faq-hero-content p {
+        font-size: 1rem;
+    }
+    
+    .faq-question {
+        padding: 18px 15px;
+    }
+    
+    .faq-number {
+        font-size: 1rem;
+        min-width: 25px;
+    }
+    
+    .faq-text {
+        font-size: 0.95rem;
+    }
+    
+    .faq-answer p {
+        padding: 0 15px 18px 40px;
+        font-size: 0.9rem;
+    }
+    
+    .faq-cta-content h2 {
+        font-size: 1.7rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVE FIXES - CRITICAL OVERRIDES
+   ============================================ */
+
+/* Mobile First - Very Small Screens (320px - 480px) */
+@media (max-width: 480px) {
+    .hero-main-title {
+        font-size: 3rem !important;
+    }
+    
+    .hero-description {
+        margin-left: 0 !important;
+        transform: translateY(0) translateX(0) !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .hero-subtitle {
+        transform: translateY(0) translateX(0) !important;
+    }
+    
+    .slogan {
+        margin-left: 0 !important;
+        transform: translateX(0) !important;
+    }
+}
+
+/* Small Mobile (481px - 640px) */
+@media (max-width: 640px) {
+    .hero-description {
+        margin-left: 20px !important;
+        transform: translateY(0) translateX(0) !important;
+    }
+    
+    .hero-subtitle {
+        transform: translateY(-5px) translateX(15px) !important;
+    }
+    
+    /* Fix journey cards on mobile */
+    .journey-container {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+    
+    .journey-container::before {
+        display: none !important;
+    }
+    
+    /* Fix testimonials */
+    .testimonial-cards-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Fix inclusions grid */
+    .inclusions-grid-2x5 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .inclusions-grid-4x3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Large Mobile / Small Tablet (641px - 768px) */
+@media (min-width: 641px) and (max-width: 768px) {
+    .testimonial-cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .journey-container {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .inclusions-grid-2x5 {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+/* Tablet (769px - 968px) */
+@media (min-width: 769px) and (max-width: 968px) {
+    .testimonial-cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .journey-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+    }
+    
+    .journey-container::before {
+        display: none !important;
+    }
+    
+    .inclusions-grid-2x5 {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+    
+    .inclusions-grid-4x3 {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    /* Fix signature carousel width */
+    .signature-carousel-wrapper {
+        max-width: 100% !important;
+    }
+}
+
+/* Touch Optimizations for All Mobile Devices */
+@media (max-width: 968px) {
+    /* Improve touch targets */
+    .cta-button,
+    .request-btn,
+    .faq-question {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Add touch scrolling */
+    .signature-inclusions-grid,
+    .signature-departures-grid {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .testimonial-card:hover,
+    .experience-card:hover,
+    .journey-card:hover {
+        transform: none;
+    }
+    
+    /* Fix modal width on mobile */
+    .request-modal-content,
+    .modal-content {
+        width: 95% !important;
+        margin: 5% auto !important;
+    }
+    
+    /* Ensure home button doesn't overlap */
+    .home-button {
+        bottom: 20px !important;
+        left: 20px !important;
+    }
+    
+    /* Fix contact menu positioning */
+    .contact-menu {
+        bottom: 20px !important;
+        right: 20px !important;
+    }
+}
+
+/* Landscape Mobile Fixes */
+@media (max-width: 968px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 100vh !important;
+    }
+    
+    .faq-hero-section {
+        min-height: 70vh !important;
+    }
+    
+    .signature-hero,
+    .bespoke-hero {
+        min-height: 80vh !important;
+    }
+}
+
+/* Prevent horizontal scroll on all screen sizes */
+@media (max-width: 968px) {
+    * {
+        max-width: 100vw;
+    }
+    
+    .hero-content,
+    .signature-container,
+    .faq-container {
+        overflow-x: hidden;
+    }
+}
+
+/* Fix for very wide tablets / small laptops */
+@media (min-width: 969px) and (max-width: 1366px) {
+    .inclusions-grid-2x5 {
+        grid-template-columns: repeat(5, 1fr) !important;
+    }
+    
+    .testimonial-cards-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
 }

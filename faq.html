@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Tocca Amalfi Coast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&family=Style+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <a href="index.html#hero" class="home-button" title="Back to Home">
+        <i class="fas fa-home"></i>
+        <span class="home-text">Home</span>
+    </a>
+
+    <div id="contact-menu" class="contact-menu">
+        <button class="contact-toggle" onclick="toggleContactMenu()">
+            <i class="fas fa-envelope"></i>
+            <span class="contact-text">Contact Us</span>
+        </button>
+        <div class="contact-options">
+            <a href="mailto:info@toccaamalfi.com" class="contact-option" title="Email Us">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <a href="https://wa.me/16462298158?text=Hello!%20I'd%20like%20to%20know%20more%20about%20the%20tours." target="_blank" class="contact-option" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="tel:+16462298158" class="contact-option" title="Call Us">
+                <i class="fas fa-phone"></i>
+                <span>Call</span>
+            </a>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html#hero" class="nav-logo-container">
+                <img src="imagenes/tocca_amalfi_nav.png" alt="Tocca Amalfi Logo" class="nav-logo">
+            </a>
+            <div class="nav-menu">
+                <a href="index.html#why-tocca-amalfi" class="nav-link">Why Choose Us?</a>
+                <a href="index.html#what-we-offer" class="nav-link">What We Offer</a>
+                <a href="index.html#tocca-offerings" class="nav-link">Our Experiences</a>
+                <a href="#" class="nav-link" onclick="openRequestModal(); return false;">Contact Us</a>
+            </div>
+            <button class="hamburger" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- FAQ HERO -->
+        <section class="faq-hero-section">
+            <div class="faq-hero-content">
+                <h1>Frequently Asked Questions</h1>
+                <p>Everything you need to know about your Tocca Amalfi Coast experience</p>
+            </div>
+        </section>
+
+        <!-- FAQ CONTENT -->
+        <section class="faq-content-section">
+            <div class="faq-container">
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-number">1.</span>
+                        <span class="faq-text">What is Tocca Amalfi Coast?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tocca Amalfi Coast is a founder-hosted, small-group and bespoke travel experience on the Amalfi Coast. I personally curate every detail. Every stay, transfer, and experience is curated with care — blending comfort, culture, and exclusive access to local hosts that most travelers never meet. My goal is for you to simply arrive, and live la dolce vita.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-number">2.</span>
+                        <span class="faq-text">What's the difference between the Signature Journey and the Bespoke Journey?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Signature Journey</strong> – A beautifully curated, fixed-date itinerary (10–11 days) for an intimate group of 8–10 travelers. Every detail is pre-planned: premium stays, exclusive local experiences, private transportation, selected meals with wine, and your founder-host with you throughout.</p>
+                        <p><strong>Bespoke Journey</strong> – Fully customized to you. Dates, pace, accommodation, and experiences are tailored to your preferences — perfect for couples, families, solo travelers, or small groups wanting a private, made-to-order experience.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-number">3.</span>
+                        <span class="faq-text">What's included in the experience?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your journey includes private ground transportation, curated local experiences (many of which are difficult to access without local connections), private or semi-private boat days, handpicked accommodations, select meals with wine, and 24/7 support from me and our trusted local partners.</p>
+                        <p>Each journey has a "What's Included" section with full details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-number">4.</span>
+                        <span class="faq-text">Are international flights included?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. International flights to and from Italy are not included. Most guests prefer to book their own flights using miles, airline points, or preferred carriers.</p>
+                        <p>However, I am happy to support you with booking flights through our trusted third-party partners if you'd like help finding better routes, prices, or upgraded options.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-number">5.</span>
+                        <span class="faq-text">How big are the groups on the Signature Journey?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The Signature Journey is intentionally intimate, limited to 8–10 guests.</p>
+                        <p>Small groups allow for more flexibility, deeper connection, and a feeling of traveling with friends rather than joining a large tour. It also ensures every experience feels personal and high-touch.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-number">6.</span>
+                        <span class="faq-text">Can I join as a solo traveler or as a couple?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Solo travelers, couples, and friends are all warmly welcomed.</p>
+                        <p>We'll review room options together and explain any single-occupancy supplements so everything feels clear from the start.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-number">7.</span>
+                        <span class="faq-text">Can you accommodate dietary needs or special requests?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Vegetarian, vegan, gluten-free, allergies, and other dietary considerations can be accommodated with advance notice.</p>
+                        <p>Special celebrations — birthdays, anniversaries, proposals — can also be designed into your journey.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-number">8.</span>
+                        <span class="faq-text">What if I have mobility concerns or prefer a slower pace?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The Amalfi Coast has hills, stairs, and narrow cobblestone paths, but many experiences can be adapted.</p>
+                        <p>During our initial planning call, we'll discuss your comfort level and design the right pace, transportation, and activities for you. Bespoke Journeys are especially flexible for mobility considerations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-number">9.</span>
+                        <span class="faq-text">Is there free time, or is everything scheduled?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You'll enjoy curated, exclusive experiences — but also plenty of free time.</p>
+                        <p>Relax by the sea, explore local shops, enjoy a cappuccino in the piazza, or simply unwind.</p>
+                        <p>My goal is to balance structure with flexibility so your days feel effortless but never rushed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-number">10.</span>
+                        <span class="faq-text">What is the best time of year to travel to the Amalfi Coast?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Late spring through early fall is ideal.</p>
+                        <p>May–June and September–October offer beautiful weather, warm sea days, and fewer crowds.</p>
+                        <p>If you're unsure which dates fit your interests, I'm happy to help compare seasons.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-number">11.</span>
+                        <span class="faq-text">How do bookings, payments, and cancellations work?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To secure your spot, a $1,000 deposit is required.</p>
+                        <p>The remaining balance is due no later than 3 months (90 days) before departure.</p>
+                        <p>Because spots are limited to 8–10 travelers and dates fill quickly, booking early is highly recommended for best availability.</p>
+                        <p>A full proposal — including itinerary, inclusions, pricing, terms, and cancellation policy — is provided before you commit so everything is transparent from the start.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span class="faq-number">12.</span>
+                        <span class="faq-text">Is this suitable for children or families?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, particularly through the Bespoke Journey.</p>
+                        <p>Families love private boat days, farm experiences, cooking classes, and flexible pacing.</p>
+                        <p>We'll tailor everything to the ages and interests of your group.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ CTA -->
+        <section class="faq-cta-section">
+            <div class="faq-cta-content">
+                <h2>Still have questions?</h2>
+                <p>I'm here to help. Let's connect and talk through everything you'd like to know.</p>
+                <a href="#" class="cta-button" onclick="openRequestModal(); return false;">Let's Talk →</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+        // FAQ Toggle Function
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = button.querySelector('.faq-icon');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                    item.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current FAQ item
+            faqItem.classList.toggle('active');
+            
+            if (faqItem.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // CONTACT MENU TOGGLE
+        let contactMenuOpen = false;
+        function toggleContactMenu() {
+            const menu = document.getElementById('contact-menu');
+            menu.classList.toggle('active');
+            contactMenuOpen = !contactMenuOpen;
+        }
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('contact-menu');
+            if (menu && !menu.contains(event.target) && contactMenuOpen) {
+                toggleContactMenu();
+            }
+        });
+    </script>
+
+    <!-- REQUEST SPOT MODAL -->
+    <div id="requestModal" class="request-modal">
+        <div class="request-modal-content">
+            <span class="request-modal-close" onclick="closeRequestModal()">&times;</span>
+            <h2>Let's Connect</h2>
+            
+            <div class="request-contact-options">
+                <div class="request-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Jessica</h3>
+                    <p>Perfect for detailed questions, special requests, or sharing your travel plans.</p>
+                    <p class="contact-detail">info@toccaamalfi.com</p>
+                    <a href="mailto:info@toccaamalfi.com?subject=FAQ%20Inquiry%20-%20Tocca%20Amalfi%20Coast" class="request-btn">Send an Email</a>
+                </div>
+                
+                <div class="request-option">
+                    <i class="fas fa-phone"></i>
+                    <h3>Request a Call</h3>
+                    <p>Ideal if you'd like to talk through the journey or design something more custom.</p>
+                    <p class="contact-detail">Jessica will follow up to confirm a time.</p>
+                    <a href="mailto:info@toccaamalfi.com?subject=Request%20a%20Call%20-%20FAQ" class="request-btn">Schedule a Call</a>
+                </div>
+                
+                <div class="request-option">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Perfect for quick questions or real-time availability.</p>
+                    <p class="contact-detail">+1 646 229 8158</p>
+                    <a href="https://wa.me/16462298158?text=Hello!%20I%20have%20a%20question%20about%20Tocca%20Amalfi%20Coast." target="_blank" class="request-btn">Send a Message</a>
+                </div>
+                
+                <div class="request-option">
+                    <i class="fas fa-comment"></i>
+                    <h3>Text Message</h3>
+                    <p>Send a text message directly to Jessica for quick communication.</p>
+                    <p class="contact-detail">+1 646 229 8158</p>
+                    <a href="sms:+16462298158?body=Hello!%20I%20have%20a%20question%20about%20Tocca%20Amalfi%20Coast." class="request-btn">Send a Text</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openRequestModal() {
+            document.getElementById('requestModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeRequestModal() {
+            document.getElementById('requestModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById('requestModal');
+            if (event.target == modal) {
+                closeRequestModal();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
