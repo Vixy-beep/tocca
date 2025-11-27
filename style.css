@@ -6143,10 +6143,42 @@ h2.signature-banner-text {
     }
     
     .glimpse-section-wrapper .what-we-offer-carousel {
-        flex: none;
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
+        flex: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .glimpse-section-wrapper .what-we-offer-carousel.slick-initialized {
+        display: block !important;
+    }
+    
+    .glimpse-section-wrapper .what-we-offer-carousel .slick-list {
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+    
+    .glimpse-section-wrapper .what-we-offer-carousel .slick-track {
+        display: flex !important;
+    }
+    
+    .glimpse-section-wrapper .what-we-offer-carousel .slick-slide {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .glimpse-section-wrapper .what-we-offer-carousel .slick-slide img,
+    .glimpse-section-wrapper .what-we-offer-carousel img {
+        display: block !important;
+        width: 100% !important;
+        height: 300px !important;
+        object-fit: cover !important;
+        border-radius: 12px !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 }
 
@@ -8234,17 +8266,38 @@ h2.signature-banner-text {
 
 /* Fix carousel wrapper on mobile */
 @media (max-width: 768px) {
-    .what-we-offer-carousel {
+    .what-we-offer-carousel,
+    .experiences-carousel {
         width: 100% !important;
         max-width: 100% !important;
         overflow: visible !important;
         padding: 0 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
-    .what-we-offer-carousel .slick-slide img {
+    .what-we-offer-carousel.slick-initialized,
+    .experiences-carousel.slick-initialized {
+        display: block !important;
+    }
+    
+    .what-we-offer-carousel .slick-slide,
+    .experiences-carousel .slick-slide {
+        display: block !important;
+    }
+    
+    .what-we-offer-carousel .slick-slide img,
+    .experiences-carousel .slick-slide img,
+    .what-we-offer-carousel img,
+    .experiences-carousel img {
+        display: block !important;
         height: 280px !important;
         width: 100% !important;
         object-fit: cover !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        border-radius: 12px !important;
     }
     
     .glimpse-section-wrapper {
@@ -8347,19 +8400,36 @@ h2.signature-banner-text {
         margin-left: 0 !important;
         margin-right: 0 !important;
         width: 100% !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .experiences-carousel .slick-slide,
     .what-we-offer-carousel .slick-slide {
         padding: 0 10px !important;
+        display: block !important;
+    }
+    
+    .experiences-carousel .slick-slide > div,
+    .what-we-offer-carousel .slick-slide > div {
+        display: block !important;
+        width: 100% !important;
     }
     
     .experiences-carousel img,
-    .what-we-offer-carousel img {
+    .what-we-offer-carousel img,
+    .experiences-carousel .slick-slide img,
+    .what-we-offer-carousel .slick-slide img {
+        display: block !important;
         width: 100% !important;
         height: auto !important;
         min-height: 250px !important;
+        max-height: 350px !important;
         object-fit: cover !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        border-radius: 12px !important;
     }
 }
 
