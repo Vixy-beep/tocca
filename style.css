@@ -3854,6 +3854,8 @@ section.animate-on-scroll.is-visible {
     margin: 0 auto;
     align-items: flex-start;
     padding: 0 20px;
+    position: relative;
+    z-index: 100;
 }
 
 .signature-why-content {
@@ -3902,6 +3904,7 @@ section.animate-on-scroll.is-visible {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    margin-top: 45px;
 }
 
 .carousel-container {
@@ -4015,11 +4018,18 @@ section.animate-on-scroll.is-visible {
 /* Stamp Overlay - Full Width Banner */
 .signature-stamp-overlay {
     position: absolute;
-    bottom: 120px;
+    bottom: -180px;
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 50;
+    z-index: 10;
+}
+
+.signature-why-section .signature-cta-buttons {
+    position: relative;
+    z-index: 100;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
 
 .stamp-content {
