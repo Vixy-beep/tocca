@@ -270,8 +270,8 @@
                 <p>Every Bespoke Journey begins with a conversation. Tell us your vision, and we'll bring it to life.</p>
                 
                 <div class="signature-cta-buttons">
-                    <a href="mailto:info@toccaamalfi.com?subject=Bespoke Journey Inquiry" class="btn-primary-xl">Schedule a Discovery Call →</a>
-                    <a href="index.html#contact-section" class="btn-secondary-xl">Contact Us →</a>
+                    <a href="#" class="btn-primary-xl" onclick="openRequestModal(); return false;">Schedule a Discovery Call →</a>
+                    <a href="#" class="btn-secondary-xl" onclick="openRequestModal(); return false;">Contact Us →</a>
                 </div>
                 
                 <!-- Bespoke Stamp -->
@@ -290,15 +290,75 @@
                 <p class="final-cta-poetic">The scent of lemons, the warmth of the sun, the sound of waves against ancient cliffs.<br>Come as a traveler. Leave as part of the coast.</p>
                 <p class="final-cta-tagline"><strong>Tocca Amalfi</strong><br><em>Touch the Soul of the Coast.</em></p>
                 <div class="final-cta-buttons">
-                    <a href="mailto:info@toccaamalfi.com?subject=Bespoke Journey - Let's Talk" class="btn-primary-xl">Start Planning →</a>
+                    <a href="#" class="btn-primary-xl" onclick="openRequestModal(); return false;">Start Planning →</a>
                 </div>
             </div>
         </section>
 
     </main>
 
+    <!-- REQUEST SPOT MODAL -->
+    <div id="requestModal" class="request-modal">
+        <div class="request-modal-content">
+            <span class="request-modal-close" onclick="closeRequestModal()">&times;</span>
+            <h2>Interest? Let's connect</h2>
+            
+            <div class="request-contact-options">
+                <div class="request-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Jessica</h3>
+                    <p>Perfect for detailed questions, special requests, or sharing your travel plans.</p>
+                    <p class="contact-detail">info@toccaamalfi.com</p>
+                    <a href="mailto:info@toccaamalfi.com?subject=Interest%3F%20Let%27s%20connect%20-%20Bespoke%20Journey" class="request-btn">Send an Email</a>
+                </div>
+                
+                <div class="request-option">
+                    <i class="fas fa-phone"></i>
+                    <h3>Request a Call</h3>
+                    <p>Ideal if you'd like to talk through the journey or design something more custom.</p>
+                    <p class="contact-detail">Jessica will follow up to confirm a time.</p>
+                    <a href="mailto:info@toccaamalfi.com?subject=Request a Call - Bespoke Journey" class="request-btn">Schedule a Call</a>
+                </div>
+                
+                <div class="request-option">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Perfect for quick questions or real-time availability.</p>
+                    <p class="contact-detail">+1 646 229 8158</p>
+                    <a href="https://wa.me/16462298158?text=Hello!%20I'd%20like%20to%20inquire%20about%20the%20Bespoke%20Journey." target="_blank" class="request-btn">Send a Message</a>
+                </div>
+                
+                <div class="request-option">
+                    <i class="fas fa-comment"></i>
+                    <h3>Text Message</h3>
+                    <p>Send a text message directly to Jessica for quick communication.</p>
+                    <p class="contact-detail">+1 646 229 8158</p>
+                    <a href="sms:+16462298158?body=Hello!%20I'd%20like%20to%20inquire%20about%20the%20Bespoke%20Journey." class="request-btn">Send a Text</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
     <script>
+        // REQUEST MODAL FUNCTIONS
+        function openRequestModal() {
+            document.getElementById('requestModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeRequestModal() {
+            document.getElementById('requestModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById('requestModal');
+            if (event.target == modal) {
+                closeRequestModal();
+            }
+        }
+
         // CONTACT MENU TOGGLE
         let contactMenuOpen = false;
         function toggleContactMenu() {
