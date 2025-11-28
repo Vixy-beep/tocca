@@ -519,6 +519,22 @@ section.animate-on-scroll.is-visible {
     align-items: center;
 }
 
+.hero-cta-buttons .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 769px) {
+    .hero-cta-buttons .cta-button {
+        width: auto;
+        min-width: 220px;
+    }
+}
+
 .cta-button {
     display: inline-block;
     background-color: var(--warning-color);
@@ -1555,6 +1571,10 @@ section.animate-on-scroll.is-visible {
     background-color: #f8f9fa; /* Fondo claro */
     position: relative;
     overflow: hidden;
+}
+
+#tocca-offerings {
+    scroll-margin-top: 110px;
 }
 
 .journey-section h2 {
@@ -3845,6 +3865,10 @@ section.animate-on-scroll.is-visible {
     background: #ffffff;
     overflow-x: visible;
     position: relative;
+}
+
+#signature-why {
+    scroll-margin-top: 110px;
 }
 
 .signature-why-wrapper {
@@ -6224,8 +6248,8 @@ h2.signature-banner-text {
 /* Bespoke Hero - dark overlay to mirror journey-card aesthetic */
 .bespoke-hero {
     position: relative;
-    min-height: 670px;
-    padding: 130px 6vw 110px;
+    min-height: 620px;
+    padding: 110px 6vw 110px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -6340,6 +6364,10 @@ h2.signature-banner-text {
     padding: 90px 20px;
     background: linear-gradient(135deg, #f5f1eb 0%, #ede8df 100%);
     position: relative;
+}
+
+#bespoke-inspired {
+    scroll-margin-top: 110px;
 }
 
 .bespoke-intro-section::after {
@@ -8184,6 +8212,7 @@ h2.signature-banner-text {
     }
     
     .hero-cta-buttons .cta-button {
+        width: 100% !important;
         padding: 14px 30px !important;
     }
     
