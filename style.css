@@ -6120,6 +6120,13 @@ h2.signature-banner-text {
     margin: 0;
 }
 
+.glimpse-section-wrapper .what-we-offer-carousel img {
+    width: 100% !important;
+    height: 400px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
 @media (max-width: 968px) {
     .glimpse-section-wrapper {
         flex-direction: column;
@@ -6179,6 +6186,33 @@ h2.signature-banner-text {
         border-radius: 12px !important;
         visibility: visible !important;
         opacity: 1 !important;
+    }
+    
+    /* Fix for carousel only showing 20% on mobile */
+    .glimpse-section-wrapper .what-we-offer-carousel .slick-list,
+    .what-we-offer-carousel .slick-list {
+        width: 100% !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .glimpse-section-wrapper .what-we-offer-carousel .slick-track,
+    .what-we-offer-carousel .slick-track {
+        width: 100% !important;
+        display: flex !important;
+    }
+    
+    .glimpse-section-wrapper .what-we-offer-carousel .slick-slide,
+    .what-we-offer-carousel .slick-slide {
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    .glimpse-section-wrapper .what-we-offer-carousel .slick-slide > div,
+    .what-we-offer-carousel .slick-slide > div {
+        width: 100% !important;
+        display: block !important;
     }
 }
 
@@ -7947,6 +7981,26 @@ h2.signature-banner-text {
 
 /* Mobile First - Very Small Screens (320px - 480px) */
 @media (max-width: 480px) {
+    /* Journey Cards Mobile Fix */
+    .journey-card {
+        height: auto !important;
+        min-height: 600px !important;
+        padding: 25px 15px !important;
+    }
+    
+    .journey-card-content h3 {
+        font-size: 2.2rem !important;
+    }
+    
+    .journey-features li {
+        font-size: 0.9rem !important;
+    }
+    
+    .journey-link {
+        padding: 16px 20px !important;
+        font-size: 0.95rem !important;
+    }
+    
     .hero-section {
         min-height: 100vh !important;
         height: auto !important;
@@ -8091,6 +8145,21 @@ h2.signature-banner-text {
 
 /* Large Mobile / Small Tablet (641px - 768px) */
 @media (min-width: 641px) and (max-width: 768px) {
+    /* Journey Cards for this range */
+    .journey-card {
+        height: auto !important;
+        min-height: 550px !important;
+    }
+    
+    .journey-card-content h3 {
+        font-size: 2.8rem !important;
+    }
+    
+    .journey-link {
+        padding: 14px 24px !important;
+        font-size: 1rem !important;
+    }
+    
     .hero-content {
         padding: 120px 30px 100px !important;
         gap: 18px !important;
@@ -8275,15 +8344,41 @@ h2.signature-banner-text {
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
+        margin: 0 auto !important;
     }
     
     .what-we-offer-carousel.slick-initialized,
     .experiences-carousel.slick-initialized {
         display: block !important;
+        width: 100% !important;
+    }
+    
+    .what-we-offer-carousel .slick-list,
+    .experiences-carousel .slick-list {
+        width: 100% !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .what-we-offer-carousel .slick-track,
+    .experiences-carousel .slick-track {
+        width: 100% !important;
+        display: flex !important;
+        transform: translate3d(0, 0, 0) !important;
     }
     
     .what-we-offer-carousel .slick-slide,
     .experiences-carousel .slick-slide {
+        display: block !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        float: none !important;
+    }
+    
+    .what-we-offer-carousel .slick-slide > div,
+    .experiences-carousel .slick-slide > div {
+        width: 100% !important;
         display: block !important;
     }
     
@@ -8294,6 +8389,7 @@ h2.signature-banner-text {
         display: block !important;
         height: 280px !important;
         width: 100% !important;
+        max-width: 100% !important;
         object-fit: cover !important;
         visibility: visible !important;
         opacity: 1 !important;
@@ -8303,6 +8399,7 @@ h2.signature-banner-text {
     .glimpse-section-wrapper {
         overflow-x: visible !important;
         padding: 0 20px !important;
+        width: 100% !important;
     }
 }
 
@@ -8355,19 +8452,51 @@ h2.signature-banner-text {
 /* Fix journey cards on mobile - ensure buttons are visible */
 @media (max-width: 768px) {
     .journey-card {
-        min-height: 500px !important;
+        min-height: 550px !important;
+        height: auto !important;
+        padding: 30px 20px !important;
     }
     
     .journey-card-content {
-        padding: 25px !important;
+        padding: 20px !important;
+        position: relative !important;
+        z-index: 10 !important;
+    }
+    
+    .journey-card-content h3 {
+        font-size: 2.5rem !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .journey-subtitle-card {
+        font-size: 1rem !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .journey-features {
+        margin-bottom: 25px !important;
+    }
+    
+    .journey-features li {
+        font-size: 0.95rem !important;
+        margin-bottom: 10px !important;
     }
     
     .journey-link {
         display: block !important;
         width: 100% !important;
+        max-width: 100% !important;
         text-align: center !important;
-        padding: 12px 20px !important;
+        padding: 14px 20px !important;
         margin-top: 20px !important;
+        position: relative !important;
+        z-index: 10 !important;
+        background-color: #4A9A92 !important;
+        color: #ffffff !important;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 15px rgba(74, 154, 146, 0.4) !important;
     }
 }
 
